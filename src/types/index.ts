@@ -35,6 +35,7 @@ export interface CarouselImage {
 export interface HomeConfig {
   carousel: {
     images: CarouselImage[];
+    images_mobile?: CarouselImage[];
   };
 }
 

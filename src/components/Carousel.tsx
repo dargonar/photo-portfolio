@@ -17,7 +17,7 @@ function getImagePath(serie: Serie, filename: string): string {
 }
 
 export function Carousel() {
-  const images = config.pages.home.carousel.images;
+  const [images, setImages] = useState(config.pages.home.carousel.images);
   const [current, setCurrent] = useState(0);
   const total = images.length;
   const { t } = useI18n();
@@ -39,6 +39,21 @@ export function Carousel() {
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
   }, [goNext, goPrev]);
+
+  // Switch image set on resize across 1024px boundary (+ initial check)
+  useEffect(() => {
+    const update = () => {
+      const wide = window.innerWidth >= 1024;
+      const next = config.pages.home.carousel.images_mobile && !wide
+        ? config.pages.home.carousel.images_mobile
+        : config.pages.home.carousel.images;
+      setImages(next);
+      setCurrent((c) => Math.min(c, next.length - 1));
+    };
+    update(); // initial run (SSR-safe: window exists client-side only)
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
 
   const item = images[current];
   const serie = getSerie(item.serie_slug);

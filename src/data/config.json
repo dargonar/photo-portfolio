@@ -1329,9 +1329,9 @@
       ]
     },
     {
-      "serie_name": "Water-soluble oil",
-      "serie_name_es": "Water-soluble oil",
-      "serie_slug": "water-soluble-oil",
+      "serie_name": "Soluble oil",
+      "serie_name_es": "Oleo al agua",
+      "serie_slug": "soluble-oil",
       "year": "2023",
       "category_slug": "body-dialogues",
       "description": "",
@@ -2656,7 +2656,7 @@
         "images": [
           {
             "filename": "IMG_1415_v2.jpg",
-            "serie_slug": "water-soluble-oil"
+            "serie_slug": "soluble-oil"
           },
           {
             "filename": "00_IMG_1122_v2.jpg",
@@ -2667,11 +2667,33 @@
             "serie_slug": "circus"
           },
           {
+            "filename": "10_09_IMG_2873.jpg",
+            "serie_slug": "knots"
+          },
+          {
+            "filename": "_DSC1108.jpg",
+            "serie_slug": "adhd"
+          }
+        ],
+        "images_mobile": [
+          {
+            "filename": "IMG_0089.jpg",
+            "serie_slug": "soluble-oil"
+          },
+          {
+            "filename": "08_32_nena_pablotutino.jpg",
+            "serie_slug": "bw"
+          },
+          {
+            "filename": "05_IMG_8434.jpg",
+            "serie_slug": "circus"
+          },
+          {
             "filename": "01_03_IMG_2672_v2.jpg",
             "serie_slug": "knots"
           },
           {
-            "filename": "Layer 1.jpg",
+            "filename": "26_DSC9995.jpg",
             "serie_slug": "adhd"
           }
         ]
