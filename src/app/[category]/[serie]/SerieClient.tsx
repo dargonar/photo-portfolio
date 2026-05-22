@@ -30,27 +30,29 @@ export default function SerieClient() {
     : categorySlug;
 
   return (
-    <div className="min-h-screen px-4 md:px-8 py-8">
-      {/* Breadcrumb */}
-      <nav className="border-b border-white/10 pb-4 mb-8 flex items-center gap-2 font-sans text-[0.7rem] md:text-sm uppercase tracking-widest">
+    <div className="min-h-screen px-4 py-8 max-w-7xl mx-auto">
+      {/* Breadcrumb — data-mono style with chevron */}
+      <div className="mb-12 flex items-center gap-2 font-pt-mono text-[11px] uppercase tracking-[0.1em] text-on-surface-variant">
         <a
           href={`/${categorySlug}`}
-          className="text-white/60 hover:text-white transition-colors"
+          className="hover:text-white cursor-pointer transition-colors"
         >
           {catTitle}
         </a>
-        <span className="text-white/30">›</span>
-        <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M9 18l6-6-6-6" />
+        </svg>
+        <span className="text-white">
           {t(serie.serie_name, serie.serie_name_es)} — {serie.year}
         </span>
-      </nav>
+      </div>
 
-      {/* Gallery — masonry-like with aspect ratio preservation */}
+      {/* Gallery — masonry preserving aspect ratios */}
       <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
         {serie.images.map((img: ImageData, idx: number) => (
           <div
             key={img.filename}
-            className="relative break-inside-avoid group cursor-pointer overflow-hidden"
+            className="relative break-inside-avoid group cursor-pointer overflow-hidden border border-transparent hover:border-outline-variant transition-all"
             onClick={() => setLightboxIndex(idx)}
           >
             <Image

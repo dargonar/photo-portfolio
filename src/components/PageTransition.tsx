@@ -6,6 +6,7 @@ import { ReactNode } from "react";
 
 export function PageTransition({ children }: { children: ReactNode }) {
   const pathname = usePathname();
+  const isHome = pathname === "/";
 
   return (
     <AnimatePresence mode="wait">
@@ -15,7 +16,7 @@ export function PageTransition({ children }: { children: ReactNode }) {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="min-h-[calc(100vh-3rem)] pt-10"
+        className={isHome ? "" : "min-h-screen pt-14 md:pt-10"}
       >
         {children}
       </motion.main>

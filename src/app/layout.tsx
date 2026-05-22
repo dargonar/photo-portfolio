@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { PT_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/Providers";
 
-const ptMono = localFont({
-  src: "../../public/fonts/PTMono-Regular.ttf",
+const ptMono = PT_Mono({
+  subsets: ["latin"],
+  weight: "400",
   variable: "--font-pt-mono",
   display: "swap",
 });
@@ -21,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className={ptMono.variable}>
-      <body className="bg-black text-white font-sans antialiased">
+      <body className="bg-background text-on-background antialiased">
         <Providers>{children}</Providers>
       </body>
     </html>

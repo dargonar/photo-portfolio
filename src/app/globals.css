@@ -1,12 +1,62 @@
 @import "tailwindcss";
 
+@theme {
+  /* ── Colors (Stitch design system) ── */
+  --color-primary: #ffffff;
+  --color-on-primary: #2f3131;
+  --color-background: #131313;
+  --color-on-background: #e2e2e2;
+  --color-surface: #131313;
+  --color-on-surface: #e2e2e2;
+  --color-on-surface-variant: #c4c7c8;
+  --color-surface-container: #1f1f1f;
+  --color-surface-container-low: #1b1b1b;
+  --color-surface-container-high: #2a2a2a;
+  --color-surface-container-highest: #353535;
+  --color-surface-dim: #131313;
+  --color-outline: #8e9192;
+  --color-outline-variant: #444748;
+  --color-border-muted: #262626;
+  --color-secondary: #4ae176;
+  --color-terminal-green: #22C55E;
+  --color-glass-bg: rgba(0, 0, 0, 0.8);
+
+  /* ── Font families — use the CSS variable from next/font/google ── */
+  --font-headline-lg: var(--font-pt-mono), monospace;
+  --font-headline-lg-mobile: var(--font-pt-mono), monospace;
+  --font-headline-md: var(--font-pt-mono), monospace;
+  --font-body-md: var(--font-pt-mono), monospace;
+  --font-data-mono: var(--font-pt-mono), monospace;
+  --font-label-sm: var(--font-pt-mono), monospace;
+
+  /* ── Font sizes (Stitch design system) ── */
+  --text-headline-lg: 24px;
+  --text-headline-lg--line-height: 1.2;
+  --text-headline-lg-mobile: 16px;
+  --text-headline-lg-mobile--line-height: 1.2;
+  --text-headline-md: 18px;
+  --text-headline-md--line-height: 1.4;
+  --text-body-md: 16px;
+  --text-body-md--line-height: 1.5;
+  --text-label-sm: 12px;
+  --text-label-sm--line-height: 1.2;
+  --text-data-mono: 11px;
+  --text-data-mono--line-height: 1.6;
+
+  /* ── Spacing (Stitch) ── */
+  --spacing-gutter: 1rem;
+  --spacing-section-gap: 4rem;
+}
+
 :root {
   --font-pt-mono: "PT Mono", monospace;
 }
 
 body {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--font-pt-mono), monospace;
 }
 
 .font-pt-mono {
@@ -14,33 +64,10 @@ body {
 }
 
 /* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 4px;
-  height: 4px;
-}
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: #131313; }
+::-webkit-scrollbar-thumb { background: #262626; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.4); }
 
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 2px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.4);
-}
-
-/* Remove image drag in gallery */
-img {
-  user-select: none;
-  -webkit-user-drag: none;
-}
-
-@theme {
-  --text-tiny: 0.625rem;
-  --text-tiny--line-height: 1.5rem; 
-  --text-tiny--letter-spacing: 0.125rem; 
-  --text-tiny--font-weight: 500; 
-}
+/* Remove image drag */
+img { user-select: none; -webkit-user-drag: none; }

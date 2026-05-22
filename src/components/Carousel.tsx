@@ -62,25 +62,27 @@ export function Carousel() {
 
   const tv = variants[transition] || variants.fade;
 
+  const pad = (n: number) => String(n).padStart(2, "0");
+
   return (
-    <div className="relative w-full h-[calc(100vh-5.5rem)] overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden bg-black">
 
       {/* Nav arrows */}
       <button
         onClick={goPrev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 flex items-center justify-center text-white/70 hover:text-white transition-colors bg-black/60"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-black/40 p-4 hover:bg-black/80 transition-all border border-transparent hover:border-white"
         aria-label="Previous"
       >
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
           <path d="M15 18l-6-6 6-6" />
         </svg>
       </button>
       <button
         onClick={goNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 flex items-center justify-center text-white/70 hover:text-white transition-colors bg-black/60"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-black/40 p-4 hover:bg-black/80 transition-all border border-transparent hover:border-white"
         aria-label="Next"
       >
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
           <path d="M9 18l6-6-6-6" />
         </svg>
       </button>
@@ -92,8 +94,8 @@ export function Carousel() {
           initial={tv.initial}
           animate={tv.animate}
           exit={tv.exit}
-          transition={{ duration: 0.6, ease: "easeInOut" }}
-          className="absolute inset-0 flex items-center justify-center"
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          className="absolute inset-0"
         >
           <Image
             src={src}
@@ -106,18 +108,19 @@ export function Carousel() {
         </motion.div>
       </AnimatePresence>
 
-      {/* Footer info bar */}
-      <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between px-4 md:px-8 py-4 bg-black/60 backdrop-blur-sm">
-        <span className="font-pt-mono md:text-sm text-xs text-white/50">
-          {current + 1}/{total}
-        </span>
-        <Link
-          href={`/${serie.category_slug}/${serie.serie_slug}`}
-          className="font-sans md:text-sm text-xs uppercase tracking-widest hover:text-gray-300 transition-colors"
-        >
-          {t(serie.serie_name, serie.serie_name_es)} — {serie.year}
-        </Link>
-        <span className="w-5" />
+      {/* Footer overlay — glass bg, fixed bottom */}
+      <div className="fixed bottom-0 left-0 right-0 z-40 bg-glass-bg backdrop-blur-md border-t border-outline-variant px-gutter p-4">
+        <div className="flex items-center gap-6 max-w-screen-xl mx-auto">
+          <span className="font-data-mono text-data-mono text-terminal-green">
+            {pad(current + 1)} / {pad(total)}
+          </span>
+          <Link
+            href={`/${serie.category_slug}/${serie.serie_slug}`}
+            className="font-label-sm text-label-sm tracking-[0.1em] uppercase text-primary hover:text-on-surface-variant transition-colors"
+          >
+            {t(serie.serie_name, serie.serie_name_es)} — {serie.year}
+          </Link>
+        </div>
       </div>
     </div>
   );

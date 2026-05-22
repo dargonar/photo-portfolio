@@ -2678,8 +2678,9 @@
       }
     },
     "about": {
-      "title": "Pablo Tutino",
-      "content_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "title": "Bio",
+      "content_text": "I explore shame as a visual and emotional territory. I go out into the world to make a fool of myself and turn it into images.<br/>Visual storyteller, photographer & developer.",
+      "content_text_es": "Exploro la vergüenza como territorio visual y emocional. Salgo ahí fuera a hacer el ridículo y convertirlo en imágenes.<br/>Visual storyteller, photographer & developer.",
       "image": "retrato.jpg"
     }
   },

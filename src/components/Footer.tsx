@@ -1,10 +1,15 @@
 "use client";
 
-import { useI18n } from "@/hooks/useI18n";
+import { usePathname } from "next/navigation";
 
 export function Footer() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
+  if (isHome) return null;
+
   return (
-    <footer className="border-t border-white/10 py-4 px-4 md:px-8 flex items-center justify-center">
+    <footer className="fixed bottom-0 left-0 right-0 z-40 bg-glass-bg backdrop-blur-md border-t border-outline-variant flex justify-center items-center px-gutter p-4">
       <a
         href="https://www.instagram.com/pablotutino"
         target="_blank"
