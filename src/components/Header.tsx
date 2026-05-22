@@ -25,6 +25,23 @@ export function Header() {
         >
           Pablo Tutino
         </Link>
+
+        {/* Desktop nav links — hidden on mobile */}
+        <div className="hidden md:flex items-center gap-10">
+          <Link
+            href="/series"
+            className="font-headline-lg-mobile text-headline-lg-mobile tracking-widest text-primary hover:text-secondary transition-colors"
+          >
+            Series
+          </Link>
+          <Link
+            href="/projects"
+            className="font-headline-lg-mobile text-headline-lg-mobile tracking-widest text-primary hover:text-secondary transition-colors"
+          >
+            Projects
+          </Link>
+        </div>
+
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="text-primary hover:text-secondary transition-colors"
