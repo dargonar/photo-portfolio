@@ -36,6 +36,7 @@ export interface HomeConfig {
   carousel: {
     images: CarouselImage[];
     images_mobile?: CarouselImage[];
+    transition_interval_s?: number;
   };
 }
 

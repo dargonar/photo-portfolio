@@ -2696,7 +2696,8 @@
             "filename": "26_DSC9995.jpg",
             "serie_slug": "adhd"
           }
-        ]
+        ],
+        "transition_interval_s": 5
       }
     },
     "about": {

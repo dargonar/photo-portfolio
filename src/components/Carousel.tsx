@@ -31,6 +31,7 @@ export function Carousel() {
     [total]
   );
 
+  // Keyboard navigation
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === "ArrowRight") goNext();
@@ -39,6 +40,13 @@ export function Carousel() {
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
   }, [goNext, goPrev]);
+
+  // Autoplay — advance every transition_interval_s seconds
+  useEffect(() => {
+    const interval = (config.pages.home.carousel.transition_interval_s ?? 5) * 1000;
+    const timer = setInterval(goNext, interval);
+    return () => clearInterval(timer);
+  }, [goNext]);
 
   // Switch image set on resize across 1024px boundary (+ initial check)
   useEffect(() => {
