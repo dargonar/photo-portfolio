@@ -119,11 +119,18 @@ export function Header() {
 
         {/* Category links */}
         <div className="flex flex-col items-center space-y-6 mt-8">
+          <Link
+                href="/series"
+                className="font-headline-md text-headline-md tracking-[0.2em] text-primary hover:text-secondary transition-all duration-300 uppercase"
+                onClick={() => setMenuOpen(false)}
+              >
+              Series:
+            </Link>
           {categoryLinks.map((cat) => (
             <Link
               key={cat.category_slug}
               href={`/${cat.category_slug}`}
-              className="font-headline-md text-headline-md tracking-[0.2em] text-primary hover:text-secondary transition-all duration-300 uppercase"
+              className="font-headline-md text-body-md tracking-[0.2em] text-primary hover:text-secondary transition-all duration-300 uppercase"
               onClick={() => setMenuOpen(false)}
             >
               {cat.title_es ? t(cat.title, cat.title_es) : cat.title}

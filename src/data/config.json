@@ -2738,6 +2738,18 @@
         "title_es": "Diálogos del Cuerpo",
         "category_slug": "body-dialogues",
         "description": "Body dialogues"
+      },
+      {
+        "title": "Nature",
+        "title_es": "Naturaleza",
+        "category_slug": "nature",
+        "description": "Nature"
+      },
+      {
+        "title": "Night",
+        "title_es": "Noche",
+        "category_slug": "night",
+        "description": "Night"
       }
     ],
     "projects": {
