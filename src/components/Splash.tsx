@@ -8,7 +8,7 @@ export function Splash() {
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    timerRef.current = setTimeout(() => setVisible(false), 4000);
+    timerRef.current = setTimeout(() => setVisible(false), 2500);
     return () => {
       if (timerRef.current) clearTimeout(timerRef.current);
     };
