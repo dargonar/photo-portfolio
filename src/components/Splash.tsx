@@ -31,10 +31,10 @@ export function Splash() {
           className="fixed inset-0 z-50 flex items-center justify-center bg-black cursor-pointer"
         >
           <div className="text-center px-6">
-            <p className="font-data-mono text-data-mono text-[clamp(1rem,3vw,1.75rem)] leading-relaxed text-white uppercase tracking-[0.15em]">
+            <p className="font-data-mono text-data-mono font-headline-lg-mobile text-headline-lg-mobile leading-relaxed text-white tracking-[0.15em]">
               Pablo Tutino
             </p>
-            <p className="font-data-mono text-data-mono text-[clamp(0.65rem,1.5vw,0.9rem)] text-[#888] mt-5 tracking-[0.25em] uppercase">
+            <p className="font-data-mono text-data-mono font-headline-lg-mobile text-headline-lg-mobile mt-5 tracking-[0.25em] uppercase">
               Visual storyteller &amp; photographer
             </p>
           </div>
