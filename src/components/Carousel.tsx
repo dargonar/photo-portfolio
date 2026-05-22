@@ -61,6 +61,8 @@ export function Carousel() {
 
   const src = getImagePath(serie, item.filename);
   const transition = serie.carousel_transition || "fade";
+  const isProject = serie.category_slug === config.categories.projects.category_slug;
+  const seriePath = `/${serie.category_slug}/${serie.serie_slug}`;
 
   const variants = {
     fade: {
@@ -102,26 +104,28 @@ export function Carousel() {
         </svg>
       </button>
 
-      {/* Image */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={`${item.serie_slug}-${item.filename}`}
-          initial={tv.initial}
-          animate={tv.animate}
-          exit={tv.exit}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="absolute inset-0"
-        >
-          <Image
-            src={src}
-            alt={`${serie.serie_name} — ${item.filename}`}
-            fill
-            className="object-cover"
-            priority
-            sizes="100vw"
-          />
-        </motion.div>
-      </AnimatePresence>
+      {/* Clickable image → series/project page */}
+      <Link href={seriePath} className="absolute inset-0 z-[5]">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={`${item.serie_slug}-${item.filename}`}
+            initial={tv.initial}
+            animate={tv.animate}
+            exit={tv.exit}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            className="absolute inset-0"
+          >
+            <Image
+              src={src}
+              alt={`${serie.serie_name} — ${item.filename}`}
+              fill
+              className="object-cover"
+              priority
+              sizes="100vw"
+            />
+          </motion.div>
+        </AnimatePresence>
+      </Link>
 
       {/* Footer overlay — glass bg, fixed bottom */}
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-glass-bg backdrop-blur-md border-t border-outline-variant px-gutter p-4">
@@ -130,10 +134,11 @@ export function Carousel() {
             {pad(current + 1)} / {pad(total)}
           </span>
           <Link
-            href={`/${serie.category_slug}/${serie.serie_slug}`}
+            href={seriePath}
             className="font-label-sm text-label-sm tracking-[0.1em] uppercase text-primary hover:text-on-surface-variant transition-colors"
           >
             {t(serie.serie_name, serie.serie_name_es)} — {serie.year}
+            <span className="ml-3 text-terminal-green">→ {isProject ? t("View project", "Ver proyecto") : t("View series", "Ver serie")}</span>
           </Link>
         </div>
       </div>
