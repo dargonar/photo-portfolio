@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 import Link from "next/link";
 import { siteConfig } from "@/data/config";
 import type { Serie } from "@/types";
@@ -36,8 +36,8 @@ export default function SeriesPage() {
                 key={img.filename}
                 className="relative aspect-[4/3] overflow-hidden bg-surface-container"
               >
-                <Image
-                  src={`/images/${serie.serie_slug}/${img.filename}`}
+                <CldImage
+                  src={`${serie.serie_slug}/${img.filename.replace(/\.[^.]+$/, "")}`}
                   alt={`${serie.serie_name} — ${img.filename}`}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
