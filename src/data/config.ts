@@ -5,6 +5,7 @@ function castSerie(s: (typeof rawConfig.series)[number]): Serie {
   return {
     ...s,
     carousel_transition: s.carousel_transition as Serie["carousel_transition"],
+    lightbox_mode: s.lightbox_mode as Serie["lightbox_mode"],
   };
 }
 

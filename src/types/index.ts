@@ -1,4 +1,5 @@
 export type CarouselTransition = "fade" | "book";
+export type LightboxMode = "single" | "flipbook" | "slideshow" | "compare";
 
 export interface ImageData {
   filename: string;
@@ -24,6 +25,8 @@ export interface Serie {
   show_thumbnails: boolean;
   show_lightbox_title: boolean;
   show_lightbox_footer: boolean;
+  lightbox_mode?: LightboxMode;
+  lightbox_autoplay_interval?: number;
   images: ImageData[];
 }
 

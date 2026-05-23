@@ -10,6 +10,8 @@
       "show_thumbnails": true,
       "show_lightbox_title": true,
       "show_lightbox_footer": true,
+      "lightbox_mode": "flipbook",          
+      "lightbox_autoplay_interval": 4000,   
       "images": [
         {
           "filename": "00_IMG_1122_v2.jpg",
@@ -257,6 +259,8 @@
       "show_thumbnails": true,
       "show_lightbox_title": true,
       "show_lightbox_footer": true,
+      "lightbox_mode": "slideshow",         
+      "lightbox_autoplay_interval": 4000,   
       "images": [
         {
           "filename": "01_12_IMG_8415.jpg",
@@ -439,6 +443,8 @@
       "show_thumbnails": true,
       "show_lightbox_title": true,
       "show_lightbox_footer": true,
+      "lightbox_mode": "flipbook",           
+      "lightbox_autoplay_interval": 4000,   
       "images": [
         {
           "filename": "01_03_IMG_2672_v2.jpg",
@@ -595,6 +601,8 @@
       "show_thumbnails": true,
       "show_lightbox_title": true,
       "show_lightbox_footer": true,
+      "lightbox_mode": "flipbook",          
+      "lightbox_autoplay_interval": 4000,   
       "images": [
         {
           "filename": "Layer 1.jpg",
@@ -920,6 +928,8 @@
       "show_thumbnails": true,
       "show_lightbox_title": true,
       "show_lightbox_footer": true,
+      "lightbox_mode": "flipbook",          
+      "lightbox_autoplay_interval": 4000,   
       "images": [
         {
           "filename": "Layer 1.jpg",
@@ -1130,6 +1140,8 @@
       "show_thumbnails": true,
       "show_lightbox_title": true,
       "show_lightbox_footer": true,
+      "lightbox_mode": "compare",           
+      "lightbox_autoplay_interval": 4000,   
       "images": [
         {
           "filename": "_DSC5320.jpg",
@@ -1340,6 +1352,8 @@
       "show_thumbnails": true,
       "show_lightbox_title": true,
       "show_lightbox_footer": true,
+      "lightbox_mode": "compare",           
+      "lightbox_autoplay_interval": 4000,   
       "images": [
         {
           "filename": "IMG_0089.jpg",
