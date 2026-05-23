@@ -15,6 +15,50 @@ export interface ImageData {
   editor: string;
 }
 
+/* ── Text overlay on a photo (in lightbox) ── */
+export interface TextOverlay {
+  text_md: string;
+  position:
+    | "top-left" | "top-center" | "top-right"
+    | "center"
+    | "bottom-left" | "bottom-center" | "bottom-right";
+  class?: string;
+}
+
+/* ── Scatter word (positioned freely on a canvas) ── */
+export interface ScatterWord {
+  text: string;
+  x: number;       // % from left
+  y: number;       // % from top
+  rotate?: number; // degrees
+  class?: string;  // CSS class for styling
+}
+
+export interface Canvas {
+  width: number;
+  height: number;
+}
+
+/* ── Text slide between photos ── */
+export interface TextItem {
+  type: "text";
+  layout: "prose" | "scatter";
+  content_md?: string;
+  align?: "left" | "center" | "right";
+  class?: string;      // CSS class for the container
+  words?: ScatterWord[];
+  canvas?: Canvas;     // conceptual canvas dimensions (for aspect ratio)
+}
+
+/* ── Photo item (wraps existing ImageData) ── */
+export interface PhotoItem {
+  type: "photo";
+  data: ImageData;
+  overlays?: TextOverlay[];
+}
+
+export type SeriesItem = PhotoItem | TextItem;
+
 export interface Serie {
   serie_name: string;
   serie_name_es: string;
@@ -28,6 +72,7 @@ export interface Serie {
   lightbox_mode?: LightboxMode;
   lightbox_autoplay_interval?: number;
   images: ImageData[];
+  items?: SeriesItem[];
 }
 
 export interface CarouselImage {
