@@ -6,6 +6,7 @@ import type { Serie, ImageData, LightboxMode, SeriesItem, PhotoItem, TextItem } 
 import { motion, AnimatePresence } from "framer-motion";
 import { useI18n } from "@/hooks/useI18n";
 import { useSwipe } from "@/hooks/useSwipe";
+import { ScatterWordsLayer } from "@/components/ScatterWordsLayer";
 
 interface LightboxProps {
   serie: Serie;
@@ -265,6 +266,7 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
           sizes="100vw"
           priority
         />
+        {photo.words && <ScatterWordsLayer words={photo.words} />}
         {renderOverlays(photo)}
         {serie.show_lightbox_footer && img.description && (
           <div className="absolute bottom-2 left-2 right-2 z-10 text-center pointer-events-none">
@@ -276,10 +278,12 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
   }
 
   function renderFlipbook() {
-    const leftImg = (items[current] as PhotoItem).data;
+    const leftItem = items[current] as PhotoItem;
+    const leftImg = leftItem.data;
     const rightIdx = Math.min(current + 1, total - 1);
-    const rightImg = items[rightIdx]?.type === "photo" ? (items[rightIdx] as PhotoItem).data : leftImg;
-    const isSingle = leftImg === rightImg;
+    const rightItem = items[rightIdx]?.type === "photo" ? (items[rightIdx] as PhotoItem) : leftItem;
+    const rightImg = rightItem.data;
+    const isSingle = leftItem === rightItem;
 
     return (
       <motion.div
@@ -302,6 +306,7 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
           )}
           <Image src={`/images/${serie.serie_slug}/${leftImg.filename}`} alt="" width={1200} height={900}
             className="max-w-full max-h-full w-auto h-auto object-contain" sizes="50vw" priority />
+          {leftItem.words && <ScatterWordsLayer words={leftItem.words} />}
         </div>
         <div className="w-px bg-white/10 flex-shrink-0 relative z-10" />
         <div className="flex-1 relative overflow-hidden flex items-center justify-center">
@@ -312,6 +317,7 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
           )}
           <Image src={`/images/${serie.serie_slug}/${rightImg.filename}`} alt="" width={1200} height={900}
             className="max-w-full max-h-full w-auto h-auto object-contain" sizes="50vw" priority />
+          {rightItem.words && <ScatterWordsLayer words={rightItem.words} />}
         </div>
         <div className="absolute inset-y-0 left-1/2 w-8 -translate-x-1/2 pointer-events-none z-[6]">
           <div className="w-full h-full bg-gradient-to-r from-black/20 via-black/10 to-transparent" />
@@ -344,6 +350,7 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
         <div className="absolute inset-0 flex items-center justify-center">
           <Image src={`/images/${serie.serie_slug}/${rightImg.filename}`} alt="" width={1200} height={900}
             className="max-w-full max-h-full w-auto h-auto object-contain" sizes="100vw" priority />
+          {rightItem.words && <ScatterWordsLayer words={rightItem.words} />}
           {renderOverlays(rightItem)}
         </div>
         {/* LEFT — clipped overlay */}
@@ -351,6 +358,7 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
           <div className="absolute inset-0 flex items-center justify-center">
             <Image src={`/images/${serie.serie_slug}/${leftImg.filename}`} alt="" width={1200} height={900}
               className="max-w-full max-h-full w-auto h-auto object-contain" sizes="100vw" priority />
+            {leftItem.words && <ScatterWordsLayer words={leftItem.words} />}
             {renderOverlays(leftItem)}
           </div>
         </div>

@@ -55,6 +55,7 @@ export interface PhotoItem {
   type: "photo";
   data: ImageData;
   overlays?: TextOverlay[];
+  words?: ScatterWord[];
 }
 
 export type SeriesItem = PhotoItem | TextItem;

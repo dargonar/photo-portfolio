@@ -1140,7 +1140,7 @@
       "show_thumbnails": true,
       "show_lightbox_title": true,
       "show_lightbox_footer": true,
-      "lightbox_mode": "compare",
+      "lightbox_mode": "single",
       "lightbox_autoplay_interval": 4000,
       "images": [
         {
@@ -1423,7 +1423,29 @@
             "focal_mm": 0,
             "flash": false,
             "editor": ""
-          }
+          },
+          "words": [
+            {
+              "text": "frenética",
+              "x": 25,
+              "y": 30,
+              "rotate": -4,
+              "class": "word-hero"
+            },
+            {
+              "text": "y",
+              "x": 45,
+              "y": 45,
+              "class": "word-italic"
+            },
+            {
+              "text": "triste",
+              "x": 65,
+              "y": 55,
+              "rotate": 3,
+              "class": "word-hero"
+            }
+          ]
         },
         {
           "type": "photo",
@@ -1508,7 +1530,29 @@
             "focal_mm": 0,
             "flash": false,
             "editor": ""
-          }
+          },
+          "words": [
+            {
+              "text": "despertaba",
+              "x": 50,
+              "y": 35,
+              "rotate": -2,
+              "class": "word-title"
+            },
+            {
+              "text": "a veces",
+              "x": 35,
+              "y": 55,
+              "class": "word-subtle"
+            },
+            {
+              "text": "en mi departamento",
+              "x": 65,
+              "y": 70,
+              "rotate": 1,
+              "class": "word-italic"
+            }
+          ]
         },
         {
           "type": "photo",
@@ -1593,7 +1637,23 @@
             "focal_mm": 0,
             "flash": false,
             "editor": ""
-          }
+          },
+          "words": [
+            {
+              "text": "¿Todo esto",
+              "x": 30,
+              "y": 30,
+              "rotate": -3,
+              "class": "word-muted"
+            },
+            {
+              "text": "para qué?",
+              "x": 60,
+              "y": 50,
+              "rotate": 2,
+              "class": "word-hero"
+            }
+          ]
         },
         {
           "type": "photo",
@@ -1672,7 +1732,23 @@
             "focal_mm": 0,
             "flash": false,
             "editor": ""
-          }
+          },
+          "words": [
+            {
+              "text": "los latidos",
+              "x": 40,
+              "y": 35,
+              "rotate": -2,
+              "class": "word-title"
+            },
+            {
+              "text": "de mi corazón",
+              "x": 55,
+              "y": 55,
+              "rotate": 1,
+              "class": "word-body"
+            }
+          ]
         },
         {
           "type": "photo",
@@ -1758,7 +1834,22 @@
             "focal_mm": 0,
             "flash": false,
             "editor": ""
-          }
+          },
+          "words": [
+            {
+              "text": "Algo",
+              "x": 35,
+              "y": 30,
+              "class": "word-emphasis"
+            },
+            {
+              "text": "sucederá",
+              "x": 60,
+              "y": 55,
+              "rotate": -3,
+              "class": "word-hero"
+            }
+          ]
         },
         {
           "type": "text",

@@ -9,6 +9,7 @@ import { useParams } from "next/navigation";
 import Image from "next/image";
 import { Lightbox } from "@/components/Lightbox";
 import { NerdOverlay } from "@/components/NerdOverlay";
+import { ScatterWordsLayer } from "@/components/ScatterWordsLayer";
 
 /* ── render a scatter-word canvas ── */
 function ScatterCanvas({ item }: { item: TextItem }) {
@@ -137,6 +138,7 @@ export default function SerieClient() {
                   className="w-full h-auto"
                   sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                 />
+                {item.words && <ScatterWordsLayer words={item.words} />}
                 {nerdMode && <NerdOverlay image={img} />}
               </div>
             );
