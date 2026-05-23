@@ -39,7 +39,7 @@ function mdToHtml(md: string): string {
 function ScatterSlide({ item }: { item: TextItem }) {
   return (
     <div className="absolute inset-0 flex items-center justify-center bg-surface-container">
-      <div className="relative w-full h-full max-w-5xl max-h-[90vh]" style={{ aspectRatio: item.canvas ? item.canvas.width / item.canvas.height : undefined }}>
+      <div className="relative w-full h-full max-w-5xl max-h-[90vh] overflow-hidden" style={{ aspectRatio: item.canvas ? item.canvas.width / item.canvas.height : undefined }}>
         {item.words?.map((w, i) => (
           <div
             key={i}
@@ -251,7 +251,7 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
         variants={slideVariants}
         initial="enter" animate="center" exit="exit"
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="absolute inset-0 flex items-center justify-center"
+        className="absolute inset-0 flex items-center justify-center overflow-hidden"
       >
         {serie.show_lightbox_title && img.title && (
           <div className="absolute top-2 left-2 right-2 z-10 text-center pointer-events-none">
@@ -347,7 +347,7 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
         onTouchMove={onCompareTouchMove}
       >
         {/* RIGHT — background */}
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
           <Image src={`/images/${serie.serie_slug}/${rightImg.filename}`} alt="" width={1200} height={900}
             className="max-w-full max-h-full w-auto h-auto object-contain" sizes="100vw" priority />
           {rightItem.words && <ScatterWordsLayer words={rightItem.words} />}

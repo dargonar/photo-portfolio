@@ -18,7 +18,7 @@ function ScatterCanvas({ item }: { item: TextItem }) {
 
   return (
     <div
-      className="relative w-full bg-surface-container select-none"
+      className="relative w-full bg-surface-container select-none overflow-hidden"
       style={{ aspectRatio: ratio }}
     >
       {words?.map((w, i) => (

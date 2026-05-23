@@ -1739,7 +1739,7 @@
               "x": 40,
               "y": 35,
               "rotate": -2,
-              "class": "word-title"
+              "class": "word-title bg-black pl-4 pr-4"
             },
             {
               "text": "de mi corazón",
