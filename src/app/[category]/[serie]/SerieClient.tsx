@@ -6,7 +6,7 @@ import { useI18n } from "@/hooks/useI18n";
 import { useNerdMode } from "@/hooks/useNerdMode";
 import { useState, useMemo } from "react";
 import { useParams } from "next/navigation";
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 import { Lightbox } from "@/components/Lightbox";
 import { NerdOverlay } from "@/components/NerdOverlay";
 import { ScatterWordsLayer } from "@/components/ScatterWordsLayer";
@@ -130,8 +130,8 @@ export default function SerieClient() {
                 className="relative break-inside-avoid group cursor-pointer overflow-hidden border border-transparent hover:border-outline-variant transition-all"
                 onClick={() => setLightboxIndex(idx)}
               >
-                <Image
-                  src={`/images/${serie.serie_slug}/${img.filename}`}
+                <CldImage
+                  src={`${serie.serie_slug}/${img.filename.replace(/\.[^.]+$/, "")}`}
                   alt={`${serie.serie_name} — ${img.filename}`}
                   width={800}
                   height={600}

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef, useMemo } from "react";
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 import type { Serie, ImageData, LightboxMode, SeriesItem, PhotoItem, TextItem } from "@/types";
 import { motion, AnimatePresence } from "framer-motion";
 import { useI18n } from "@/hooks/useI18n";
@@ -258,14 +258,14 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
             <p className="font-pt-mono text-sm md:text-lg drop-shadow-lg">{img.title}</p>
           </div>
         )}
-        <Image
-          src={`/images/${serie.serie_slug}/${img.filename}`}
-          alt={`${serie.serie_name} — ${img.filename}`}
-          width={1200} height={900}
-          className="max-w-full max-h-full w-auto h-auto object-contain"
-          sizes="100vw"
-          priority
-        />
+        <CldImage
+           src={`${serie.serie_slug}/${img.filename.replace(/\.[^.]+$/, "")}`}
+           alt={`${serie.serie_name} — ${img.filename}`}
+           width={1200} height={900}
+           className="max-w-full max-h-full w-auto h-auto object-contain"
+           sizes="100vw"
+           priority
+         />
         {photo.words && <ScatterWordsLayer words={photo.words} />}
         {renderOverlays(photo)}
         {serie.show_lightbox_footer && img.description && (
@@ -304,7 +304,7 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
               <p className="font-pt-mono text-sm md:text-lg drop-shadow-lg">{leftImg.title}</p>
             </div>
           )}
-          <Image src={`/images/${serie.serie_slug}/${leftImg.filename}`} alt="" width={1200} height={900}
+          <CldImage src={`${serie.serie_slug}/${leftImg.filename.replace(/\.[^.]+$/, "")}`} alt="" width={1200} height={900}
             className="max-w-full max-h-full w-auto h-auto object-contain" sizes="50vw" priority />
           {leftItem.words && <ScatterWordsLayer words={leftItem.words} />}
         </div>
@@ -315,7 +315,7 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
               <p className="font-pt-mono text-sm md:text-lg drop-shadow-lg">{rightImg.title}</p>
             </div>
           )}
-          <Image src={`/images/${serie.serie_slug}/${rightImg.filename}`} alt="" width={1200} height={900}
+          <CldImage src={`${serie.serie_slug}/${rightImg.filename.replace(/\.[^.]+$/, "")}`} alt="" width={1200} height={900}
             className="max-w-full max-h-full w-auto h-auto object-contain" sizes="50vw" priority />
           {rightItem.words && <ScatterWordsLayer words={rightItem.words} />}
         </div>
@@ -348,7 +348,7 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
       >
         {/* RIGHT — background */}
         <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
-          <Image src={`/images/${serie.serie_slug}/${rightImg.filename}`} alt="" width={1200} height={900}
+          <CldImage src={`${serie.serie_slug}/${rightImg.filename.replace(/\.[^.]+$/, "")}`} alt="" width={1200} height={900}
             className="max-w-full max-h-full w-auto h-auto object-contain" sizes="100vw" priority />
           {rightItem.words && <ScatterWordsLayer words={rightItem.words} />}
           {renderOverlays(rightItem)}
@@ -356,7 +356,7 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
         {/* LEFT — clipped overlay */}
         <div className="absolute inset-0 z-10 overflow-hidden" style={{ clipPath: `inset(0 ${100 - comparePos}% 0 0)` }}>
           <div className="absolute inset-0 flex items-center justify-center">
-            <Image src={`/images/${serie.serie_slug}/${leftImg.filename}`} alt="" width={1200} height={900}
+            <CldImage src={`${serie.serie_slug}/${leftImg.filename.replace(/\.[^.]+$/, "")}`} alt="" width={1200} height={900}
               className="max-w-full max-h-full w-auto h-auto object-contain" sizes="100vw" priority />
             {leftItem.words && <ScatterWordsLayer words={leftItem.words} />}
             {renderOverlays(leftItem)}
@@ -521,7 +521,7 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
                     className={`relative flex-shrink-0 w-12 h-12 md:w-20 md:h-20 overflow-hidden transition-all ${
                       isActive ? "ring-2 ring-white opacity-100" : "opacity-40 hover:opacity-70"
                     }`}>
-                    <Image src={`/images/${serie.serie_slug}/${img.filename}`} alt="" fill
+                    <CldImage src={`${serie.serie_slug}/${img.filename.replace(/\.[^.]+$/, "")}`} alt="" fill
                       className="object-cover" sizes="(min-width: 768px) 80px, 48px" />
                   </button>
                 );

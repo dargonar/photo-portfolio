@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useCallback, useEffect } from "react";
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { siteConfig as config } from "@/data/config";
@@ -13,7 +13,7 @@ function getSerie(slug: string): Serie | undefined {
 }
 
 function getImagePath(serie: Serie, filename: string): string {
-  return `/images/${serie.serie_slug}/${filename}`;
+  return `${serie.serie_slug}/${filename.replace(/\.[^.]+$/, "")}`;
 }
 
 export function Carousel() {
@@ -123,7 +123,7 @@ export function Carousel() {
             transition={{ duration: 0.8, ease: "easeInOut" }}
             className="absolute inset-0"
           >
-            <Image
+            <CldImage
               src={src}
               alt={`${serie.serie_name} — ${item.filename}`}
               fill
