@@ -137,16 +137,18 @@ export function Carousel() {
 
       {/* Footer overlay — glass bg, fixed bottom */}
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-glass-bg backdrop-blur-md border-t border-outline-variant px-gutter p-4">
-        <div className="flex items-center gap-6 max-w-screen-xl mx-auto">
-          <span className="font-data-mono text-data-mono text-terminal-green">
+        <div className="grid grid-cols-3 items-center max-w-screen-xl mx-auto">
+          {/* Left: counter */}
+          <span className="font-data-mono text-data-mono text-primary justify-self-start">
             {pad(current + 1)} / {pad(total)}
           </span>
+          {/* Center: serie name + link */}
           <Link
             href={seriePath}
-            className="font-label-sm text-label-sm tracking-[0.1em] uppercase text-primary hover:text-on-surface-variant transition-colors"
+            className="font-label-sm text-label-sm tracking-[0.1em] text-primary hover:text-on-surface-variant transition-colors justify-self-center text-center"
           >
             {t(serie.serie_name, serie.serie_name_es)} — {serie.year}
-            <span className="ml-3 text-terminal-green">→ {isProject ? t("View project", "Ver proyecto") : t("View series", "Ver serie")}</span>
+            <span className="ml-3 text-primary">→ {isProject ? t("View project", "Ver proyecto") : t("View series", "Ver serie")}</span>
           </Link>
         </div>
       </div>

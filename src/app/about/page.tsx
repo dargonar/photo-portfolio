@@ -14,7 +14,7 @@ export default function AboutPage() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 md:gap-20">
         {/* Left: Name + portrait */}
         <div className="md:w-1/2 flex flex-col">
-          <h1 className="font-label-sm text-label-sm tracking-[0.2em] uppercase text-on-surface-variant mb-8">
+          <h1 className="font-label-sm text-label-sm tracking-[0.2em] NOTuppercase text-on-surface-variant mb-8">
             {about.title}
           </h1>
           <div className="relative aspect-[3/4] bg-white/5 mt-auto overflow-hidden">

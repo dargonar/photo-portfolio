@@ -94,7 +94,7 @@ export default function SerieClient() {
   return (
     <div className="min-h-screen px-4 py-8 max-w-7xl mx-auto">
       {/* Breadcrumb */}
-      <div className="mb-12 flex items-center gap-2 font-pt-mono text-[11px] uppercase tracking-[0.1em] text-on-surface-variant">
+      <div className="mb-12 flex items-center gap-2 font-pt-mono text-[11px] NOTuppercase tracking-[0.1em] text-on-surface-variant">
         <a
           href={`/${categorySlug}`}
           className="hover:text-white cursor-pointer transition-colors"

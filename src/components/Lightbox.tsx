@@ -298,7 +298,7 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
           <div className="w-1/2" />
           <div className="w-1/2 bg-gradient-to-r from-black/30 to-transparent" />
         </div>
-        <div className="flex-1 relative overflow-hidden flex items-center justify-center">
+        <div className="flex-1 relative overflow-hidden flex items-center justify-end">
           {serie.show_lightbox_title && leftImg.title && (
             <div className="absolute top-2 left-2 right-2 z-10 text-center pointer-events-none">
               <p className="font-pt-mono text-sm md:text-lg drop-shadow-lg">{leftImg.title}</p>
@@ -309,7 +309,7 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
           {leftItem.words && <ScatterWordsLayer words={leftItem.words} />}
         </div>
         <div className="w-px bg-white/10 flex-shrink-0 relative z-10" />
-        <div className="flex-1 relative overflow-hidden flex items-center justify-center">
+        <div className="flex-1 relative overflow-hidden flex items-center justify-start">
           {!isSingle && serie.show_lightbox_title && rightImg.title && (
             <div className="absolute top-2 left-2 right-2 z-10 text-center pointer-events-none">
               <p className="font-pt-mono text-sm md:text-lg drop-shadow-lg">{rightImg.title}</p>
@@ -432,7 +432,7 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
 
       {/* ── HEADER ── */}
       <div className="flex-shrink-0 px-4 pt-3 pb-2 flex items-center justify-between z-20">
-        <p className="font-pt-mono text-xs md:text-sm text-white/40 uppercase tracking-widest">
+        <p className="font-pt-mono text-xs text-white/40 uppercase tracking-widest">
           {t(serie.serie_name, serie.serie_name_es)} — {serie.year}
           <span className="mx-2 text-white/20">|</span>
           {current + 1}/{total}

@@ -25,7 +25,7 @@ export default function CategoryClient() {
     <div className="min-h-screen px-4 py-8">
       {/* Section Title — label style + separator line */}
       <div className="mb-8">
-        <h1 className="font-pt-mono text-[12px] tracking-[0.2em] uppercase text-on-surface-variant">
+        <h1 className="font-pt-mono text-[12px] tracking-[0.2em] NOTuppercase text-on-surface-variant">
           {catTitle}
         </h1>
         <div className="mt-2 h-[1px] w-full bg-outline-variant" />

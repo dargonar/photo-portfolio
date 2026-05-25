@@ -30,15 +30,15 @@ export function Header() {
         <div className="hidden md:flex items-center gap-10">
           <Link
             href="/series"
-            className="font-headline-lg-mobile text-label-sm uppercase tracking-widest text-primary hover:text-secondary transition-colors"
+            className="font-headline-lg-mobile text-label-sm NOTuppercase tracking-widest text-primary hover:text-secondary transition-colors"
           >
             Series
           </Link>
           <Link
             href="/projects"
-            className="font-headline-lg-mobile text-label-sm uppercase tracking-widest text-primary hover:text-secondary transition-colors"
+            className="font-headline-lg-mobile text-label-sm NOTuppercase tracking-widest text-primary hover:text-secondary transition-colors"
           >
-            Projects
+            {projectsLink ? (projectsLink.title_es ? t(projectsLink.title, projectsLink.title_es) : projectsLink.title) : "Projects"}
           </Link>
         </div>
 
