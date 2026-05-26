@@ -444,7 +444,7 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
         </p>
         <div className="flex items-center gap-2">
           {/* Mode selector (only for photo series) */}
-          {!isMixed && (
+          {!isMixed && mode !== "flipbook" && (
             <div className="flex items-center gap-1">
               {modes.map((m) => {
                 const isActive = mode === m;
