@@ -43,9 +43,9 @@ function ProseBlock({ item }: { item: TextItem }) {
   // Simple markdown-like parsing: **bold**, *italic*, > blockquote
   const html = (item.content_md ?? "")
     .replace(/^> (.*)$/gm, "<blockquote>$1</blockquote>")
-    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
-    .replace(/\*(.+?)\*/g, "<em>$1</em>")
-    .replace(/\n/g, "<br/>");
+    .replace(/\\*\\*(.+?)\\*\\*/g, "<strong>$1</strong>")
+    .replace(/\\*(.+?)\\*/g, "<em>$1</em>")
+    .replace(/\\n/g, "<br/>");
 
   return (
     <div
@@ -75,10 +75,13 @@ export default function SerieClient() {
   if (!serie) return <div className="p-8 text-white/50">Serie not found</div>;
 
   // Resolve items: if serie.items exists use it, else wrap images
+  // Filter out items marked as not visible in serie (but keep them for lightbox)
   const items: SeriesItem[] = useMemo(
     () =>
-      serie.items ??
-      serie.images.map((img) => ({ type: "photo" as const, data: img })),
+      (serie.items ?? serie.images.map((img) => ({ type: "photo" as const, data: img })))
+        .filter((item) =>
+          item.type !== "photo" || !(item as PhotoItem).data.not_visible_in_serie
+        ),
     [serie.items, serie.images]
   );
 
@@ -131,7 +134,7 @@ export default function SerieClient() {
                 onClick={() => setLightboxIndex(idx)}
               >
                 <CldImage
-                  src={`${serie.serie_slug}/${img.filename.replace(/\.[^.]+$/, "")}`}
+                  src={`${serie.serie_slug}/${img.filename.replace(/\\.[^.]+$/, "")}`}
                   alt={`${serie.serie_name} — ${img.filename}`}
                   width={800}
                   height={600}

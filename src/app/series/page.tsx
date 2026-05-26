@@ -31,7 +31,7 @@ export default function SeriesPage() {
             href={`/${serie.category_slug}/${serie.serie_slug}`}
             className="grid grid-cols-2 md:grid-cols-4 gap-[1px] group"
           >
-            {serie.images.slice(0, 4).map((img, i) => (
+            {serie.images.filter(img => !img.not_visible_in_serie).slice(0, 4).map((img, i) => (
               <div
                 key={img.filename}
                 className="relative aspect-[4/3] overflow-hidden bg-surface-container"

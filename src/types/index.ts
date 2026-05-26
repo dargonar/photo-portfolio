@@ -12,8 +12,9 @@ export interface ImageData {
   shutter_speed: string;
   focal_mm: number;
   flash: boolean;
-  editor: string;
-}
+    editor: string;
+    not_visible_in_serie?: boolean;
+  }
 
 /* ── Text overlay on a photo (in lightbox) ── */
 export interface TextOverlay {
