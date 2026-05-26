@@ -7,7 +7,7 @@
       "year": "2023",
       "category_slug": "intimate",
       "carousel_transition": "fade",
-      "show_thumbnails": true,
+      "show_thumbnails": false,
       "show_lightbox_title": true,
       "show_lightbox_footer": true,
       "lightbox_mode": "flipbook",
@@ -4187,7 +4187,7 @@
             "serie_slug": "knots"
           },
           {
-            "filename": "_DSC1108.jpg",
+            "filename": "_DSC1108_big.jpg",
             "serie_slug": "adhd"
           }
         ],

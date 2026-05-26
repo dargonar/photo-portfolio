@@ -106,7 +106,6 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
   const [current, setCurrent] = useState(initialIndex);
   const [direction, setDirection] = useState(1);
   const containerRef = useRef<HTMLDivElement>(null);
-  const slideshowTimer = useRef<ReturnType<typeof setInterval> | null>(null);
   const [slideshowPlaying, setSlideshowPlaying] = useState(false);
   const [slideshowProgress, setSlideshowProgress] = useState(0);
   const rafRef = useRef<number>(0);
@@ -186,27 +185,30 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
     return () => cancelAnimationFrame(rafRef.current);
   }, [slideshowPlaying, mode, autoplayInterval, goNext]);
 
-  const toggleSlideshow = useCallback(() => {
-    setSlideshowPlaying((p) => !p);
-    setSlideshowProgress(0);
-  }, []);
-
   /* ── swipe ── */
   const swipeHandlers = useSwipe(
     useMemo(() => ({ onSwipeLeft: goNext, onSwipeRight: goPrev }), [goNext, goPrev])
   );
 
-  /* ── mode cycle ── */
-  const cycleMode = useCallback(() => {
-    const modes: LightboxMode[] = ["single", "flipbook", "slideshow", "compare"];
-    const idx = modes.indexOf(mode);
-    const next = modes[(idx + 1) % modes.length];
-    const newStep = (next === "flipbook" || next === "compare") && !isMixed ? 2 : 1;
+  /* ── direct mode selector ── */
+  const setModeDirect = useCallback((newMode: LightboxMode) => {
+    if (newMode === mode) {
+      // Same mode: slideshow toggles play/pause
+      if (newMode === "slideshow") {
+        setSlideshowPlaying((p) => !p);
+        setSlideshowProgress(0);
+      }
+      return;
+    }
+    const newStep = (newMode === "flipbook" || newMode === "compare") && !isMixed ? 2 : 1;
     const newMax = newStep > 1 ? Math.max(0, total - 2) : total - 1;
     setCurrent((prev) => Math.min(prev, newMax));
-    setMode(next);
+    setMode(newMode);
     setDirection(1);
     setSlideshowProgress(0);
+    if (newMode === "slideshow") {
+      setSlideshowPlaying(true);
+    }
   }, [mode, total, isMixed]);
 
   /* ── compare slider ── */
@@ -408,9 +410,7 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
   }
 
   /* ── Mode label icons ── */
-  const modeLabel: Record<LightboxMode, string> = {
-    single: "1:1", flipbook: "📖", slideshow: "▶", compare: "⇔",
-  };
+  const modes: LightboxMode[] = ["single", "flipbook", "slideshow", "compare"];
 
   return (
     <motion.div
@@ -443,28 +443,51 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
           )}
         </p>
         <div className="flex items-center gap-2">
-          {/* Mode toggle (only show for photo series) */}
+          {/* Mode selector (only for photo series) */}
           {!isMixed && (
-            <button onClick={cycleMode}
-              className="w-7 h-7 flex items-center justify-center text-white/40 hover:text-white/80 transition-colors text-xs font-pt-mono rounded hover:bg-white/5"
-              title={`Mode: ${mode}`}>
-              {modeLabel[mode]}
-            </button>
-          )}
-          {mode === "slideshow" && isPhoto && (
-            <button onClick={toggleSlideshow}
-              className="w-7 h-7 flex items-center justify-center text-white/40 hover:text-white/80 transition-colors"
-              aria-label={slideshowPlaying ? "Pause" : "Play"}>
-              {slideshowPlaying ? (
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                  <rect x="6" y="4" width="4" height="16" rx="1" /><rect x="14" y="4" width="4" height="16" rx="1" />
-                </svg>
-              ) : (
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              )}
-            </button>
+            <div className="flex items-center gap-1">
+              {modes.map((m) => {
+                const isActive = mode === m;
+                const showPause = m === "slideshow" && isActive && slideshowPlaying;
+                return (
+                  <button
+                    key={m}
+                    onClick={() => setModeDirect(m)}
+                    className={`w-7 h-7 flex items-center justify-center border transition-all duration-200 text-xs font-pt-mono ${
+                      isActive
+                        ? "border-primary bg-primary text-background"
+                        : "border-white/20 text-white/40 hover:border-white/60 hover:text-white/80"
+                    }`}
+                    title={m.charAt(0).toUpperCase() + m.slice(1)}
+                  >
+                    {m === "slideshow" ? (
+                      showPause ? (
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                          <rect x="6" y="4" width="4" height="16" rx="1" />
+                          <rect x="14" y="4" width="4" height="16" rx="1" />
+                        </svg>
+                      ) : (
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      )
+                    ) : m === "single" ? (
+                      "1∶1"
+                    ) : m === "flipbook" ? (
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <rect x="2" y="3" width="8" height="18" rx="1" />
+                        <rect x="14" y="3" width="8" height="18" rx="1" />
+                      </svg>
+                    ) : (
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <line x1="6" y1="2" x2="6" y2="22" />
+                        <path d="M12 12 L18 6 L18 18 Z" fill="currentColor" stroke="none" />
+                      </svg>
+                    )}
+                  </button>
+                );
+              })}
+            </div>
           )}
           <button onClick={onClose}
             className="w-8 h-8 flex items-center justify-center text-white/70 hover:text-white transition-colors"
