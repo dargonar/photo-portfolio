@@ -10,7 +10,7 @@
       "show_thumbnails": false,
       "show_lightbox_title": true,
       "show_lightbox_footer": true,
-      "lightbox_mode": "flipbook",
+      "lightbox_mode": "single",
       "lightbox_autoplay_interval": 4000,
       "images": [
         {
@@ -1920,34 +1920,34 @@
           },
           "words": [
             {
-              "text": "nunca",
+              "text": "noches",
               "x": 35,
               "y": 70,
               "rotate": -8,
               "class": "word-body-small"
             },
             {
-              "text": "fue",
+              "text": ":",
               "x": 45,
               "y": 70,
               "rotate": 6,
               "class": "word-body-small"
             },
             {
-              "text": "peor",
-              "x": 55,
+              "text": "frenéticas",
+              "x": 60,
               "y": 70,
               "class": "word-body-small"
             },
             {
-              "text": "ni",
+              "text": "y",
               "x": 75,
               "y": 70,
               "rotate": 10,
               "class": "word-body-small"
             },
             {
-              "text": "mejor",
+              "text": "vagas",
               "x": 85,
               "y": 70,
               "rotate": 10,
@@ -1973,15 +1973,39 @@
           },
           "words": [
             {
-              "text": "que",
-              "x": 35,
+              "text": "anotaba",
+              "x": 15,
               "y": 70,
               "rotate": -8,
               "class": "word-body-small"
             },
             {
-              "text": "entonces",
+              "text": "contactos",
+              "x": 35,
+              "y": 70,
+              "rotate": 6,
+              "class": "word-body-small"
+            }
+            ,
+            {
+              "text": "en",
+              "x": 50,
+              "y": 70,
+              "rotate": 6,
+              "class": "word-body-small"
+            }
+            ,
+            {
+              "text": "mi",
               "x": 55,
+              "y": 70,
+              "rotate": -5,
+              "class": "word-body-small"
+            }
+            ,
+            {
+              "text": "agenda",
+              "x": 65,
               "y": 70,
               "rotate": 6,
               "class": "word-body-small"
@@ -2005,28 +2029,28 @@
           },
           "words": [
             {
-              "text": "sabía",
-              "x": 25,
+              "text": "sudaba",
+              "x": 45,
               "y": 70,
               "rotate": -4,
               "class": "word-body-small"
             },
             {
-              "text": "lo",
-              "x": 45,
+              "text": "de",
+              "x": 55,
               "y": 75,
               "class": "word-body-small"
             },
             {
-              "text": "que",
+              "text": "tanto",
               "x": 65,
               "y": 75,
-              "rotate": 3,
+              "rotate": -7,
               "class": "word-body-small"
             },
             {
-              "text": "queria",
-              "x": 75,
+              "text": "bailar",
+              "x": 80,
               "y": 75,
               "rotate": 3,
               "class": "word-body-small"
@@ -2050,37 +2074,31 @@
           },
           "words": [
             {
-              "text": "no",
-              "x": 25,
-              "y": 75,
-              "rotate": -4,
-              "class": "word-body-small"
-            },
-            {
-              "text": "cómo",
-              "x": 45,
-              "y": 75,
-              "class": "word-body-small"
-            },
-            {
-              "text": "vivir",
-              "x": 65,
+              "text": "pensaba",
+              "x": 15,
               "y": 75,
               "rotate": 3,
               "class": "word-body-small"
             },
             {
-              "text": "de",
-              "x": 75,
+              "text": "...",
+              "x": 30,
               "y": 75,
               "rotate": 3,
               "class": "word-body-small"
             },
             {
-              "text": "eso",
+              "text": "rumiaba",
               "x": 85,
               "y": 75,
               "rotate": 3,
+              "class": "word-body-small"
+            },
+            {
+              "text": "!",
+              "x": 93,
+              "y": 75,
+              "rotate": -3,
               "class": "word-body-small"
             }
           ]
@@ -2099,7 +2117,50 @@
             "focal_mm": 0,
             "flash": false,
             "editor": ""
-          }
+          },
+          "words": [
+            {
+              "text": "¿",
+              "x": 40,
+              "y": 75,
+              "rotate": -4,
+              "class": "word-italic"
+            },
+            {
+              "text": "todo",
+              "x": 50,
+              "y": 75,
+              "rotate": 8,
+              "class": "word-italic"
+            },
+            {
+              "text": "esto",
+              "x": 60,
+              "y": 75,
+              "class": "word-italic"
+            },
+            {
+              "text": "para",
+              "x": 70,
+              "y": 75,
+              "rotate": 3,
+              "class": "word-italic"
+            },
+            {
+              "text": "qué",
+              "x": 85,
+              "y": 75,
+              "rotate": 3,
+              "class": "word-italic"
+            },
+            {
+              "text": "?",
+              "x": 92,
+              "y": 75,
+              "rotate": -7,
+              "class": "word-body-small"
+            }
+          ]
         },
         {
           "type": "photo",
@@ -2119,30 +2180,51 @@
           "words": [
             {
               "text": "despertaba",
-              "x": 50,
-              "y": 35,
-              "rotate": -2,
-              "class": "word-title"
+              "x": 15,
+              "y": 75,
+              "rotate": -4,
+              "class": "word-body-small"
             },
             {
-              "text": "a veces",
-              "x": 35,
-              "y": 55,
-              "class": "word-subtle"
+              "text": "a",
+              "x": 27,
+              "y": 75,
+              "class": "word-body-small"
             },
             {
-              "text": "en mi departamento",
-              "x": 65,
-              "y": 70,
-              "rotate": 1,
-              "class": "word-italic"
+              "text": "veces",
+              "x": 37,
+              "y": 75,
+              "rotate": 3,
+              "class": "word-body-small"
+            },
+            {
+              "text": "en",
+              "x": 47,
+              "y": 75,
+              "rotate": 3,
+              "class": "word-body-small"
+            },
+            {
+              "text": "mi",
+              "x": 55,
+              "y": 75,
+              "rotate": 3,
+              "class": "word-body-small"
+            },
+            {
+              "text": "departamento",
+              "x": 70,
+              "y": 75,
+              "rotate": 3,
+              "class": "word-body-small"
             }
           ]
         },
         {
           "type": "photo",
           "data": {
-            "filename": "_DSC5712-4-2.jpg",
+            "filename": "_DSC5948.jpg",
             "title": "",
             "description": "",
             "exif_date": "2023-01-01",
@@ -2153,42 +2235,21 @@
             "focal_mm": 0,
             "flash": false,
             "editor": ""
-          }
-        },
-        {
-          "type": "text",
-          "layout": "scatter",
-          "canvas": {
-            "width": 1000,
-            "height": 1500
           },
           "words": [
             {
-              "text": "Un tren lanzado",
-              "x": 30,
-              "y": 25,
-              "rotate": -3,
-              "class": "word-hero"
+              "text": "muchas",
+              "x": 17,
+              "y": 75,
+              "rotate": 3,
+              "class": "word-body-small"
             },
             {
-              "text": "a toda velocidad",
-              "x": 60,
-              "y": 40,
-              "rotate": 5,
-              "class": "word-title"
-            },
-            {
-              "text": "hacia el fondo",
-              "x": 45,
-              "y": 60,
-              "rotate": -2,
-              "class": "word-body"
-            },
-            {
-              "text": "del fin de la noche",
-              "x": 55,
-              "y": 78,
-              "class": "word-subtle"
+              "text": "no",
+              "x": 25,
+              "y": 75,
+              "rotate": 3,
+              "class": "word-body-small"
             }
           ]
         },
@@ -2206,7 +2267,29 @@
             "focal_mm": 0,
             "flash": false,
             "editor": ""
-          }
+          },
+          "words": [
+            {
+              "text": "ocultándome",
+              "x": 25,
+              "y": 75,
+              "rotate": -4,
+              "class": "word-body-small"
+            },
+            {
+              "text": "de",
+              "x": 42,
+              "y": 75,
+              "class": "word-body-small"
+            },
+            {
+              "text": "mí",
+              "x": 52,
+              "y": 75,
+              "rotate": 3,
+              "class": "word-body-small"
+            }
+          ]
         },
         {
           "type": "photo",
@@ -2225,18 +2308,31 @@
           },
           "words": [
             {
-              "text": "¿Todo esto",
-              "x": 30,
-              "y": 30,
-              "rotate": -3,
-              "class": "word-muted"
+              "text": "con",
+              "x": 35,
+              "y": 75,
+              "rotate": -4,
+              "class": "word-body-small"
             },
             {
-              "text": "para qué?",
-              "x": 60,
-              "y": 50,
-              "rotate": 2,
-              "class": "word-hero"
+              "text": "los",
+              "x": 46,
+              "y": 75,
+              "class": "word-body-small"
+            },
+            {
+              "text": "ojos",
+              "x": 55,
+              "y": 75,
+              "rotate": 3,
+              "class": "word-body-small"
+            },
+            {
+              "text": "cerrados",
+              "x": 70,
+              "y": 75,
+              "rotate": 3,
+              "class": "word-body-small"
             }
           ]
         },
@@ -2254,36 +2350,27 @@
             "focal_mm": 0,
             "flash": false,
             "editor": ""
-          }
-        },
-        {
-          "type": "text",
-          "layout": "scatter",
-          "canvas": {
-            "width": 1000,
-            "height": 1500
           },
           "words": [
             {
-              "text": "Todo va a",
-              "x": 50,
-              "y": 35,
-              "rotate": -1,
-              "class": "word-muted"
+              "text": "escuchando",
+              "x": 25,
+              "y": 75,
+              "rotate": -4,
+              "class": "word-italic"
             },
             {
-              "text": "estar",
-              "x": 42,
-              "y": 55,
+              "text": "latidos",
+              "x": 43,
+              "y": 75,
+              "class": "word-italic"
+            },
+            {
+              "text": "mudos",
+              "x": 59,
+              "y": 75,
               "rotate": 3,
-              "class": "word-emphasis"
-            },
-            {
-              "text": "bien",
-              "x": 58,
-              "y": 70,
-              "rotate": -2,
-              "class": "word-hero"
+              "class": "word-italic"
             }
           ]
         },
@@ -2301,7 +2388,43 @@
             "focal_mm": 0,
             "flash": false,
             "editor": ""
-          }
+          },
+          "words": [
+            {
+              "text": "un",
+              "x": 15,
+              "y": 75,
+              "rotate": -4,
+              "class": "word-body-small"
+            },
+            {
+              "text": "tren",
+              "x": 22,
+              "y": 75,
+              "rotate": -4,
+              "class": "word-body-small"
+            },
+            {
+              "text": "a",
+              "x": 32,
+              "y": 75,
+              "class": "word-body-small"
+            },
+            {
+              "text": "toda",
+              "x": 39,
+              "y": 75,
+              "rotate": 3,
+              "class": "word-body-small"
+            },
+            {
+              "text": "velocidad",
+              "x": 49,
+              "y": 75,
+              "rotate": 3,
+              "class": "word-body-small"
+            }
+          ]
         },
         {
           "type": "photo",
@@ -2317,21 +2440,26 @@
             "focal_mm": 0,
             "flash": false,
             "editor": ""
-          },
-          "words": [
+          },"words": [
             {
-              "text": "los latidos",
-              "x": 40,
-              "y": 35,
-              "rotate": -2,
-              "class": "word-title bg-black pl-4 pr-4"
+              "text": "hacia",
+              "x": 15,
+              "y": 75,
+              "rotate": -4,
+              "class": "word-body-small"
             },
             {
-              "text": "de mi corazón",
-              "x": 55,
-              "y": 55,
-              "rotate": 1,
-              "class": "word-body"
+              "text": "el",
+              "x": 25,
+              "y": 75,
+              "rotate": -4,
+              "class": "word-body-small"
+            },
+            {
+              "text": "fondo",
+              "x": 32,
+              "y": 75,
+              "class": "word-body-small"
             }
           ]
         },
@@ -2349,43 +2477,42 @@
             "focal_mm": 0,
             "flash": false,
             "editor": ""
-          }
-        },
-        {
-          "type": "text",
-          "layout": "scatter",
-          "canvas": {
-            "width": 1000,
-            "height": 1500
           },
           "words": [
             {
-              "text": "Arañando",
-              "x": 25,
-              "y": 25,
-              "rotate": -4,
-              "class": "word-hero"
-            },
-            {
-              "text": "entre cenizas",
-              "x": 60,
-              "y": 38,
-              "rotate": 2,
-              "class": "word-title"
-            },
-            {
-              "text": "la luz",
-              "x": 45,
-              "y": 55,
-              "rotate": -1,
-              "class": "word-body"
-            },
-            {
-              "text": "de una brasa",
-              "x": 50,
-              "y": 72,
+              "text": "del",
+              "x": 42,
+              "y": 75,
               "rotate": 3,
-              "class": "word-italic"
+              "class": "word-body-small"
+            },
+            {
+              "text": "fin",
+              "x": 55,
+              "y": 75,
+              "rotate": 3,
+              "class": "word-body-small"
+            },
+            {
+              "text": "de",
+              "x": 65,
+              "y": 76,
+              "rotate": 3,
+              "class": "word-body-small"
+            },
+            {
+              "text": "la",
+              "x": 72,
+              "y": 75,
+              "rotate": 3,
+              "class": "word-body-small"
+            },
+            {
+              "text": "noche",
+              "x": 82,
+              "y": 75,
+              "rotate": 3,
+              "class": "word-body-small"
             }
           ]
         },
@@ -2403,7 +2530,43 @@
             "focal_mm": 0,
             "flash": false,
             "editor": ""
-          }
+          },
+          "words": [
+            {
+              "text": "arañando",
+              "x": 10,
+              "y": 75,
+              "rotate": -4,
+              "class": "word-body-small"
+            },
+            {
+              "text": "entre",
+              "x": 25,
+              "y": 75,
+              "rotate": -4,
+              "class": "word-body-small"
+            },
+            {
+              "text": "cenizas",
+              "x": 40,
+              "y": 75,
+              "class": "word-body-small"
+            },
+            {
+              "text": "una",
+              "x": 50,
+              "y": 75,
+              "rotate": 3,
+              "class": "word-body-small"
+            },
+            {
+              "text": "brasa",
+              "x": 60,
+              "y": 75,
+              "rotate": 3,
+              "class": "word-body-small"
+            }
+          ]
         },
         {
           "type": "photo",
@@ -2422,68 +2585,119 @@
           },
           "words": [
             {
-              "text": "Algo",
-              "x": 35,
-              "y": 30,
-              "class": "word-emphasis"
+              "text": "que",
+              "x": 65,
+              "y": 75,
+              "rotate": -4,
+              "class": "word-body-small"
             },
             {
-              "text": "sucederá",
-              "x": 60,
-              "y": 55,
-              "rotate": -3,
-              "class": "word-hero"
+              "text": "decía",
+              "x": 80,
+              "y": 75,
+              "rotate": -4,
+              "class": "word-body-small"
+            },
+            {
+              "text": ":",
+              "x": 90,
+              "y": 75,
+              "class": "word-body-small"
             }
           ]
         },
         {
-          "type": "text",
-          "layout": "scatter",
-          "canvas": {
-            "width": 1000,
-            "height": 1500
+          "type": "photo",
+          "data": {
+            "filename": "_DSC5822.jpg",
+            "title": "",
+            "description": "",
+            "exif_date": "2023-01-01",
+            "location": "La Plata, AR",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "_DSC5719.jpg",
+            "title": "",
+            "description": "",
+            "exif_date": "2023-01-01",
+            "location": "La Plata, AR",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
           },
           "words": [
             {
-              "text": "Sabía",
-              "x": 30,
-              "y": 30,
-              "rotate": -2,
-              "class": "word-title"
-            },
-            {
-              "text": "lo que quería hacer,",
+              "text": "Hay",
               "x": 50,
-              "y": 45,
-              "rotate": 1,
-              "class": "word-body"
-            },
-            {
-              "text": "pero no",
-              "x": 50,
-              "y": 60,
+              "y": 75,
               "rotate": -4,
-              "class": "word-italic"
+              "class": "word-body-small"
             },
             {
-              "text": "cómo",
-              "x": 50,
-              "y": 72,
-              "class": "word-emphasis"
+              "text": "que",
+              "x": 60,
+              "y": 75,
+              "rotate": 4,
+              "class": "word-body-small"
+            },
+            {
+              "text": "seguir",
+              "x": 70,
+              "y": 75,
+              "rotate": -9,
+              "class": "word-body-small"
+            },
+            {
+              "text": ",",
+              "x": 80,
+              "y": 75,
+              "class": "word-body-small"
             }
           ]
         },
         {
-          "type": "text",
-          "layout": "prose",
-          "content_md": "*Nunca fue peor que entonces.*\n\nSabía lo que quería hacer,\npero no **cómo** se hacía para vivir de eso.\n\nEl tiempo transcurría con una asfixia extraña,\na empujones de euforia y de desazón.",
-          "class": "text-slide-prose"
-        },
-        {
-          "type": "text",
-          "layout": "prose",
-          "content_md": "Una mañana toda la oscuridad\nse había esfumado,\ny a la siguiente *estaba*,\notra vez,\nen medio de la **sombra**.",
-          "class": "text-slide-prose"
+          "type": "photo",
+          "data": {
+            "filename": "_DSC5500.jpg",
+            "title": "",
+            "description": "",
+            "exif_date": "2023-01-01",
+            "location": "La Plata, AR",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          },
+          "words": [
+            {
+              "text": "algo",
+              "x": 10,
+              "y": 75,
+              "rotate": 9,
+              "class": "word-body-small"
+            },
+            {
+              "text": "sucederá",
+              "x": 28,
+              "y": 75,
+              "rotate": -4,
+              "class": "word-body-small-red"
+            }
+          ]
         }
       ]
     },
@@ -3265,7 +3479,8 @@
       "description": "",
       "description_es": "",
       "carousel_transition": "fade",
-      "show_thumbnails": true,
+      "lightbox_mode": "flipbook",
+      "show_thumbnails": false,
       "show_lightbox_title": true,
       "show_lightbox_footer": true,
       "images": [
