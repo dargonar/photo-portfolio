@@ -14,7 +14,7 @@
       "lightbox_autoplay_interval": 4000,
       "images": [
         {
-          "filename": "00_IMG_1122_v2.jpg",
+          "filename": "IMG_1122_vNEW.jpg",
           "title": "",
           "description": "",
           "exif_date": "2023-01-01",
@@ -2278,7 +2278,7 @@
         {
           "type": "text",
           "layout": "prose",
-          "content_md": "> *Nunca fue peor que entonces.*\n\nSabía lo que quería hacer,\npero no **cómo** se hacía para vivir de eso.\n\nEl tiempo transcurría con una asfixia extraña,\na empujones de euforia y de desazón.",
+          "content_md": "*Nunca fue peor que entonces.*\n\nSabía lo que quería hacer,\npero no **cómo** se hacía para vivir de eso.\n\nEl tiempo transcurría con una asfixia extraña,\na empujones de euforia y de desazón.",
           "class": "text-slide-prose"
         },
         {
@@ -2617,11 +2617,11 @@
           "editor": ""
         },
         {
-          "filename": "IMG_1415_v2.jpg",
+          "filename": "IMG_1415_vNEW_2.jpg",
           "title": "",
           "description": "",
           "exif_date": "2023-01-01",
-          "location": "La Plata, AR",
+          "location": "La IMG_1122_vNEW.jpg AR",
           "iso": 0,
           "aperture_f": 0,
           "shutter_speed": "",
@@ -4166,11 +4166,11 @@
       "carousel": {
         "images": [
           {
-            "filename": "IMG_1415_v2.jpg",
+            "filename": "IMG_1415_vNEW_2.jpg",
             "serie_slug": "soluble-oil"
           },
           {
-            "filename": "00_IMG_1122_v2.jpg",
+            "filename": "IMG_1122_vNEW.jpg",
             "serie_slug": "bw"
           },
           {

@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useI18n } from "@/hooks/useI18n";
 import { useSwipe } from "@/hooks/useSwipe";
 import { ScatterWordsLayer } from "@/components/ScatterWordsLayer";
+import { mdToHtml } from "@/lib/mdToHtml";
 
 interface LightboxProps {
   serie: Serie;
@@ -27,13 +28,7 @@ const fadeVariants = {
 };
 
 /* ── prose text: simple markdown → HTML ── */
-function mdToHtml(md: string): string {
-  return md
-    .replace(/^> (.*)$/gm, "<blockquote>$1</blockquote>")
-    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
-    .replace(/\*(.+?)\*/g, "<em>$1</em>")
-    .replace(/\n/g, "<br/>");
-}
+// imported from @/lib/mdToHtml
 
 /* ── render scatter text (words positioned on a full-screen canvas) ── */
 function ScatterSlide({ item }: { item: TextItem }) {

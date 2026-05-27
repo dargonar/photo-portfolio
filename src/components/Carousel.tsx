@@ -42,11 +42,11 @@ export function Carousel() {
   }, [goNext, goPrev]);
 
   // Autoplay — advance every transition_interval_s seconds
-  useEffect(() => {
-    const interval = (config.pages.home.carousel.transition_interval_s ?? 5) * 1000;
-    const timer = setInterval(goNext, interval);
-    return () => clearInterval(timer);
-  }, [goNext]);
+  // useEffect(() => {
+  //   const interval = (config.pages.home.carousel.transition_interval_s ?? 5) * 1000;
+  //   const timer = setInterval(goNext, interval);
+  //   return () => clearInterval(timer);
+  // }, [goNext]);
 
   // Switch image set on resize across 1024px boundary (+ initial check)
   useEffect(() => {

@@ -10,6 +10,7 @@ import { CldImage } from "next-cloudinary";
 import { Lightbox } from "@/components/Lightbox";
 import { NerdOverlay } from "@/components/NerdOverlay";
 import { ScatterWordsLayer } from "@/components/ScatterWordsLayer";
+import { mdToHtml } from "@/lib/mdToHtml";
 
 /* ── render a scatter-word canvas ── */
 function ScatterCanvas({ item }: { item: TextItem }) {
@@ -40,12 +41,7 @@ function ScatterCanvas({ item }: { item: TextItem }) {
 
 /* ── render a prose text block ── */
 function ProseBlock({ item }: { item: TextItem }) {
-  // Simple markdown-like parsing: **bold**, *italic*, > blockquote
-  const html = (item.content_md ?? "")
-    .replace(/^> (.*)$/gm, "<blockquote>$1</blockquote>")
-    .replace(/\\*\\*(.+?)\\*\\*/g, "<strong>$1</strong>")
-    .replace(/\\*(.+?)\\*/g, "<em>$1</em>")
-    .replace(/\\n/g, "<br/>");
+  const html = mdToHtml(item.content_md ?? "");
 
   return (
     <div
