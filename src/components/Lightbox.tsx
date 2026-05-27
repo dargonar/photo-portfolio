@@ -106,7 +106,7 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
   const autoplayInterval = serie.lightbox_autoplay_interval ?? 4000;
 
   const total = items.length;
-  const step = (mode === "flipbook" || mode === "compare") && !isMixed ? 2 : 1;
+  const step = mode === "flipbook" || (mode === "compare" && !isMixed) ? 2 : 1;
   const maxIndex = step > 1 ? Math.max(0, total - 2) : total - 1;
 
   const currentItem = items[current];
@@ -194,7 +194,7 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
       }
       return;
     }
-    const newStep = (newMode === "flipbook" || newMode === "compare") && !isMixed ? 2 : 1;
+    const newStep = newMode === "flipbook" || (newMode === "compare" && !isMixed) ? 2 : 1;
     const newMax = newStep > 1 ? Math.max(0, total - 2) : total - 1;
     setCurrent((prev) => Math.min(prev, newMax));
     setMode(newMode);
@@ -274,53 +274,72 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
   }
 
   function renderFlipbook() {
-    const leftItem = items[current] as PhotoItem;
-    const leftImg = leftItem.data;
-    const rightIdx = Math.min(current + 1, total - 1);
-    const rightItem = items[rightIdx]?.type === "photo" ? (items[rightIdx] as PhotoItem) : leftItem;
-    const rightImg = rightItem.data;
-    const isSingle = leftItem === rightItem;
+      const currentItem_ = items[current];
+      const isLeftPhoto = currentItem_?.type === "photo";
+      const isLeftText = currentItem_?.type === "text";
+      const rightIdx = Math.min(current + 1, total - 1);
+      const rightItem = items[rightIdx];
+      const isRightPhoto = rightItem?.type === "photo";
+      const isRightText = rightItem?.type === "text";
 
-    return (
-      <motion.div
-        key={`spread-${current}`}
-        custom={direction}
-        variants={slideVariants}
-        initial="enter" animate="center" exit="exit"
-        transition={{ duration: 0.35, ease: "easeInOut" }}
-        className="absolute inset-0 flex"
-      >
-        <div className="absolute inset-0 z-[5] pointer-events-none flex">
-          <div className="w-1/2" />
-          <div className="w-1/2 bg-gradient-to-r from-black/30 to-transparent" />
-        </div>
-        <div className="flex-1 relative overflow-hidden flex items-center justify-end">
-          {serie.show_lightbox_title && leftImg.title && (
-            <div className="absolute top-2 left-2 right-2 z-10 text-center pointer-events-none">
-              <p className="font-pt-mono text-sm md:text-lg drop-shadow-lg">{leftImg.title}</p>
-            </div>
-          )}
-          <CldImage src={`${serie.serie_slug}/${leftImg.filename.replace(/\.[^.]+$/, "")}`} alt="" width={1200} height={900}
-            className="max-w-full max-h-full w-auto h-auto object-contain" sizes="50vw" priority />
-          {leftItem.words && <ScatterWordsLayer words={leftItem.words} />}
-        </div>
-        <div className="w-px bg-white/10 flex-shrink-0 relative z-10" />
-        <div className="flex-1 relative overflow-hidden flex items-center justify-start">
-          {!isSingle && serie.show_lightbox_title && rightImg.title && (
-            <div className="absolute top-2 left-2 right-2 z-10 text-center pointer-events-none">
-              <p className="font-pt-mono text-sm md:text-lg drop-shadow-lg">{rightImg.title}</p>
-            </div>
-          )}
-          <CldImage src={`${serie.serie_slug}/${rightImg.filename.replace(/\.[^.]+$/, "")}`} alt="" width={1200} height={900}
-            className="max-w-full max-h-full w-auto h-auto object-contain" sizes="50vw" priority />
-          {rightItem.words && <ScatterWordsLayer words={rightItem.words} />}
-        </div>
-        <div className="absolute inset-y-0 left-1/2 w-8 -translate-x-1/2 pointer-events-none z-[6]">
-          <div className="w-full h-full bg-gradient-to-r from-black/20 via-black/10 to-transparent" />
-        </div>
-      </motion.div>
-    );
-  }
+      return (
+        <motion.div
+          key={`spread-${current}`}
+          custom={direction}
+          variants={slideVariants}
+          initial="enter" animate="center" exit="exit"
+          transition={{ duration: 0.35, ease: "easeInOut" }}
+          className="absolute inset-0 flex"
+        >
+          <div className="absolute inset-0 z-[5] pointer-events-none flex">
+            <div className="w-1/2" />
+            <div className="w-1/2 bg-gradient-to-r from-black/30 to-transparent" />
+          </div>
+          {/* LEFT: photo or text */}
+          <div className="flex-1 relative overflow-hidden flex items-center justify-end">
+            {isLeftText ? (
+              currentItem_.layout === "scatter"
+                ? <ScatterSlide item={currentItem_ as TextItem} />
+                : <ProseSlide item={currentItem_ as TextItem} />
+            ) : isLeftPhoto ? (
+              <>
+                {serie.show_lightbox_title && (currentItem_ as PhotoItem).data.title && (
+                  <div className="absolute top-2 left-2 right-2 z-10 text-center pointer-events-none">
+                    <p className="font-pt-mono text-sm md:text-lg drop-shadow-lg">{(currentItem_ as PhotoItem).data.title}</p>
+                  </div>
+                )}
+                <CldImage src={`${serie.serie_slug}/${(currentItem_ as PhotoItem).data.filename.replace(/\\.[^.]+$/, "")}`} alt="" width={1200} height={900}
+                  className="max-w-full max-h-full w-auto h-auto object-contain" sizes="50vw" priority />
+                {(currentItem_ as PhotoItem).words && <ScatterWordsLayer words={(currentItem_ as PhotoItem).words!} />}
+              </>
+            ) : null}
+          </div>
+          <div className="w-px bg-white/10 flex-shrink-0 relative z-10" />
+          {/* RIGHT: photo or text */}
+          <div className="flex-1 relative overflow-hidden flex items-center justify-start">
+            {isRightText ? (
+              rightItem.layout === "scatter"
+                ? <ScatterSlide item={rightItem as TextItem} />
+                : <ProseSlide item={rightItem as TextItem} />
+            ) : isRightPhoto ? (
+              <>
+                {serie.show_lightbox_title && (rightItem as PhotoItem).data.title && (
+                  <div className="absolute top-2 left-2 right-2 z-10 text-center pointer-events-none">
+                    <p className="font-pt-mono text-sm md:text-lg drop-shadow-lg">{(rightItem as PhotoItem).data.title}</p>
+                  </div>
+                )}
+                <CldImage src={`${serie.serie_slug}/${(rightItem as PhotoItem).data.filename.replace(/\\.[^.]+$/, "")}`} alt="" width={1200} height={900}
+                  className="max-w-full max-h-full w-auto h-auto object-contain" sizes="50vw" priority />
+                <ScatterWordsLayer words={(rightItem as PhotoItem).words ?? []} />
+              </>
+            ) : null}
+          </div>
+          <div className="absolute inset-y-0 left-1/2 w-8 -translate-x-1/2 pointer-events-none z-[6]">
+            <div className="w-full h-full bg-gradient-to-r from-black/20 via-black/10 to-transparent" />
+          </div>
+        </motion.div>
+      );
+    }
 
   function renderCompare() {
     const leftItem = items[current] as PhotoItem;
@@ -375,33 +394,32 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
 
   /* ── Central renderer: decides what to show ── */
   function renderContent() {
-    if (!currentItem) return null;
+      if (!currentItem) return null;
 
-    if (currentItem.type === "text") {
-      const ti = currentItem as TextItem;
-      return (
-        <motion.div
-          key={`text-${current}`}
-          variants={fadeVariants}
-          initial="enter" animate="center" exit="exit"
-          transition={{ duration: 0.3 }}
-          className="absolute inset-0"
-        >
-          {ti.layout === "scatter" ? <ScatterSlide item={ti} /> : <ProseSlide item={ti} />}
-        </motion.div>
-      );
-    }
+      // In single/slideshow/compare modes, text items render full-width
+      if (currentItem.type === "text" && mode !== "flipbook") {
+        const ti = currentItem as TextItem;
+        return (
+          <motion.div
+            key={`text-${current}`}
+            variants={fadeVariants}
+            initial="enter" animate="center" exit="exit"
+            transition={{ duration: 0.3 }}
+            className="absolute inset-0"
+          >
+            {ti.layout === "scatter" ? <ScatterSlide item={ti} /> : <ProseSlide item={ti} />}
+          </motion.div>
+        );
+      }
 
-    // Photo item
-    const photo = currentItem as PhotoItem;
-    switch (mode) {
-      case "flipbook": return renderFlipbook();
-      case "compare": return renderCompare();
-      case "slideshow":
-      case "single":
-      default: return renderSinglePhoto(photo, current);
+      switch (mode) {
+        case "flipbook": return renderFlipbook();
+        case "compare": return renderCompare();
+        case "slideshow":
+        case "single":
+        default: return renderSinglePhoto(currentItem as PhotoItem, current);
+      }
     }
-  }
 
   /* ── Mode label icons ── */
   const modes: LightboxMode[] = ["single", "flipbook", "slideshow", "compare"];
