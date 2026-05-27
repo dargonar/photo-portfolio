@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef, useMemo } from "react";
 import { CldImage } from "next-cloudinary";
-import type { Serie, ImageData, LightboxMode, SeriesItem, PhotoItem, TextItem } from "@/types";
+import type { Serie, LightboxMode, SeriesItem, PhotoItem, TextItem } from "@/types";
 import { motion, AnimatePresence } from "framer-motion";
 import { useI18n } from "@/hooks/useI18n";
 import { useSwipe } from "@/hooks/useSwipe";
@@ -88,10 +88,9 @@ function OverlayBadge({ overlay, serieSlug }: { overlay: import("@/types").TextO
 export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
   const { t } = useI18n();
 
-  // Resolve items
   const items: SeriesItem[] = useMemo(
-    () => serie.items ?? serie.images.map((img) => ({ type: "photo" as const, data: img })),
-    [serie.items, serie.images]
+    () => serie.images,
+    [serie.images]
   );
 
   const isMixed = items.some((it) => it.type !== "photo");

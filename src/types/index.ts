@@ -73,8 +73,7 @@ export interface Serie {
   show_lightbox_footer: boolean;
   lightbox_mode?: LightboxMode;
   lightbox_autoplay_interval?: number;
-  images: ImageData[];
-  items?: SeriesItem[];
+  images: SeriesItem[];
 }
 
 export interface CarouselImage {
@@ -93,6 +92,7 @@ export interface HomeConfig {
 export interface AboutConfig {
   title: string;
   content_text: string;
+  content_text_es?: string;
   image: string;
 }
 

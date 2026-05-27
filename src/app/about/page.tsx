@@ -7,7 +7,7 @@ import { useI18n } from "@/hooks/useI18n";
 export default function AboutPage() {
   const about = config.pages.about;
   const { t } = useI18n();
-  const bio = t(about.content_text, about.content_text_es);
+  const bio = t(about.content_text, about.content_text_es ?? about.content_text);
 
   return (
     <div className="min-h-screen px-gutter md:px-8 py-8">

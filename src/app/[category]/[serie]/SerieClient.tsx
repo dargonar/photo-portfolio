@@ -1,7 +1,7 @@
 "use client";
 
 import { siteConfig, allCategories } from "@/data/config";
-import type { SeriesItem, PhotoItem, TextItem, ImageData } from "@/types";
+import type { SeriesItem, PhotoItem, TextItem } from "@/types";
 import { useI18n } from "@/hooks/useI18n";
 import { useNerdMode } from "@/hooks/useNerdMode";
 import { useState, useMemo } from "react";
@@ -70,16 +70,14 @@ export default function SerieClient() {
   const serie = siteConfig.series.find((s) => s.serie_slug === serieSlug);
   if (!serie) return <div className="p-8 text-white/50">Serie not found</div>;
 
-  // Resolve items: if serie.items exists use it, else wrap images
   // Filter out items marked as not visible in serie (but keep them for lightbox)
-  const items: SeriesItem[] = useMemo(
-    () =>
-      (serie.items ?? serie.images.map((img) => ({ type: "photo" as const, data: img })))
-        .filter((item) =>
+    const items: SeriesItem[] = useMemo(
+      () =>
+        serie.images.filter((item) =>
           item.type !== "photo" || !(item as PhotoItem).data.not_visible_in_serie
         ),
-    [serie.items, serie.images]
-  );
+      [serie.images]
+    );
 
   const category = allCategories.find(
     (c: { category_slug: string }) => c.category_slug === categorySlug
