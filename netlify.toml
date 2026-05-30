@@ -1,0 +1,7 @@
+[build]
+  command = "npm run build"
+  publish = "out"
+
+# Sin @netlify/plugin-nextjs — es static export, no necesita server runtime
+# Si lo tenés instalado desde la UI de Netlify, desinstalalo:
+#   Netlify UI → Site settings → Build & deploy → Plugins → Remove @netlify/plugin-nextjs
