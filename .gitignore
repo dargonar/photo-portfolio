@@ -41,5 +41,5 @@ yarn-error.log*
 next-env.d.ts
 
 # images (stored externally)
-/public/images/
-/public/icons/
+# /public/images/
+# /public/icons/
