@@ -97,6 +97,14 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
 
   const configuredMode = serie.lightbox_mode ?? "single";
   const [mode, setMode] = useState<LightboxMode>(configuredMode);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 1024);
+  }, []);
+
+  const effectiveMode = isMobile ? "single" : mode;
+
   const [current, setCurrent] = useState(initialIndex);
   const [direction, setDirection] = useState(1);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -106,7 +114,7 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
   const autoplayInterval = serie.lightbox_autoplay_interval ?? 4000;
 
   const total = items.length;
-  const step = mode === "flipbook" || (mode === "compare" && !isMixed) ? 2 : 1;
+  const step = effectiveMode === "flipbook" || (effectiveMode === "compare" && !isMixed) ? 2 : 1;
   const maxIndex = step > 1 ? Math.max(0, total - 2) : total - 1;
 
   const currentItem = items[current];
@@ -155,7 +163,7 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
 
   /* ── slideshow timer ── */
   useEffect(() => {
-    if (mode !== "slideshow") {
+    if (effectiveMode !== "slideshow") {
       setSlideshowPlaying(false);
       setSlideshowProgress(0);
       return;
@@ -165,7 +173,7 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
   }, [mode]);
 
   useEffect(() => {
-    if (!slideshowPlaying || mode !== "slideshow") return;
+    if (!slideshowPlaying || effectiveMode !== "slideshow") return;
 
     let start: number | null = null;
     const tick = (ts: number) => {
@@ -412,7 +420,7 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
         );
       }
 
-      switch (mode) {
+      switch (effectiveMode) {
         case "flipbook": return renderFlipbook();
         case "compare": return renderCompare();
         case "slideshow":
@@ -436,7 +444,7 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
       {...swipeHandlers}
     >
       {/* Slideshow progress */}
-      {mode === "slideshow" && isPhoto && (
+      {effectiveMode === "slideshow" && isPhoto && (
         <div className="absolute top-0 left-0 right-0 z-30 h-0.5 bg-white/10">
           <motion.div className="h-full bg-white/60" style={{ width: `${slideshowProgress}%` }} transition={{ duration: 0.05 }} />
         </div>
@@ -448,7 +456,7 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
           {t(serie.serie_name, serie.serie_name_es)} — {serie.year}
           <span className="mx-2 text-white/20">|</span>
           {current + 1}/{total}
-          {isPhoto && (mode === "flipbook" || mode === "compare") && (
+          {isPhoto && (effectiveMode === "flipbook" || effectiveMode === "compare") && (
             <span className="ml-2 text-white/30">
               spread {Math.floor(current / 2) + 1}/{Math.ceil(total / 2)}
             </span>
@@ -456,7 +464,7 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
         </p>
         <div className="flex items-center gap-2">
           {/* Mode selector (only for photo series) */}
-          {!isMixed && mode !== "flipbook" && (
+          {!isMixed && mode !== "flipbook" && !isMobile && (
             <div className="flex items-center gap-1">
               {modes.map((m) => {
                 const isActive = mode === m;
@@ -513,7 +521,7 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
 
       {/* ── CONTENT ── */}
       <div className="flex-1 relative min-h-0 select-none"
-        onMouseUp={mode === "compare" && isPhoto ? onCompareMouseUp : undefined}>
+        onMouseUp={effectiveMode === "compare" && isPhoto ? onCompareMouseUp : undefined}>
         {canGoPrev && (
           <button onClick={goPrev}
             className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center text-white/50 hover:text-white transition-colors"
@@ -524,7 +532,7 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
           </button>
         )}
 
-        <AnimatePresence mode={mode === "compare" && isPhoto ? "sync" : "wait"} custom={direction}>
+        <AnimatePresence mode={effectiveMode === "compare" && isPhoto ? "sync" : "wait"} custom={direction}>
           {renderContent()}
         </AnimatePresence>
 
@@ -546,7 +554,7 @@ export function Lightbox({ serie, initialIndex, onClose }: LightboxProps) {
             {items.map((item: SeriesItem, idx: number) => {
               if (item.type === "photo") {
                 const img = (item as PhotoItem).data;
-                const isSpread = mode === "flipbook" || mode === "compare";
+                const isSpread = effectiveMode === "flipbook" || effectiveMode === "compare";
                 const isActive = isSpread
                   ? (idx === current || idx === Math.min(current + 1, total - 1))
                   : idx === current;
