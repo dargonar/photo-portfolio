@@ -124,9 +124,9 @@ export function Header() {
                 className="font-headline-md text-headline-md tracking-[0.2em] text-primary hover:text-secondary transition-all duration-300 uppercase"
                 onClick={() => setMenuOpen(false)}
               >
-              Series:
+              Series
             </Link>
-          {categoryLinks.map((cat) => (
+          {false && categoryLinks.map((cat) => (
             <Link
               key={cat.category_slug}
               href={`/${cat.category_slug}`}
