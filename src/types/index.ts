@@ -40,6 +40,45 @@ export interface Canvas {
   height: number;
 }
 
+/* ── Editorial layout: rows/slots (see references/editorial-layout-spec.md) ── */
+export type CellAlign = "top" | "center" | "bottom";
+
+export interface TextSlotProse {
+  layout: "prose";
+  title?: string;
+  title_es?: string;
+  content_md?: string;
+  content_md_es?: string;
+  align?: "left" | "center" | "right";
+  class?: string;
+}
+
+export interface TextSlotCredits {
+  layout: "credits";
+  title?: string;
+  title_es?: string;
+  items: { role: string; name: string }[];
+  class?: string;
+}
+
+export type TextSlot = TextSlotProse | TextSlotCredits;
+
+export interface LayoutCell {
+  photo?: string;    // filename (resuelto contra serie.images)
+  text?: string;     // id de text_slots
+  align?: CellAlign; // solo afecta fotos landscape (default center)
+}
+
+export interface LayoutRow {
+  cells: LayoutCell[]; // 1 = full-width, 2 = diptico (50/50)
+}
+
+export interface SerieLayout {
+  cover?: string; // filename; default: primera foto
+  rows?: LayoutRow[];
+  text_slots?: Record<string, TextSlot>;
+}
+
 /* ── Text slide between photos ── */
 export interface TextItem {
   type: "text";
@@ -73,6 +112,7 @@ export interface Serie {
   show_lightbox_footer: boolean;
   lightbox_mode?: LightboxMode;
   lightbox_autoplay_interval?: number;
+  layout?: SerieLayout;
   images: SeriesItem[];
 }
 
