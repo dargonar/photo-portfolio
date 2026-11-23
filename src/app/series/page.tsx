@@ -63,7 +63,7 @@ export default function SeriesPage() {
       </div>
 
       {workSeries.length === 0 && (
-        <p className="text-white/40 font-pt-mono text-center mt-20">
+        <p className="text-on-surface-variant font-pt-mono text-center mt-20">
           No series yet.
         </p>
       )}

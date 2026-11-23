@@ -68,7 +68,7 @@ export default function SerieClient() {
   const serieSlug = params.serie as string;
 
   const serie = siteConfig.series.find((s) => s.serie_slug === serieSlug);
-  if (!serie) return <div className="p-8 text-white/50">Serie not found</div>;
+  if (!serie) return <div className="p-8 text-on-surface-variant">Serie not found</div>;
 
   // Filter out items marked as not visible in serie (but keep them for lightbox)
     const items: SeriesItem[] = useMemo(
@@ -94,7 +94,7 @@ export default function SerieClient() {
       <div className="mb-12 flex items-center gap-2 font-pt-mono text-[11px] NOTuppercase tracking-[0.1em] text-on-surface-variant">
         <a
           href={`/${categorySlug}`}
-          className="hover:text-white cursor-pointer transition-colors"
+          className="hover:text-primary cursor-pointer transition-colors"
         >
           {catTitle}
         </a>
@@ -111,7 +111,7 @@ export default function SerieClient() {
         >
           <path d="M9 18l6-6-6-6" />
         </svg>
-        <span className="text-white">
+        <span className="text-primary">
           {t(serie.serie_name, serie.serie_name_es)} — {serie.year}
         </span>
       </div>

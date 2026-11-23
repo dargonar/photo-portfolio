@@ -13,7 +13,7 @@ export default function CategoryClient() {
   const { t } = useI18n();
 
   const category = allCategories.find((c) => c.category_slug === slug);
-  if (!category) return <div className="p-8 text-white/50">Category not found</div>;
+  if (!category) return <div className="p-8 text-on-surface-variant">Category not found</div>;
 
   const series = siteConfig.series.filter((s) => s.category_slug === slug);
 
@@ -71,7 +71,7 @@ export default function CategoryClient() {
       </div>
 
       {series.length === 0 && (
-        <p className="text-white/40 font-pt-mono text-center mt-20">
+        <p className="text-on-surface-variant font-pt-mono text-center mt-20">
           No series in this category yet.
         </p>
       )}
