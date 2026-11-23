@@ -137,32 +137,32 @@ export function Carousel() {
         </AnimatePresence>
       </Link>
 
-      {/* Serie dots — click to jump to a serie */}
-      <div className="absolute bottom-[72px] left-1/2 -translate-x-1/2 z-20 flex items-center gap-2.5">
-        {images.map((img, i) => (
-          <button
-            key={`${img.serie_slug}-${img.filename}`}
-            onClick={() => setCurrent(i)}
-            aria-label={`Go to slide ${i + 1}`}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              i === current ? "bg-white scale-125" : "bg-white/40 hover:bg-white/70"
-            }`}
-          />
-        ))}
+      {/* Serie dots + pause/play — one centered flex strip */}
+      <div className="absolute bottom-[72px] left-1/2 -translate-x-1/2 z-20 flex items-center gap-4">
+        <div className="flex items-center gap-2.5">
+          {images.map((img, i) => (
+            <button
+              key={`${img.serie_slug}-${img.filename}`}
+              onClick={() => setCurrent(i)}
+              aria-label={`Go to slide ${i + 1}`}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                i === current ? "bg-white scale-125" : "bg-white/40 hover:bg-white/70"
+              }`}
+            />
+          ))}
+        </div>
+        <button
+          onClick={() => setPaused((p) => !p)}
+          aria-label={paused ? "Play carousel" : "Pause carousel"}
+          className="text-white/60 hover:text-white transition-colors"
+        >
+          {paused ? (
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+          ) : (
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z" /></svg>
+          )}
+        </button>
       </div>
-
-      {/* Pause/play toggle — right of dots */}
-      <button
-        onClick={() => setPaused((p) => !p)}
-        aria-label={paused ? "Play carousel" : "Pause carousel"}
-        className="absolute bottom-[72px] left-1/2 translate-x-[calc(50%+1.5rem)] z-20 text-white/60 hover:text-white transition-colors"
-      >
-        {paused ? (
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
-        ) : (
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z" /></svg>
-        )}
-      </button>
 
       {/* Footer overlay — glass bg, fixed bottom */}
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-glass-bg backdrop-blur-md border-t border-outline-variant px-gutter p-4">
