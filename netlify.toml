@@ -5,3 +5,33 @@
 # Sin @netlify/plugin-nextjs — es static export, no necesita server runtime
 # Si lo tenés instalado desde la UI de Netlify, desinstalalo:
 #   Netlify UI → Site settings → Build & deploy → Plugins → Remove @netlify/plugin-nextjs
+
+# URLs viejas por categoria → /series/:serie (301). Las de projects siguen igual.
+[[redirects]]
+  from = "/intimate/:serie"
+  to = "/series/:serie"
+  status = 301
+[[redirects]]
+  from = "/body-dialogues/:serie"
+  to = "/series/:serie"
+  status = 301
+[[redirects]]
+  from = "/street/:serie"
+  to = "/series/:serie"
+  status = 301
+[[redirects]]
+  from = "/travel/:serie"
+  to = "/series/:serie"
+  status = 301
+[[redirects]]
+  from = "/circus/:serie"
+  to = "/series/:serie"
+  status = 301
+[[redirects]]
+  from = "/nature/:serie"
+  to = "/series/:serie"
+  status = 301
+[[redirects]]
+  from = "/night/:serie"
+  to = "/series/:serie"
+  status = 301
