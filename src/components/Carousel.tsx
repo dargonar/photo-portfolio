@@ -97,7 +97,7 @@ export function Carousel() {
       {/* Nav arrows */}
       <button
         onClick={goPrev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-black/40 p-4 hover:bg-black/80 transition-all border border-transparent hover:border-white"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-white bg-black/40 p-4 hover:bg-black/80 transition-all border border-transparent hover:border-white"
         aria-label="Previous"
       >
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -106,7 +106,7 @@ export function Carousel() {
       </button>
       <button
         onClick={goNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-black/40 p-4 hover:bg-black/80 transition-all border border-transparent hover:border-white"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-white bg-black/40 p-4 hover:bg-black/80 transition-all border border-transparent hover:border-white"
         aria-label="Next"
       >
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
