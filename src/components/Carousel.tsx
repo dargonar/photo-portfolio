@@ -135,6 +135,20 @@ export function Carousel() {
         </AnimatePresence>
       </Link>
 
+      {/* Serie dots — click to jump to a serie */}
+      <div className="absolute bottom-[72px] left-1/2 -translate-x-1/2 z-20 flex items-center gap-2.5">
+        {images.map((img, i) => (
+          <button
+            key={`${img.serie_slug}-${img.filename}`}
+            onClick={() => setCurrent(i)}
+            aria-label={`Go to slide ${i + 1}`}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              i === current ? "bg-white scale-125" : "bg-white/40 hover:bg-white/70"
+            }`}
+          />
+        ))}
+      </div>
+
       {/* Footer overlay — glass bg, fixed bottom */}
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-glass-bg backdrop-blur-md border-t border-outline-variant px-gutter p-4">
         <div className="grid grid-cols-3 items-center max-w-screen-xl mx-auto">
