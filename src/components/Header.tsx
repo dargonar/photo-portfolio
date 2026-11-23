@@ -73,8 +73,8 @@ export function Header() {
           </svg>
         </button>
 
-        {/* Controls: Nerd + Language */}
-        <div className="flex items-center gap-4 mb-4">
+        {/* Controls: Nerd + Language — secondary chrome, dimmed at rest */}
+        <div className="flex items-center gap-4 mb-4 opacity-50 hover:opacity-100 focus-within:opacity-100 transition-opacity">
           <button
             onClick={(e) => { e.stopPropagation(); toggleNerdMode(); }}
             className={`flex items-center justify-center w-12 h-12 border transition-all duration-300 ${
