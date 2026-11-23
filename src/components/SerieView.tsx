@@ -7,6 +7,7 @@ import { useNerdMode } from "@/hooks/useNerdMode";
 import { useState, useMemo } from "react";
 import { useParams } from "next/navigation";
 import { Lightbox } from "@/components/Lightbox";
+import { EditorialLayout } from "@/components/EditorialLayout";
 import { NerdOverlay } from "@/components/NerdOverlay";
 import { ScatterWordsLayer } from "@/components/ScatterWordsLayer";
 import { mdToHtml } from "@/lib/mdToHtml";
@@ -91,6 +92,28 @@ export function SerieView() {
           : "Projects";
       })()
     : t("Series", "Series");
+
+  // Nuevo layout editorial (opt-in via serie.layout) — sin breadcrumb en el hero
+  if (serie.layout) {
+    const openByFilename = (filename: string) => {
+      const idx = serie.images.findIndex(
+        (i) => i.type === "photo" && (i as PhotoItem).data.filename === filename
+      );
+      setLightboxIndex(idx >= 0 ? idx : null);
+    };
+    return (
+      <div className="min-h-screen">
+        <EditorialLayout serie={serie} onOpen={openByFilename} />
+        {lightboxIndex !== null && (
+          <Lightbox
+            serie={serie}
+            initialIndex={lightboxIndex}
+            onClose={() => setLightboxIndex(null)}
+          />
+        )}
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen px-4 py-8 max-w-7xl mx-auto">
