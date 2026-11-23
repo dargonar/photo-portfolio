@@ -20,7 +20,7 @@ export function Header() {
     <>
       <header className="fixed top-0 w-full z-50 bg-glass-bg backdrop-blur-xs border-b border-outline-variant flex justify-between items-center px-gutter p-4">
         <Link
-          href="/"
+          href="/?no-splash"
           className="font-headline-lg-mobile text-headline-lg-mobile tracking-widest text-primary"
         >
           Pablo Tutino
