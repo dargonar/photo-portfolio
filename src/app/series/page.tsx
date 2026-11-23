@@ -23,13 +23,48 @@ export default function SeriesPage() {
         <div className="mt-2 h-[1px] w-full bg-outline-variant" />
       </div>
 
-      {/* Series Feed */}
-      <div className="space-y-12">
+      {/* Series Feed — mobile: 1 large photo per serie */}
+      <div className="space-y-8 md:hidden">
+        {workSeries.map((serie: Serie) => {
+          const cover = serie.images.find(
+            (item): item is PhotoItem =>
+              item.type === "photo" && !item.data.not_visible_in_serie
+          );
+          if (!cover) return null;
+          return (
+            <Link
+              key={serie.serie_slug}
+              href={`/${serie.category_slug}/${serie.serie_slug}`}
+              className="relative block aspect-[4/3] overflow-hidden bg-surface-container group"
+            >
+              <CldImage
+                src={`${serie.serie_slug}/${cover.data.filename.replace(/\.[^.]+$/, "")}`}
+                alt={`${serie.serie_name} — ${cover.data.filename}`}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="100vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-4">
+                <h2 className="font-pt-mono text-xl text-white leading-tight">
+                  {t(serie.serie_name, serie.serie_name_es)}
+                </h2>
+                <p className="font-pt-mono text-[12px] text-white/80 mt-1">
+                  {serie.year}
+                </p>
+              </div>
+            </Link>
+          );
+        })}
+      </div>
+
+      {/* Series Feed — desktop: 4-thumb grid */}
+      <div className="space-y-12 hidden md:block">
         {workSeries.map((serie: Serie) => (
           <Link
             key={serie.serie_slug}
             href={`/${serie.category_slug}/${serie.serie_slug}`}
-            className="grid grid-cols-2 md:grid-cols-4 gap-[1px] group"
+            className="grid grid-cols-4 gap-[1px] group"
           >
             {serie.images
                           .filter((item): item is PhotoItem => item.type === "photo" && !item.data.not_visible_in_serie)
