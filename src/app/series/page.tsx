@@ -34,7 +34,7 @@ export default function SeriesPage() {
           return (
             <Link
               key={serie.serie_slug}
-              href={`/${serie.category_slug}/${serie.serie_slug}`}
+              href={`/series/${serie.serie_slug}`}
               className="relative block aspect-[4/3] overflow-hidden bg-surface-container group"
             >
               <CldImage
@@ -63,7 +63,7 @@ export default function SeriesPage() {
         {workSeries.map((serie: Serie) => (
           <Link
             key={serie.serie_slug}
-            href={`/${serie.category_slug}/${serie.serie_slug}`}
+            href={`/series/${serie.serie_slug}`}
             className="grid grid-cols-4 gap-[1px] group"
           >
             {serie.images

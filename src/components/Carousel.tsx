@@ -72,7 +72,9 @@ export function Carousel() {
   const src = getImagePath(serie, item.filename);
   const transition = serie.carousel_transition || "fade";
   const isProject = serie.category_slug === config.categories.projects.category_slug;
-  const seriePath = `/${serie.category_slug}/${serie.serie_slug}`;
+  const seriePath = serie.category_slug === config.categories.projects.category_slug
+    ? `/projects/${serie.serie_slug}`
+    : `/series/${serie.serie_slug}`;
 
   const variants = {
     fade: {

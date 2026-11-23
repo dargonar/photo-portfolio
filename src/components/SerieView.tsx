@@ -57,13 +57,12 @@ function ProseBlock({ item }: { item: TextItem }) {
   );
 }
 
-export default function SerieClient() {
+export function SerieView() {
   const params = useParams();
   const { t } = useI18n();
   const { nerdMode } = useNerdMode();
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
-  const categorySlug = params.category as string;
   const serieSlug = params.serie as string;
 
   const serie = siteConfig.series.find((s) => s.serie_slug === serieSlug);
@@ -78,24 +77,30 @@ export default function SerieClient() {
       [serie.images]
     );
 
-  const category = allCategories.find(
-    (c: { category_slug: string }) => c.category_slug === categorySlug
-  );
-  const catTitle = category
-    ? category.title_es
-      ? t(category.title, category.title_es)
-      : category.title
-    : categorySlug;
+  const isProject = serie.category_slug === siteConfig.categories.projects.category_slug;
+  const backHref = isProject ? "/projects" : "/series";
+  const backLabel = isProject
+    ? (() => {
+        const category = allCategories.find(
+          (c: { category_slug: string }) => c.category_slug === serie.category_slug
+        );
+        return category
+          ? category.title_es
+            ? t(category.title, category.title_es)
+            : category.title
+          : "Projects";
+      })()
+    : t("Series", "Series");
 
   return (
     <div className="min-h-screen px-4 py-8 max-w-7xl mx-auto">
       {/* Breadcrumb */}
       <div className="mb-12 flex items-center gap-2 font-pt-mono text-[11px] NOTuppercase tracking-[0.1em] text-on-surface-variant">
         <a
-          href={`/${categorySlug}`}
+          href={backHref}
           className="hover:text-primary cursor-pointer transition-colors"
         >
-          {catTitle}
+          {backLabel}
         </a>
         <svg
           xmlns="http://www.w3.org/2000/svg"
