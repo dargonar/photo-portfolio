@@ -718,732 +718,1583 @@
       ]
     },
     {
-      "serie_name": "ADHD",
-      "serie_name_es": "TDAH",
-      "serie_slug": "adhd",
+      "serie_name": "Too Much But Not Enough",
+      "serie_name_es": "Demasiado pero no suficiente",
+      "serie_slug": "too-much-but-not-enough",
       "year": "2025",
       "category_slug": "projects",
       "carousel_transition": "fade",
       "show_thumbnails": true,
       "show_lightbox_title": true,
       "show_lightbox_footer": true,
-      "lightbox_mode": "flipbook",
-      "lightbox_autoplay_interval": 4000,
+      "layout": {},
       "images": [
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_2_1.jpg",
-            "not_visible_in_serie": true,
-            "title": "",
+            "filename": "pablotutino_001_DSC9931_hq.jpg",
+            "title": "pablotutino_001_DSC9931_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_2_2.jpg",
-            "not_visible_in_serie": true,
-            "title": "",
+            "filename": "pablotutino_002_DSC4054_hq.jpg",
+            "title": "pablotutino_002_DSC4054_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_3_1.jpg",
-            "not_visible_in_serie": true,
-            "title": "",
+            "filename": "pablotutino_003_IMG_2013_hq.jpg",
+            "title": "pablotutino_003_IMG_2013_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_3_2.jpg",
-            "title": "",
+            "filename": "pablotutino_004_DSC9922_hq.jpg",
+            "title": "pablotutino_004_DSC9922_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_4_1.jpg",
-            "title": "",
+            "filename": "pablotutino_005_DSC3907_hq.jpg",
+            "title": "pablotutino_005_DSC3907_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_4_2.jpg",
-            "title": "",
+            "filename": "pablotutino_006_IMG_20230813_150814_hq.jpg",
+            "title": "pablotutino_006_IMG_20230813_150814_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_5_1.jpg",
-            "not_visible_in_serie": true,
-            "title": "",
+            "filename": "pablotutino_007_P1050619_ex_hq.jpg",
+            "title": "pablotutino_007_P1050619_ex_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_5_2.jpg",
-            "title": "",
+            "filename": "pablotutino_008_DSC0797_hq.jpg",
+            "title": "pablotutino_008_DSC0797_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_6_1.jpg",
-            "title": "",
+            "filename": "pablotutino_009_P1050469_ex_hq.jpg",
+            "title": "pablotutino_009_P1050469_ex_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_6_2.jpg",
-            "title": "",
+            "filename": "pablotutino_010_IMG_3802_hq.jpg",
+            "title": "pablotutino_010_IMG_3802_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_7_1.jpg",
-            "not_visible_in_serie": true,
-            "title": "",
+            "filename": "pablotutino_011_DSC9301_hq.jpg",
+            "title": "pablotutino_011_DSC9301_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_7_2.jpg",
-            "title": "",
+            "filename": "pablotutino_012_DSC9841_hq.jpg",
+            "title": "pablotutino_012_DSC9841_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_8_1.jpg",
-            "title": "",
+            "filename": "pablotutino_013_DSC9334_hq.jpg",
+            "title": "pablotutino_013_DSC9334_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_8_2.jpg",
-            "title": "",
+            "filename": "pablotutino_014_DSC02639_hq.jpg",
+            "title": "pablotutino_014_DSC02639_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_9_1.jpg",
-            "title": "",
+            "filename": "pablotutino_015_26_DSC9995_hq.jpg",
+            "title": "pablotutino_015_26_DSC9995_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_9_2.jpg",
-            "title": "",
+            "filename": "pablotutino_016_DSC1167_hq.jpg",
+            "title": "pablotutino_016_DSC1167_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_10_1.jpg",
-            "title": "",
+            "filename": "pablotutino_017_IMG_9790_hq.jpg",
+            "title": "pablotutino_017_IMG_9790_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_10_2.jpg",
-            "not_visible_in_serie": true,
-            "title": "",
+            "filename": "pablotutino_018__DSC8943_hq.jpg",
+            "title": "pablotutino_018__DSC8943_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_11_1.jpg",
-            "title": "",
+            "filename": "pablotutino_019_IMG_2080_hq.jpg",
+            "title": "pablotutino_019_IMG_2080_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_11_2.jpg",
-            "title": "",
+            "filename": "pablotutino_020_DSC1317_hq.jpg",
+            "title": "pablotutino_020_DSC1317_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_12_1.jpg",
-            "title": "",
+            "filename": "pablotutino_021_IMG_20180221_210740_hq.jpg",
+            "title": "pablotutino_021_IMG_20180221_210740_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_12_2.jpg",
-            "not_visible_in_serie": true,
-            "title": "",
+            "filename": "pablotutino_022_DSC8114_hq.jpg",
+            "title": "pablotutino_022_DSC8114_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_13_1.jpg",
-            "title": "",
+            "filename": "pablotutino_023_DSC00948_hq.jpg",
+            "title": "pablotutino_023_DSC00948_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_13_2.jpg",
-            "title": "",
+            "filename": "pablotutino_024_IMG_1840_hq.jpg",
+            "title": "pablotutino_024_IMG_1840_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_14_1.jpg",
-            "title": "",
+            "filename": "pablotutino_025_P1050488_hq.jpg",
+            "title": "pablotutino_025_P1050488_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_14_2.jpg",
-            "title": "",
+            "filename": "pablotutino_026_DSC5954_v4_hq.jpg",
+            "title": "pablotutino_026_DSC5954_v4_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_15_1.jpg",
-            "not_visible_in_serie": true,
-            "title": "",
+            "filename": "pablotutino_027_DSC02080_hq.jpg",
+            "title": "pablotutino_027_DSC02080_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_15_2.jpg",
-            "title": "",
+            "filename": "pablotutino_028_IMG_20260207_170628_1_hq.jpg",
+            "title": "pablotutino_028_IMG_20260207_170628_1_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_16_1.jpg",
-            "title": "",
+            "filename": "pablotutino_029_IMG_20230817_154712_hq.jpg",
+            "title": "pablotutino_029_IMG_20230817_154712_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_16_2.jpg",
-            "title": "",
+            "filename": "pablotutino_030_DSC8192_hq.jpg",
+            "title": "pablotutino_030_DSC8192_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_17_1.jpg",
-            "title": "",
+            "filename": "pablotutino_031_IMG_20230812_182115_hq.jpg",
+            "title": "pablotutino_031_IMG_20230812_182115_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_17_2.jpg",
-            "title": "",
+            "filename": "pablotutino_032_IMG_1873_hq.jpg",
+            "title": "pablotutino_032_IMG_1873_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_18_1.jpg",
-            "title": "",
+            "filename": "pablotutino_033_IMG_20230817_135233_hq.jpg",
+            "title": "pablotutino_033_IMG_20230817_135233_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_18_2.jpg",
-            "title": "",
+            "filename": "pablotutino_034_DSC8361_hq.jpg",
+            "title": "pablotutino_034_DSC8361_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_19_1.jpg",
-            "title": "",
+            "filename": "pablotutino_035_DSC4855_hq.jpg",
+            "title": "pablotutino_035_DSC4855_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_19_2.jpg",
-            "title": "",
+            "filename": "pablotutino_036_DSC4887_hq.jpg",
+            "title": "pablotutino_036_DSC4887_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_20_1.jpg",
-            "title": "",
+            "filename": "pablotutino_037_DSC00879_hq.jpg",
+            "title": "pablotutino_037_DSC00879_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_20_2.jpg",
-            "not_visible_in_serie": true,
-            "title": "",
+            "filename": "pablotutino_038_0030_IMG_20241031_120719_hq.jpg",
+            "title": "pablotutino_038_0030_IMG_20241031_120719_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_21_1.jpg",
-            "not_visible_in_serie": true,
-            "title": "",
+            "filename": "pablotutino_039_felicidad_DSC00214_hq.jpg",
+            "title": "pablotutino_039_felicidad_DSC00214_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_21_2.jpg",
-            "title": "",
+            "filename": "pablotutino_040_DSC0131_hq.jpg",
+            "title": "pablotutino_040_DSC0131_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_22_1.jpg",
-            "title": "",
+            "filename": "pablotutino_041_IMG_3307_hq.jpg",
+            "title": "pablotutino_041_IMG_3307_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_22_2.jpg",
-            "title": "",
+            "filename": "pablotutino_042_DSC4489_hq.jpg",
+            "title": "pablotutino_042_DSC4489_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_23_1.jpg",
-            "not_visible_in_serie": true,
-            "title": "",
+            "filename": "pablotutino_043_abrazos_DSC00260_hq.jpg",
+            "title": "pablotutino_043_abrazos_DSC00260_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
           }
         },
         {
           "type": "photo",
           "data": {
-            "filename": "Layer_23_2.jpg",
-            "not_visible_in_serie": true,
-            "title": "",
+            "filename": "pablotutino_044_DSC0232_hq.jpg",
+            "title": "pablotutino_044_DSC0232_hq.jpg",
             "description": "",
-            "exif_date": "2023-01-01",
-            "location": "La Plata, AR",
-            "iso": 100,
-            "aperture_f": 2.8,
-            "shutter_speed": "1/125",
-            "focal_mm": 50,
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
             "flash": false,
-            "editor": "Lightroom"
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_045_C0073-frame-at-0m1s_hq.jpg",
+            "title": "pablotutino_045_C0073-frame-at-0m1s_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_046_DSC0119_hq.jpg",
+            "title": "pablotutino_046_DSC0119_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_047_DSC01168_hq.jpg",
+            "title": "pablotutino_047_DSC01168_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_048_P1050518_hq.jpg",
+            "title": "pablotutino_048_P1050518_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_049_DSC02062_hq.jpg",
+            "title": "pablotutino_049_DSC02062_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_050_felicidad_DSC00302_hq.jpg",
+            "title": "pablotutino_050_felicidad_DSC00302_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_051_P1050822_hq.jpg",
+            "title": "pablotutino_051_P1050822_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_052_DSC01265_hq.jpg",
+            "title": "pablotutino_052_DSC01265_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_053_DSC9537_hq.jpg",
+            "title": "pablotutino_053_DSC9537_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_054_IMG_8543_hq.jpg",
+            "title": "pablotutino_054_IMG_8543_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_055_IMG_20230812_182355_hq.jpg",
+            "title": "pablotutino_055_IMG_20230812_182355_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_056_DSC00926_hq.jpg",
+            "title": "pablotutino_056_DSC00926_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_057_DSC02898_hq.jpg",
+            "title": "pablotutino_057_DSC02898_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_058_P1050504_hq.jpg",
+            "title": "pablotutino_058_P1050504_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_059_P1050464_ex_hq.jpg",
+            "title": "pablotutino_059_P1050464_ex_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_060_DSC00360_hq.jpg",
+            "title": "pablotutino_060_DSC00360_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_061_IMG_1415_hq.jpg",
+            "title": "pablotutino_061_IMG_1415_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_062_P1050525_hq.jpg",
+            "title": "pablotutino_062_P1050525_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_063_P1050483_hq.jpg",
+            "title": "pablotutino_063_P1050483_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_064_DSC00448_hq.jpg",
+            "title": "pablotutino_064_DSC00448_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_065_DSC02047_hq.jpg",
+            "title": "pablotutino_065_DSC02047_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_066_DSC7617_hq.jpg",
+            "title": "pablotutino_066_DSC7617_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_067_dsc2431_hq.jpg",
+            "title": "pablotutino_067_dsc2431_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_068_20180213_182633_hq.jpg",
+            "title": "pablotutino_068_20180213_182633_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_069_doxa_DSC00161_hq.jpg",
+            "title": "pablotutino_069_doxa_DSC00161_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_070_IMG_1976_hq.jpg",
+            "title": "pablotutino_070_IMG_1976_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_071_DSC03919_hq.jpg",
+            "title": "pablotutino_071_DSC03919_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_072_DSC5320_hq.jpg",
+            "title": "pablotutino_072_DSC5320_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_073_IMG_3275_hq.jpg",
+            "title": "pablotutino_073_IMG_3275_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_074_IMG_4192_hq.jpg",
+            "title": "pablotutino_074_IMG_4192_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_075_DSC9503_hq.jpg",
+            "title": "pablotutino_075_DSC9503_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_076_DSC7935_hq.jpg",
+            "title": "pablotutino_076_DSC7935_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_077_DSC03725_hq.jpg",
+            "title": "pablotutino_077_DSC03725_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_078_IMG_1858_hq.jpg",
+            "title": "pablotutino_078_IMG_1858_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_079_DSC03954_hq.jpg",
+            "title": "pablotutino_079_DSC03954_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_080_DSC5712-x_4-2_hq.jpg",
+            "title": "pablotutino_080_DSC5712-x_4-2_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_081_IMG_5273_hq.jpg",
+            "title": "pablotutino_081_IMG_5273_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_082_DSC1108_hq.jpg",
+            "title": "pablotutino_082_DSC1108_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_083_IMG_20230812_195914_hq.jpg",
+            "title": "pablotutino_083_IMG_20230812_195914_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_084_IMG_1637_hq.jpg",
+            "title": "pablotutino_084_IMG_1637_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_085_P1050584_hq.jpg",
+            "title": "pablotutino_085_P1050584_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_086_DSC8393_hq.jpg",
+            "title": "pablotutino_086_DSC8393_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_087_DSC5740_hq.jpg",
+            "title": "pablotutino_087_DSC5740_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_088_IMG_2027_hq.jpg",
+            "title": "pablotutino_088_IMG_2027_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_089_IMG_20250215_171032_hq.jpg",
+            "title": "pablotutino_089_IMG_20250215_171032_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_090_DSC0836_02_hq.jpg",
+            "title": "pablotutino_090_DSC0836_02_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_091_DSC01332_hq.jpg",
+            "title": "pablotutino_091_DSC01332_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_092_P1050724_hq.jpg",
+            "title": "pablotutino_092_P1050724_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_093_DSC9906_hq.jpg",
+            "title": "pablotutino_093_DSC9906_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_094_IMG_9752_hq.jpg",
+            "title": "pablotutino_094_IMG_9752_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_095_DSC1292_hq.jpg",
+            "title": "pablotutino_095_DSC1292_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_096_DSC5115_hq.jpg",
+            "title": "pablotutino_096_DSC5115_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_097_dsc2846-2_hq.jpg",
+            "title": "pablotutino_097_dsc2846-2_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
+          }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "pablotutino_098_DSC02978_hq.jpg",
+            "title": "pablotutino_098_DSC02978_hq.jpg",
+            "description": "",
+            "exif_date": "",
+            "location": "",
+            "iso": 0,
+            "aperture_f": 0,
+            "shutter_speed": "",
+            "focal_mm": 0,
+            "flash": false,
+            "editor": ""
           }
         }
       ]
@@ -1953,7 +2804,6 @@
               "rotate": 10,
               "class": "word-body-small"
             }
-
           ]
         },
         {
@@ -1985,24 +2835,21 @@
               "y": 70,
               "rotate": 6,
               "class": "word-body-small"
-            }
-            ,
+            },
             {
               "text": "en",
               "x": 50,
               "y": 70,
               "rotate": 6,
               "class": "word-body-small"
-            }
-            ,
+            },
             {
               "text": "mi",
               "x": 55,
               "y": 70,
               "rotate": -5,
               "class": "word-body-small"
-            }
-            ,
+            },
             {
               "text": "agenda",
               "x": 65,
@@ -2440,7 +3287,8 @@
             "focal_mm": 0,
             "flash": false,
             "editor": ""
-          },"words": [
+          },
+          "words": [
             {
               "text": "hacia",
               "x": 15,
@@ -4993,46 +5841,46 @@
       "carousel": {
         "images": [
           {
-            "filename": "IMG_1415_vNEW_2.jpg",
-            "serie_slug": "soluble-oil"
+            "filename": "pablotutino_001_DSC9931_hq.jpg",
+            "serie_slug": "too-much-but-not-enough"
           },
           {
-            "filename": "IMG_1122_vNEW.jpg",
-            "serie_slug": "bw"
+            "filename": "pablotutino_002_DSC4054_hq.jpg",
+            "serie_slug": "too-much-but-not-enough"
           },
           {
-            "filename": "01_12_IMG_8415.jpg",
-            "serie_slug": "circus"
+            "filename": "pablotutino_003_IMG_2013_hq.jpg",
+            "serie_slug": "too-much-but-not-enough"
           },
           {
-            "filename": "10_09_IMG_2873.jpg",
-            "serie_slug": "knots"
+            "filename": "pablotutino_004_DSC9922_hq.jpg",
+            "serie_slug": "too-much-but-not-enough"
           },
           {
-            "filename": "_DSC1108_big.jpg",
-            "serie_slug": "adhd"
+            "filename": "pablotutino_005_DSC3907_hq.jpg",
+            "serie_slug": "too-much-but-not-enough"
           }
         ],
         "images_mobile": [
           {
-            "filename": "IMG_0089.jpg",
-            "serie_slug": "soluble-oil"
+            "filename": "pablotutino_001_DSC9931_hq.jpg",
+            "serie_slug": "too-much-but-not-enough"
           },
           {
-            "filename": "08_32_nena_pablotutino.jpg",
-            "serie_slug": "bw"
+            "filename": "pablotutino_002_DSC4054_hq.jpg",
+            "serie_slug": "too-much-but-not-enough"
           },
           {
-            "filename": "05_IMG_8434.jpg",
-            "serie_slug": "circus"
+            "filename": "pablotutino_003_IMG_2013_hq.jpg",
+            "serie_slug": "too-much-but-not-enough"
           },
           {
-            "filename": "01_03_IMG_2672_v2.jpg",
-            "serie_slug": "knots"
+            "filename": "pablotutino_004_DSC9922_hq.jpg",
+            "serie_slug": "too-much-but-not-enough"
           },
           {
-            "filename": "26_DSC9995.jpg",
-            "serie_slug": "adhd"
+            "filename": "pablotutino_005_DSC3907_hq.jpg",
+            "serie_slug": "too-much-but-not-enough"
           }
         ],
         "transition_interval_s": 5
