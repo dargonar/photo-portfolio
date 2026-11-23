@@ -6,7 +6,6 @@ import { useI18n } from "@/hooks/useI18n";
 import { useNerdMode } from "@/hooks/useNerdMode";
 import { useState, useMemo } from "react";
 import { useParams } from "next/navigation";
-import { CldImage } from "next-cloudinary";
 import { Lightbox } from "@/components/Lightbox";
 import { NerdOverlay } from "@/components/NerdOverlay";
 import { ScatterWordsLayer } from "@/components/ScatterWordsLayer";
@@ -127,13 +126,12 @@ export default function SerieClient() {
                 className="relative break-inside-avoid group cursor-pointer overflow-hidden border border-transparent hover:border-outline-variant transition-all"
                 onClick={() => setLightboxIndex(idx)}
               >
-                <CldImage
-                  src={`${serie.serie_slug}/${img.filename.replace(/\\.[^.]+$/, "")}`}
+                {/* raw Cloudinary URL: q_auto,f_auto + c_limit,w_800 (next-cloudinary t_-prefixed arrays fail) */}
+                <img
+                  src={`https://res.cloudinary.com/dhr3jdnve/image/upload/q_auto,f_auto/c_limit,w_800/${serie.serie_slug}/${img.filename.replace(/\.[^.]+$/, "")}`}
                   alt={`${serie.serie_name} — ${img.filename}`}
-                  width={800}
-                  height={600}
+                  loading="lazy"
                   className="w-full h-auto"
-                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                 />
                 {item.words && <ScatterWordsLayer words={item.words} />}
                 {nerdMode && <NerdOverlay image={img} />}
