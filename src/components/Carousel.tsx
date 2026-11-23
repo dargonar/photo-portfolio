@@ -19,6 +19,7 @@ function getImagePath(serie: Serie, filename: string): string {
 export function Carousel() {
   const [images, setImages] = useState(config.pages.home.carousel.images);
   const [current, setCurrent] = useState(0);
+  const [paused, setPaused] = useState(false);
   const total = images.length;
   const { t } = useI18n();
 
@@ -44,9 +45,10 @@ export function Carousel() {
   // Autoplay — advance every transition_interval_s seconds
   useEffect(() => {
     const interval = (config.pages.home.carousel.transition_interval_s ?? 5) * 1000;
+    if (paused) return;
     const timer = setInterval(goNext, interval);
     return () => clearInterval(timer);
-  }, [goNext]);
+  }, [goNext, paused]);
 
   // Switch image set on resize across 1024px boundary (+ initial check)
   useEffect(() => {
@@ -148,6 +150,19 @@ export function Carousel() {
           />
         ))}
       </div>
+
+      {/* Pause/play toggle — right of dots */}
+      <button
+        onClick={() => setPaused((p) => !p)}
+        aria-label={paused ? "Play carousel" : "Pause carousel"}
+        className="absolute bottom-[72px] left-1/2 translate-x-[calc(50%+1.5rem)] z-20 text-white/60 hover:text-white transition-colors"
+      >
+        {paused ? (
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+        ) : (
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z" /></svg>
+        )}
+      </button>
 
       {/* Footer overlay — glass bg, fixed bottom */}
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-glass-bg backdrop-blur-md border-t border-outline-variant px-gutter p-4">
