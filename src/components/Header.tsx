@@ -89,9 +89,7 @@ export function Header() {
               alt="Nerd Mode"
               width={24}
               height={24}
-              className={`transition-all duration-200 ${
-                nerdMode ? "" : "invert"
-              }`}
+              className="transition-all duration-200"
             />
           </button>
           <button
