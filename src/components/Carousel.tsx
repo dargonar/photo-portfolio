@@ -132,6 +132,7 @@ export function Carousel() {
               alt={`${serie.serie_name} — ${item.filename}`}
               fill
               className="object-cover"
+              style={{ objectPosition: item.object_position ?? "center" }}
               priority
               sizes="100vw"
             />

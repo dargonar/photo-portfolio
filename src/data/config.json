@@ -6435,45 +6435,55 @@
         "images": [
           {
             "filename": "pablotutino_001_DSC9931_hq.jpg",
-            "serie_slug": "too-much-but-not-enough"
+            "serie_slug": "too-much-but-not-enough",
+            "object_position": "center"
           },
           {
             "filename": "pablotutino_002_DSC4054_hq.jpg",
-            "serie_slug": "too-much-but-not-enough"
+            "serie_slug": "too-much-but-not-enough",
+            "object_position": "center"
           },
           {
             "filename": "pablotutino_003_IMG_2013_hq.jpg",
-            "serie_slug": "too-much-but-not-enough"
+            "serie_slug": "too-much-but-not-enough",
+            "object_position": "center"
           },
           {
             "filename": "pablotutino_004_DSC9922_hq.jpg",
-            "serie_slug": "too-much-but-not-enough"
+            "serie_slug": "too-much-but-not-enough",
+            "object_position": "center"
           },
           {
             "filename": "pablotutino_005_DSC3907_hq.jpg",
-            "serie_slug": "too-much-but-not-enough"
+            "serie_slug": "too-much-but-not-enough",
+            "object_position": "center"
           }
         ],
         "images_mobile": [
           {
             "filename": "pablotutino_001_DSC9931_hq.jpg",
-            "serie_slug": "too-much-but-not-enough"
+            "serie_slug": "too-much-but-not-enough",
+            "object_position": "center"
           },
           {
             "filename": "pablotutino_002_DSC4054_hq.jpg",
-            "serie_slug": "too-much-but-not-enough"
+            "serie_slug": "too-much-but-not-enough",
+            "object_position": "center"
           },
           {
             "filename": "pablotutino_003_IMG_2013_hq.jpg",
-            "serie_slug": "too-much-but-not-enough"
+            "serie_slug": "too-much-but-not-enough",
+            "object_position": "center"
           },
           {
             "filename": "pablotutino_004_DSC9922_hq.jpg",
-            "serie_slug": "too-much-but-not-enough"
+            "serie_slug": "too-much-but-not-enough",
+            "object_position": "center"
           },
           {
             "filename": "pablotutino_005_DSC3907_hq.jpg",
-            "serie_slug": "too-much-but-not-enough"
+            "serie_slug": "too-much-but-not-enough",
+            "object_position": "center"
           }
         ],
         "transition_interval_s": 5

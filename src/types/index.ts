@@ -120,6 +120,8 @@ export interface Serie {
 export interface CarouselImage {
   filename: string;
   serie_slug: string;
+  /** Para fotos portrait: dónde anclar la foto dentro del viewport (default center). */
+  object_position?: "top" | "center" | "bottom";
 }
 
 export interface HomeConfig {
