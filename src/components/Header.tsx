@@ -39,7 +39,7 @@ export function Header() {
         <div className="flex items-center gap-2 opacity-50 hover:opacity-100 focus-within:opacity-100 transition-opacity">
           <button
             onClick={(e) => { e.stopPropagation(); toggleNerdMode(); }}
-            className={`flex items-center justify-center w-9 h-9 border transition-all duration-300 ${
+            className={`hidden md:flex items-center justify-center w-9 h-9 border transition-all duration-300 ${
               nerdMode
                 ? "border-primary bg-primary"
                 : "border-primary/30 hover:border-primary"
