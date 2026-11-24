@@ -22,12 +22,12 @@
   --color-glass-bg: rgba(244, 244, 242, 0.72);
 
   /* ── Font families — use the CSS variable from next/font/google ── */
-  --font-headline-lg: var(--font-pt-mono), monospace;
-  --font-headline-lg-mobile: var(--font-pt-mono), monospace;
-  --font-headline-md: var(--font-pt-mono), monospace;
-  --font-body-md: var(--font-pt-mono), monospace;
-  --font-data-mono: var(--font-pt-mono), monospace;
-  --font-label-sm: var(--font-pt-mono), monospace;
+  --font-headline-lg: var(--font-kode-mono), monospace;
+  --font-headline-lg-mobile: var(--font-kode-mono), monospace;
+  --font-headline-md: var(--font-kode-mono), monospace;
+  --font-body-md: var(--font-kode-mono), monospace;
+  --font-data-mono: var(--font-kode-mono), monospace;
+  --font-label-sm: var(--font-kode-mono), monospace;
 
   /* ── Font sizes (Stitch design system) ── */
   --text-headline-lg: 24px;
@@ -56,11 +56,11 @@ body {
   background-color: var(--color-background);
   color: var(--color-on-background);
   -webkit-font-smoothing: antialiased;
-  font-family: var(--font-pt-mono), monospace;
+  font-family: var(--font-kode-mono), monospace;
 }
 
 .font-pt-mono {
-  font-family: var(--font-pt-mono), monospace;
+  font-family: var(--font-kode-mono), monospace;
 }
 
 /* Custom scrollbar */
