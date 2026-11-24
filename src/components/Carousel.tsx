@@ -98,7 +98,7 @@ export function Carousel() {
 
       {/* Nav arrows */}
       <button
-        onClick={goPrev}
+        onClick={() => { setPaused(true); goPrev(); }}
         className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-white bg-black/40 p-4 hover:bg-black/80 transition-all border border-transparent hover:border-white"
         aria-label="Previous"
       >
@@ -107,7 +107,7 @@ export function Carousel() {
         </svg>
       </button>
       <button
-        onClick={goNext}
+        onClick={() => { setPaused(true); goNext(); }}
         className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-white bg-black/40 p-4 hover:bg-black/80 transition-all border border-transparent hover:border-white"
         aria-label="Next"
       >
