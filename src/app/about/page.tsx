@@ -19,7 +19,7 @@ export default function AboutPage() {
           </h1>
           <div className="relative aspect-[3/4] bg-white/5 mt-auto overflow-hidden">
             <Image
-              src="/images/portrait.png"
+              src="/images/portrait.jpg"
               alt="Pablo Tutino"
               fill
               className="object-contain"
