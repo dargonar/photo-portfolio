@@ -31,7 +31,6 @@ export default function IndexPage() {
         <h1 className="font-pt-mono text-[12px] tracking-[0.2em] NOTuppercase text-on-surface-variant">
           Index
         </h1>
-        <div className="mt-2 h-[1px] w-full bg-outline-variant" />
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
