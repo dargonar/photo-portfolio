@@ -8,6 +8,7 @@ import { useState, useMemo } from "react";
 import { useParams } from "next/navigation";
 import { Lightbox } from "@/components/Lightbox";
 import { EditorialLayout } from "@/components/EditorialLayout";
+import { EditorialLightbox } from "@/components/EditorialLightbox";
 import { NerdOverlay } from "@/components/NerdOverlay";
 import { ScatterWordsLayer } from "@/components/ScatterWordsLayer";
 import { mdToHtml } from "@/lib/mdToHtml";
@@ -63,6 +64,7 @@ export function SerieView() {
   const { t } = useI18n();
   const { nerdMode } = useNerdMode();
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [openFn, setOpenFn] = useState<string | null>(null);
 
   const serieSlug = params.serie as string;
 
@@ -95,20 +97,18 @@ export function SerieView() {
 
   // Nuevo layout editorial (opt-in via serie.layout) — sin breadcrumb en el hero
   if (serie.layout) {
-    const openByFilename = (filename: string) => {
-      const idx = serie.images.findIndex(
-        (i) => i.type === "photo" && (i as PhotoItem).data.filename === filename
-      );
-      setLightboxIndex(idx >= 0 ? idx : null);
-    };
+    const photoFns = serie.images
+      .filter((i) => i.type === "photo")
+      .map((i) => (i as PhotoItem).data.filename);
     return (
       <div className="min-h-screen">
-        <EditorialLayout serie={serie} onOpen={openByFilename} />
-        {lightboxIndex !== null && (
-          <Lightbox
+        <EditorialLayout serie={serie} onOpen={setOpenFn} />
+        {openFn !== null && (
+          <EditorialLightbox
             serie={serie}
-            initialIndex={lightboxIndex}
-            onClose={() => setLightboxIndex(null)}
+            filenames={photoFns}
+            initialFilename={openFn}
+            onClose={() => setOpenFn(null)}
           />
         )}
       </div>
