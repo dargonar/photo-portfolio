@@ -591,7 +591,8 @@
               }
             ]
           }
-        }
+        },
+        "cover_object_position": "center"
       },
       "images": [
         {
@@ -2604,7 +2605,10 @@
           }
         }
       ],
-      "cover_portrait": true
+      "cover_portrait": true,
+      "layout": {
+        "cover_object_position": "center"
+      }
     },
     {
       "serie_name": "B&W",
@@ -2908,7 +2912,10 @@
           }
         }
       ],
-      "cover_portrait": false
+      "cover_portrait": false,
+      "layout": {
+        "cover_object_position": "center"
+      }
     },
     {
       "serie_name": "Street-Theatre",
@@ -3132,7 +3139,10 @@
           }
         }
       ],
-      "cover_portrait": false
+      "cover_portrait": false,
+      "layout": {
+        "cover_object_position": "center"
+      }
     },
     {
       "serie_name": "Knots",
@@ -3324,7 +3334,10 @@
           }
         }
       ],
-      "cover_portrait": true
+      "cover_portrait": true,
+      "layout": {
+        "cover_object_position": "center"
+      }
     },
     {
       "serie_name": "Night speed",
@@ -4135,7 +4148,10 @@
           ]
         }
       ],
-      "cover_portrait": true
+      "cover_portrait": true,
+      "layout": {
+        "cover_object_position": "center"
+      }
     },
     {
       "serie_name": "Soluble oil",
@@ -4905,7 +4921,10 @@
           }
         }
       ],
-      "cover_portrait": true
+      "cover_portrait": true,
+      "layout": {
+        "cover_object_position": "center"
+      }
     },
     {
       "serie_name": "Inhabiting the recovery ",
@@ -5146,7 +5165,10 @@
           }
         }
       ],
-      "cover_portrait": false
+      "cover_portrait": false,
+      "layout": {
+        "cover_object_position": "center"
+      }
     },
     {
       "serie_name": "Light BDSM",
@@ -5370,7 +5392,10 @@
           }
         }
       ],
-      "cover_portrait": true
+      "cover_portrait": true,
+      "layout": {
+        "cover_object_position": "center"
+      }
     },
     {
       "serie_name": "Skin Landscape",
@@ -5754,7 +5779,10 @@
           }
         }
       ],
-      "cover_portrait": false
+      "cover_portrait": false,
+      "layout": {
+        "cover_object_position": "center"
+      }
     },
     {
       "serie_name": "Pop-Corn",
@@ -6426,7 +6454,10 @@
           }
         }
       ],
-      "cover_portrait": true
+      "cover_portrait": true,
+      "layout": {
+        "cover_object_position": "center"
+      }
     }
   ],
   "pages": {
@@ -6436,7 +6467,7 @@
           {
             "filename": "pablotutino_001_DSC9931_hq.jpg",
             "serie_slug": "too-much-but-not-enough",
-            "object_position": "center"
+            "object_position": "top"
           },
           {
             "filename": "pablotutino_002_DSC4054_hq.jpg",
@@ -6451,7 +6482,7 @@
           {
             "filename": "pablotutino_004_DSC9922_hq.jpg",
             "serie_slug": "too-much-but-not-enough",
-            "object_position": "center"
+            "object_position": "top"
           },
           {
             "filename": "pablotutino_005_DSC3907_hq.jpg",
@@ -6491,7 +6522,7 @@
     },
     "about": {
       "title": "Bio",
-      "content_text": "I explore shame as a visual and emotional territory. I try to put myself out there and make a fool of myself, and turn all of it into images.<br/><br/>I have a background in Systems Engineering, currently completing my degree in Photography at UNLP.<br/>I've taken workshops and courses with Federico Estol, Iara Kremer, Adrián Salgueiro, Nicolás Janowski, Nadia Bautista, among others.<br/><br/>When much seems to become an object of consumption, where criticism is absorbed, rebellion is commercialized and love is reduced to an individual experience on a screen: fantasy and humor present themselves to me as refuge.<br/>I want to believe that (my) imagination has not yet been colonized, and that navigating my days between real events and imagined scenes, between memories, associations, desires and fictions, is not synonymous with a flaw to be corrected.<br/>Days when time does not always obey nor is linear, when imagination bursts in, builds worlds and abandons them.<br/><br/>Perhaps visual narration is an attempt to recover what I learned to consider defective in myself: my ADHD.<br/>To give a territory to what doesn't fit, to make visible what happens in my head alongside shared reality.<br/><br/>Pablo Tutino... tuti to friends.<br/>Visual storyteller and photographer + developer.",
+      "content_text": "I explore shame as a visual and emotional territory. I try to put myself out there and make a fool of myself, and turn all of it into images.<br/><br/>I have a background in IT Engineering, currently completing my degree in Photography at UNLP.<br/>I've taken workshops and courses with Federico Estol, Iara Kremer, Adrián Salgueiro, Nicolás Janowski, Nadia Bautista, among others.<br/><br/>When much seems to become an object of consumption, where criticism is absorbed, rebellion is commercialized and love is reduced to an individual experience on a screen: fantasy and humor present themselves to me as refuge.<br/>I want to believe that (my) imagination has not yet been colonized, and that navigating my days between real events and imagined scenes, between memories, associations, desires and fictions, is not synonymous with a flaw to be corrected.<br/>Days when time does not always obey nor is linear, when imagination bursts in, builds worlds and abandons them.<br/><br/>Perhaps visual narration is an attempt to recover what I learned to consider defective in myself: my ADHD.<br/>To give a territory to what doesn't fit, to make visible what happens in my head alongside shared reality.<br/><br/>Pablo Tutino... tuti to friends.<br/>Visual storyteller and photographer + developer.",
       "content_text_es": "Exploro la vergüenza como territorio visual y emocional. Intento salir ahí fuera a hacer el ridículo y convertirlo todo en imágenes.<br/><br/>Soy Ingeniero en Sistemas de profesión, a punto de recibirme en la carrera de Fotografía de la UNLP.<br/>Realicé talleres y cursos con Federico Estol, Iara Kremer, Adrián Salgueiro, Nicolás Janowski, Nadia Bautista, entre otrxs.<br/><br/>Cuando mucho parece convertirse en objeto de consumo, donde la crítica es absorbida, la rebeldía comercializada y el amor individualizado en la pantalla: la fantasía y el humor se me presentan como refugio.<br/>Quiero creer que la (mi) imaginación aún no fue colonizada, y que navegar mis días entre acontecimientos reales y escenas imaginarias, entre recuerdos, asociaciones, deseos y ficciones, no es sinónimo de falla a corregir. <br/>Días donde el tiempo no siempre obedece ni es lineal, donde la imaginación irrumpe, construye mundos y los abandona.<br/><br/>Quizás la narración visual sea un intento de recuperar aquello que aprendí a considerar defectuoso en mí: mi TDAH.<br/>A darle un territorio a lo que no encaja, de hacer visible aquello que sucede en mi cabeza en el mientras tanto de la realidad compartida.<br/><br/>Pablo Tutino... tuti para lxs amigxs.<br/>Visual storyteller and photographer + developer.",
       "image": "retrato.jpg"
     }
