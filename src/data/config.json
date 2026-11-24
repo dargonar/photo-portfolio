@@ -728,21 +728,12 @@
       "show_lightbox_title": true,
       "show_lightbox_footer": true,
       "layout": {
+        "cover": "pablotutino_001_DSC9931_hq.jpg",
         "rows": [
           {
             "cells": [
               {
-                "photo": "pablotutino_001_DSC9931_hq.jpg"
-              },
-              {
                 "photo": "pablotutino_002_DSC4054_hq.jpg"
-              }
-            ]
-          },
-          {
-            "cells": [
-              {
-                "text": "intro"
               }
             ]
           },
@@ -754,6 +745,13 @@
               },
               {
                 "photo": "pablotutino_004_DSC9922_hq.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "text": "intro"
               }
             ]
           },
@@ -1313,22 +1311,6 @@
         }
       },
       "images": [
-        {
-          "type": "photo",
-          "data": {
-            "filename": "pablotutino_020_DSC1317_hq.jpg",
-            "title": "pablotutino_020_DSC1317_hq.jpg",
-            "description": "",
-            "exif_date": "",
-            "location": "",
-            "iso": 0,
-            "aperture_f": 0,
-            "shutter_speed": "",
-            "focal_mm": 0,
-            "flash": false,
-            "editor": ""
-          }
-        },
         {
           "type": "photo",
           "data": {
