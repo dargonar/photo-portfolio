@@ -11,10 +11,14 @@
       "show_lightbox_title": true,
       "show_lightbox_footer": true,
       "layout": {
-        "cover": "pablotutino_001_DSC9931_hq.jpg",
+        "cover": "pablotutino_020_DSC1317_hq.jpg",
+        "cover_object_position": "top",
         "rows": [
           {
             "cells": [
+              {
+                "photo": "pablotutino_001_DSC9931_hq.jpg"
+              },
               {
                 "photo": "pablotutino_002_DSC4054_hq.jpg"
               }
@@ -591,8 +595,7 @@
               }
             ]
           }
-        },
-        "cover_object_position": "center"
+        }
       },
       "images": [
         {
@@ -2607,7 +2610,166 @@
       ],
       "cover_portrait": true,
       "layout": {
-        "cover_object_position": "center"
+        "cover": "Layer_2_1.png",
+        "cover_object_position": "center",
+        "rows": [
+          {
+            "cells": [
+              {
+                "photo": "Layer_2_2.png"
+              },
+              {
+                "photo": "Layer_3_1.png"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "Layer_3_2.png"
+              },
+              {
+                "photo": "Layer_4_1.png"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "Layer_4_2.png"
+              },
+              {
+                "photo": "Layer_5_1.png"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "Layer_5_2.png"
+              },
+              {
+                "photo": "Layer_6_1.png"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "Layer_6_2.png"
+              },
+              {
+                "photo": "Layer_7_1.png"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "Layer_7_2.png"
+              },
+              {
+                "photo": "Layer_8_1.png"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "Layer_8_2.png"
+              },
+              {
+                "photo": "Layer_9_1.png"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "Layer_9_2.png"
+              },
+              {
+                "photo": "Layer_10_1.png"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "Layer_10_2.png"
+              },
+              {
+                "photo": "Layer_11_1.png"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "Layer_11_2.png"
+              },
+              {
+                "photo": "Layer_12_1.png"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "Layer_12_2.png"
+              },
+              {
+                "photo": "Layer_13_1.png"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "Layer_13_2.png"
+              },
+              {
+                "photo": "Layer_14_1.png"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "Layer_14_2.png"
+              }
+            ]
+          }
+        ],
+        "text_slots": {
+          "intro": {
+            "layout": "prose",
+            "title": "Il Nono",
+            "title_es": "Il Nono",
+            "content_md": "PLACEHOLDER — texto del proyecto. Sobre la serie: contexto, proceso, decision estetica. Reemplazar con el texto definitivo.\n\nPLACEHOLDER — agradecimientos.",
+            "content_md_es": "PLACEHOLDER — texto del proyecto en espanol.\n\nPLACEHOLDER — agradecimientos.",
+            "align": "left"
+          },
+          "credits": {
+            "layout": "credits",
+            "title": "Credits",
+            "title_es": "Creditos",
+            "items": [
+              {
+                "role": "Photography",
+                "name": "Pablo Tutino"
+              },
+              {
+                "role": "Design",
+                "name": "—"
+              },
+              {
+                "role": "Models",
+                "name": "—"
+              }
+            ]
+          }
+        }
       }
     },
     {
@@ -2914,7 +3076,126 @@
       ],
       "cover_portrait": false,
       "layout": {
-        "cover_object_position": "center"
+        "cover": "IMG_1122_vNEW.jpg",
+        "cover_object_position": "center",
+        "rows": [
+          {
+            "cells": [
+              {
+                "photo": "01_13_IMG_2916_square.jpg"
+              },
+              {
+                "photo": "02_13_flor_pablotutino.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "03_IMG_0578_v2.jpg"
+              },
+              {
+                "photo": "04_IMG_1260.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "05_IMG_1473_v2.jpg"
+              },
+              {
+                "photo": "06_15_flor_pablotutino.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "07_31_nena_pablotutino.jpg"
+              },
+              {
+                "photo": "08_32_nena_pablotutino.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "09_IMG_0551.jpg"
+              },
+              {
+                "photo": "10_30_nena_pablotutino.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "11_17_flor_pablotutino.jpg"
+              },
+              {
+                "photo": "12_IMG_0548.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "33_nena_pablotutino.jpg"
+              },
+              {
+                "photo": "IMG_1473.JPG"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_1478.JPG"
+              },
+              {
+                "photo": "NO_00_IMG_1122.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "NO_14_flor_pablotutino.jpg"
+              }
+            ]
+          }
+        ],
+        "text_slots": {
+          "intro": {
+            "layout": "prose",
+            "title": "B&W",
+            "title_es": "B&W",
+            "content_md": "PLACEHOLDER — texto del proyecto. Sobre la serie: contexto, proceso, decision estetica. Reemplazar con el texto definitivo.\n\nPLACEHOLDER — agradecimientos.",
+            "content_md_es": "PLACEHOLDER — texto del proyecto en espanol.\n\nPLACEHOLDER — agradecimientos.",
+            "align": "left"
+          },
+          "credits": {
+            "layout": "credits",
+            "title": "Credits",
+            "title_es": "Creditos",
+            "items": [
+              {
+                "role": "Photography",
+                "name": "Pablo Tutino"
+              },
+              {
+                "role": "Design",
+                "name": "—"
+              },
+              {
+                "role": "Models",
+                "name": "—"
+              }
+            ]
+          }
+        }
       }
     },
     {
@@ -3141,7 +3422,99 @@
       ],
       "cover_portrait": false,
       "layout": {
-        "cover_object_position": "center"
+        "cover": "01_12_IMG_8415.jpg",
+        "cover_object_position": "center",
+        "rows": [
+          {
+            "cells": [
+              {
+                "photo": "02_IMG_1339_v2.jpg"
+              },
+              {
+                "photo": "03_IMG_1415.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "04_4076_trape_by_pablotutino_lagran7.jpg"
+              },
+              {
+                "photo": "04_IMG_8305.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "05_IMG_8434.jpg"
+              },
+              {
+                "photo": "06_IMG_1355.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "07_sq_IMG_7989.jpg"
+              },
+              {
+                "photo": "08_IMG_7927.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "09_IMG_8380.jpg"
+              },
+              {
+                "photo": "10_ancla_by_pablotutino_lagran7.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "11_4095_trape_by_pablotutino_lagran7.jpg"
+              },
+              {
+                "photo": "NO_07_IMG_7989.JPG"
+              }
+            ]
+          }
+        ],
+        "text_slots": {
+          "intro": {
+            "layout": "prose",
+            "title": "Street-Theatre",
+            "title_es": "Circo-Teatro",
+            "content_md": "PLACEHOLDER — texto del proyecto. Sobre la serie: contexto, proceso, decision estetica. Reemplazar con el texto definitivo.\n\nPLACEHOLDER — agradecimientos.",
+            "content_md_es": "PLACEHOLDER — texto del proyecto en espanol.\n\nPLACEHOLDER — agradecimientos.",
+            "align": "left"
+          },
+          "credits": {
+            "layout": "credits",
+            "title": "Credits",
+            "title_es": "Creditos",
+            "items": [
+              {
+                "role": "Photography",
+                "name": "Pablo Tutino"
+              },
+              {
+                "role": "Design",
+                "name": "—"
+              },
+              {
+                "role": "Models",
+                "name": "—"
+              }
+            ]
+          }
+        }
       }
     },
     {
@@ -3336,7 +3709,89 @@
       ],
       "cover_portrait": true,
       "layout": {
-        "cover_object_position": "center"
+        "cover": "01_03_IMG_2672_v2.jpg",
+        "cover_object_position": "center",
+        "rows": [
+          {
+            "cells": [
+              {
+                "photo": "02_19_nena_pablotutino.jpg"
+              },
+              {
+                "photo": "03_01_IMG_2530.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "04_03_IMG_2858.jpg"
+              },
+              {
+                "photo": "05_15_IMG_2539.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "06.jpg"
+              },
+              {
+                "photo": "07_08_IMG_2667.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "08_17_IMG_2240.jpg"
+              },
+              {
+                "photo": "09_16_IMG_2737.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "10_09_IMG_2873.jpg"
+              },
+              {
+                "photo": "11_16_IMG_2767.jpg"
+              }
+            ]
+          }
+        ],
+        "text_slots": {
+          "intro": {
+            "layout": "prose",
+            "title": "Knots",
+            "title_es": "Nudos",
+            "content_md": "PLACEHOLDER — texto del proyecto. Sobre la serie: contexto, proceso, decision estetica. Reemplazar con el texto definitivo.\n\nPLACEHOLDER — agradecimientos.",
+            "content_md_es": "PLACEHOLDER — texto del proyecto en espanol.\n\nPLACEHOLDER — agradecimientos.",
+            "align": "left"
+          },
+          "credits": {
+            "layout": "credits",
+            "title": "Credits",
+            "title_es": "Creditos",
+            "items": [
+              {
+                "role": "Photography",
+                "name": "Pablo Tutino"
+              },
+              {
+                "role": "Design",
+                "name": "—"
+              },
+              {
+                "role": "Models",
+                "name": "—"
+              }
+            ]
+          }
+        }
       }
     },
     {
@@ -4150,7 +4605,126 @@
       ],
       "cover_portrait": true,
       "layout": {
-        "cover_object_position": "center"
+        "cover": "_DSC5320.jpg",
+        "cover_object_position": "center",
+        "rows": [
+          {
+            "cells": [
+              {
+                "photo": "_DSC5387-2_square.jpg"
+              },
+              {
+                "photo": "_DSC5402-2_v3.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "_DSC5422-2.jpg"
+              },
+              {
+                "photo": "_DSC5448-2_v3.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "_DSC5496-2.jpg"
+              },
+              {
+                "photo": "_DSC5948.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "_DSC5712-4.jpg"
+              },
+              {
+                "photo": "_DSC5725.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "_DSC5727.jpg"
+              },
+              {
+                "photo": "_DSC5735.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "_DSC5740_v2.jpg"
+              },
+              {
+                "photo": "_DSC5745_v2.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "_DSC5785.jpg"
+              },
+              {
+                "photo": "_DSC5954.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "_DSC5822.jpg"
+              },
+              {
+                "photo": "_DSC5719.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "_DSC5500.jpg"
+              }
+            ]
+          }
+        ],
+        "text_slots": {
+          "intro": {
+            "layout": "prose",
+            "title": "Night speed",
+            "title_es": "Night speed",
+            "content_md": "PLACEHOLDER — texto del proyecto. Sobre la serie: contexto, proceso, decision estetica. Reemplazar con el texto definitivo.\n\nPLACEHOLDER — agradecimientos.",
+            "content_md_es": "PLACEHOLDER — texto del proyecto en espanol.\n\nPLACEHOLDER — agradecimientos.",
+            "align": "left"
+          },
+          "credits": {
+            "layout": "credits",
+            "title": "Credits",
+            "title_es": "Creditos",
+            "items": [
+              {
+                "role": "Photography",
+                "name": "Pablo Tutino"
+              },
+              {
+                "role": "Design",
+                "name": "—"
+              },
+              {
+                "role": "Models",
+                "name": "—"
+              }
+            ]
+          }
+        }
       }
     },
     {
@@ -4923,7 +5497,269 @@
       ],
       "cover_portrait": true,
       "layout": {
-        "cover_object_position": "center"
+        "cover": "IMG_0089.jpg",
+        "cover_object_position": "center",
+        "rows": [
+          {
+            "cells": [
+              {
+                "photo": "IMG_0210.jpg"
+              },
+              {
+                "photo": "IMG_0359.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_0557.jpg"
+              },
+              {
+                "photo": "IMG_0704.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_0729_v2.jpg"
+              },
+              {
+                "photo": "IMG_1053.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_1058.jpg"
+              },
+              {
+                "photo": "IMG_1075.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_1093.jpg"
+              },
+              {
+                "photo": "IMG_1186.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_1207-2_v3.jpg"
+              },
+              {
+                "photo": "IMG_1211_v3.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_1222_v2.jpg"
+              },
+              {
+                "photo": "IMG_1223_v2.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_1231_v2.jpg"
+              },
+              {
+                "photo": "IMG_1263_v2.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_1271_v2.jpg"
+              },
+              {
+                "photo": "IMG_1277_v4.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_1330_v2.jpg"
+              },
+              {
+                "photo": "IMG_1341_v2.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_1342_v2.jpg"
+              },
+              {
+                "photo": "IMG_1347_v2.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_1411_v2.jpg"
+              },
+              {
+                "photo": "IMG_1415_vNEW_2.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_1430_v2.jpg"
+              },
+              {
+                "photo": "IMG_1431_v2.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_1431x_v2.jpg"
+              },
+              {
+                "photo": "IMG_1464_v2.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_1488_pop.jpg"
+              },
+              {
+                "photo": "IMG_1508_moody_pop.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_1521_pop_moody.jpg"
+              },
+              {
+                "photo": "IMG_1616_moody.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_1641.jpg"
+              },
+              {
+                "photo": "IMG_1748_moody_pop.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_1773_moody.jpg"
+              },
+              {
+                "photo": "IMG_1791_moody.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_1824_pop.jpg"
+              },
+              {
+                "photo": "IMG_1853_pop.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_1929_pop_moody.jpg"
+              },
+              {
+                "photo": "IMG_1942_pop.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_1946_moody_pop.jpg"
+              },
+              {
+                "photo": "IMG_1953_moody_pop.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_1955_moody_pop.jpg"
+              },
+              {
+                "photo": "IMG_2061_moody_pop.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_2123_moody_pop.jpg"
+              },
+              {
+                "photo": "IMG_2165_moody_pop.jpg"
+              }
+            ]
+          }
+        ],
+        "text_slots": {
+          "intro": {
+            "layout": "prose",
+            "title": "Soluble oil",
+            "title_es": "Oleo al agua",
+            "content_md": "PLACEHOLDER — texto del proyecto. Sobre la serie: contexto, proceso, decision estetica. Reemplazar con el texto definitivo.\n\nPLACEHOLDER — agradecimientos.",
+            "content_md_es": "PLACEHOLDER — texto del proyecto en espanol.\n\nPLACEHOLDER — agradecimientos.",
+            "align": "left"
+          },
+          "credits": {
+            "layout": "credits",
+            "title": "Credits",
+            "title_es": "Creditos",
+            "items": [
+              {
+                "role": "Photography",
+                "name": "Pablo Tutino"
+              },
+              {
+                "role": "Design",
+                "name": "—"
+              },
+              {
+                "role": "Models",
+                "name": "—"
+              }
+            ]
+          }
+        }
       }
     },
     {
@@ -5167,7 +6003,106 @@
       ],
       "cover_portrait": false,
       "layout": {
-        "cover_object_position": "center"
+        "cover": "post_01.jpg",
+        "cover_object_position": "center",
+        "rows": [
+          {
+            "cells": [
+              {
+                "photo": "post_02.jpg"
+              },
+              {
+                "photo": "post_03.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "post_04.jpg"
+              },
+              {
+                "photo": "post_05.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "post_06.jpg"
+              },
+              {
+                "photo": "post_07.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "post_08.jpg"
+              },
+              {
+                "photo": "post_09.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "post_10.jpg"
+              },
+              {
+                "photo": "post_11.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "post_12.jpg"
+              },
+              {
+                "photo": "post_13.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "post_14.jpg"
+              }
+            ]
+          }
+        ],
+        "text_slots": {
+          "intro": {
+            "layout": "prose",
+            "title": "Inhabiting the recovery ",
+            "title_es": "Inhabiting the recovery ",
+            "content_md": "PLACEHOLDER — texto del proyecto. Sobre la serie: contexto, proceso, decision estetica. Reemplazar con el texto definitivo.\n\nPLACEHOLDER — agradecimientos.",
+            "content_md_es": "PLACEHOLDER — texto del proyecto en espanol.\n\nPLACEHOLDER — agradecimientos.",
+            "align": "left"
+          },
+          "credits": {
+            "layout": "credits",
+            "title": "Credits",
+            "title_es": "Creditos",
+            "items": [
+              {
+                "role": "Photography",
+                "name": "Pablo Tutino"
+              },
+              {
+                "role": "Design",
+                "name": "—"
+              },
+              {
+                "role": "Models",
+                "name": "—"
+              }
+            ]
+          }
+        }
       }
     },
     {
@@ -5394,7 +6329,99 @@
       ],
       "cover_portrait": true,
       "layout": {
-        "cover_object_position": "center"
+        "cover": "post_01.jpg",
+        "cover_object_position": "center",
+        "rows": [
+          {
+            "cells": [
+              {
+                "photo": "post_02.jpg"
+              },
+              {
+                "photo": "post_03.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "post_04.jpg"
+              },
+              {
+                "photo": "post_05.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "post_06.jpg"
+              },
+              {
+                "photo": "post_07.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "post_08.jpg"
+              },
+              {
+                "photo": "post_09.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "post_10.jpg"
+              },
+              {
+                "photo": "post_11.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "post_12.jpg"
+              },
+              {
+                "photo": "post_13.jpg"
+              }
+            ]
+          }
+        ],
+        "text_slots": {
+          "intro": {
+            "layout": "prose",
+            "title": "Light BDSM",
+            "title_es": "Light BDSM",
+            "content_md": "PLACEHOLDER — texto del proyecto. Sobre la serie: contexto, proceso, decision estetica. Reemplazar con el texto definitivo.\n\nPLACEHOLDER — agradecimientos.",
+            "content_md_es": "PLACEHOLDER — texto del proyecto en espanol.\n\nPLACEHOLDER — agradecimientos.",
+            "align": "left"
+          },
+          "credits": {
+            "layout": "credits",
+            "title": "Credits",
+            "title_es": "Creditos",
+            "items": [
+              {
+                "role": "Photography",
+                "name": "Pablo Tutino"
+              },
+              {
+                "role": "Design",
+                "name": "—"
+              },
+              {
+                "role": "Models",
+                "name": "—"
+              }
+            ]
+          }
+        }
       }
     },
     {
@@ -5781,7 +6808,149 @@
       ],
       "cover_portrait": false,
       "layout": {
-        "cover_object_position": "center"
+        "cover": "Untitled-1_01.jpg",
+        "cover_object_position": "center",
+        "rows": [
+          {
+            "cells": [
+              {
+                "photo": "Untitled-1_02.jpg"
+              },
+              {
+                "photo": "Untitled-1_03.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "Untitled-1_04.jpg"
+              },
+              {
+                "photo": "Untitled-1_05.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "Untitled-1_06.jpg"
+              },
+              {
+                "photo": "Untitled-1_07.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "Untitled-1_08.jpg"
+              },
+              {
+                "photo": "Untitled-1_09.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "Untitled-1_10.jpg"
+              },
+              {
+                "photo": "Untitled-1_11.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "Untitled-1_12.jpg"
+              },
+              {
+                "photo": "Untitled-1_13.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "post_01.jpg"
+              },
+              {
+                "photo": "post_02.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "post_03.jpg"
+              },
+              {
+                "photo": "post_04.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "post_05.jpg"
+              },
+              {
+                "photo": "post_06.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "post_07.jpg"
+              },
+              {
+                "photo": "post_08.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "post_09.jpg"
+              },
+              {
+                "photo": "post_10.jpg"
+              }
+            ]
+          }
+        ],
+        "text_slots": {
+          "intro": {
+            "layout": "prose",
+            "title": "Skin Landscape",
+            "title_es": "Skin Landscape",
+            "content_md": "PLACEHOLDER — texto del proyecto. Sobre la serie: contexto, proceso, decision estetica. Reemplazar con el texto definitivo.\n\nPLACEHOLDER — agradecimientos.",
+            "content_md_es": "PLACEHOLDER — texto del proyecto en espanol.\n\nPLACEHOLDER — agradecimientos.",
+            "align": "left"
+          },
+          "credits": {
+            "layout": "credits",
+            "title": "Credits",
+            "title_es": "Creditos",
+            "items": [
+              {
+                "role": "Photography",
+                "name": "Pablo Tutino"
+              },
+              {
+                "role": "Design",
+                "name": "—"
+              },
+              {
+                "role": "Models",
+                "name": "—"
+              }
+            ]
+          }
+        }
       }
     },
     {
@@ -6456,7 +7625,239 @@
       ],
       "cover_portrait": true,
       "layout": {
-        "cover_object_position": "center"
+        "cover": "IMG_2312_v5.jpg",
+        "cover_object_position": "center",
+        "rows": [
+          {
+            "cells": [
+              {
+                "photo": "IMG_2367_v4.jpg"
+              },
+              {
+                "photo": "IMG_2367x.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_2397x.jpg"
+              },
+              {
+                "photo": "IMG_2411x.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_2482.jpg"
+              },
+              {
+                "photo": "IMG_2484.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_2502_v3.jpg"
+              },
+              {
+                "photo": "IMG_2540_v4.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_2563_v3.jpg"
+              },
+              {
+                "photo": "IMG_2607.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_2607_v2.jpg"
+              },
+              {
+                "photo": "IMG_2634_v5.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_2634_v5_cropped.jpg"
+              },
+              {
+                "photo": "IMG_2683_v4.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_2690.jpg"
+              },
+              {
+                "photo": "IMG_2724.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_2735_v3.jpg"
+              },
+              {
+                "photo": "IMG_2736.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_2757_v2.jpg"
+              },
+              {
+                "photo": "IMG_2809_v2.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_2813_v2.jpg"
+              },
+              {
+                "photo": "IMG_2827_v2.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_2837_v2.jpg"
+              },
+              {
+                "photo": "IMG_2837_v4.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_2852.jpg"
+              },
+              {
+                "photo": "IMG_2852_v3.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_2882_v3.jpg"
+              },
+              {
+                "photo": "IMG_2905_v5.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_2905x_v2.jpg"
+              },
+              {
+                "photo": "IMG_2955_v5.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_2956_v2.jpg"
+              },
+              {
+                "photo": "IMG_2956_v5.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_2960x_v4.jpg"
+              },
+              {
+                "photo": "IMG_2993_v2.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_2998_v2.jpg"
+              },
+              {
+                "photo": "IMG_3008_v5.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_3016_v2.jpg"
+              },
+              {
+                "photo": "IMG_3030_v2.jpg"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "photo": "IMG_3030_v5.jpg"
+              },
+              {
+                "photo": "IMG_3038_v4.jpg"
+              }
+            ]
+          }
+        ],
+        "text_slots": {
+          "intro": {
+            "layout": "prose",
+            "title": "Pop-Corn",
+            "title_es": "Pop-Corn",
+            "content_md": "PLACEHOLDER — texto del proyecto. Sobre la serie: contexto, proceso, decision estetica. Reemplazar con el texto definitivo.\n\nPLACEHOLDER — agradecimientos.",
+            "content_md_es": "PLACEHOLDER — texto del proyecto en espanol.\n\nPLACEHOLDER — agradecimientos.",
+            "align": "left"
+          },
+          "credits": {
+            "layout": "credits",
+            "title": "Credits",
+            "title_es": "Creditos",
+            "items": [
+              {
+                "role": "Photography",
+                "name": "Pablo Tutino"
+              },
+              {
+                "role": "Design",
+                "name": "—"
+              },
+              {
+                "role": "Models",
+                "name": "—"
+              }
+            ]
+          }
+        }
       }
     }
   ],
