@@ -6,6 +6,12 @@
 # Si lo tenés instalado desde la UI de Netlify, desinstalalo:
 #   Netlify UI → Site settings → Build & deploy → Plugins → Remove @netlify/plugin-nextjs
 
+# /index chocaba con el index.html de home en el static export → renombrado a /work
+[[redirects]]
+  from = "/index"
+  to = "/work"
+  status = 301
+
 # URLs viejas por categoria → /series/:serie (301). Las de projects siguen igual.
 [[redirects]]
   from = "/intimate/:serie"

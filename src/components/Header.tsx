@@ -18,13 +18,13 @@ export function Header() {
           Pablo Tutino
         </Link>
 
-        {/* Navegación inline (desktop): INDEX, ABOUT, language */}
+        {/* Navegación inline (desktop): WORK, ABOUT, language */}
         <div className="hidden md:flex items-center gap-6">
           <Link
-            href="/index"
+            href="/work"
             className="font-label-sm text-label-sm tracking-[0.2em] uppercase text-primary hover:text-secondary transition-colors"
           >
-            INDEX
+            WORK
           </Link>
           <Link
             href="/about"
@@ -89,13 +89,13 @@ export function Header() {
         {/* Separator */}
         <div className="w-16 border-t border-outline-variant opacity-30" />
 
-        {/* Index */}
+        {/* Work */}
         <Link
-          href="/index"
+          href="/work"
           className="font-headline-md text-headline-md tracking-[0.2em] text-primary hover:text-secondary transition-all duration-300 uppercase mt-8"
           onClick={() => setMenuOpen(false)}
         >
-          INDEX
+          WORK
         </Link>
 
         {/* Separator */}

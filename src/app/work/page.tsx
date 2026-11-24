@@ -6,8 +6,8 @@ import { siteConfig } from "@/data/config";
 import type { Serie, PhotoItem } from "@/types";
 import { useI18n } from "@/hooks/useI18n";
 
-// Index: todas las series y proyectos juntos — la diferencia se verá en credits/descripción.
-export default function IndexPage() {
+// Work: todas las series y proyectos juntos — la diferencia se verá en credits/descripción.
+export default function WorkPage() {
   const { t } = useI18n();
   const all = siteConfig.series;
 
@@ -29,7 +29,7 @@ export default function IndexPage() {
     <div className="min-h-screen px-4 py-8">
       <div className="mb-8">
         <h1 className="font-pt-mono text-[12px] tracking-[0.2em] NOTuppercase text-on-surface-variant">
-          Index
+          Work
         </h1>
       </div>
 
