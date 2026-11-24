@@ -1,7 +1,7 @@
 "use client";
 
 import { siteConfig } from "@/data/config";
-import type { Serie, PhotoItem, LayoutCell, TextSlot } from "@/types";
+import type { Serie, PhotoItem, LayoutCell, LayoutRow, TextSlot } from "@/types";
 import { useI18n } from "@/hooks/useI18n";
 import { useNerdMode } from "@/hooks/useNerdMode";
 import { NerdOverlay } from "@/components/NerdOverlay";
@@ -110,7 +110,7 @@ export function EditorialLayout({
 
   // defaults: cover = 1ra foto, el resto una fila full-width por foto
   const cover = layout.cover ?? photoFns[0];
-  const effRows =
+  const effRows: LayoutRow[] =
     rows.length > 0
       ? rows
       : photoFns.filter((f) => f !== cover).map((f) => ({ cells: [{ photo: f }] }));
@@ -137,13 +137,17 @@ export function EditorialLayout({
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-8 space-y-8">
         {effRows.map((row, i) => {
           const n = row.cells.length;
+          const textOnly = n === 1 && !!row.cells[0].text;
           return (
             <section
               key={`row-${i}`}
               className={`flex min-h-[75vh] gap-4 ${
-                n === 2 ? "grid grid-cols-1 md:grid-cols-2 items-stretch" : "items-center"
+                n === 2 || textOnly
+                  ? "grid grid-cols-1 md:grid-cols-2 items-center"
+                  : "items-center"
               }`}
             >
+              {textOnly && <div className="hidden md:block" />}
               {row.cells.map((cell, j) => (
                 <Cell
                   key={`cell-${i}-${j}`}
