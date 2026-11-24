@@ -75,6 +75,8 @@ export interface LayoutRow {
 
 export interface SerieLayout {
   cover?: string; // filename; default: primera foto
+  /** Para el cover full-bleed: dónde anclar la foto (default center). */
+  cover_object_position?: "top" | "center" | "bottom";
   rows?: LayoutRow[];
   text_slots?: Record<string, TextSlot>;
 }

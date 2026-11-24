@@ -123,6 +123,7 @@ export function EditorialLayout({
           src={cdnUrl(serie.serie_slug, cover, 2000)}
           alt={`${serie.serie_name} — cover`}
           className="absolute inset-0 w-full h-full object-cover"
+          style={{ objectPosition: layout.cover_object_position ?? "center" }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
         <h1 className="absolute bottom-20 left-6 md:bottom-14 md:left-12 text-white text-4xl md:text-7xl font-light tracking-tight max-w-[85%]">
