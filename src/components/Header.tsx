@@ -13,8 +13,6 @@ export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const nerdIconSrc = "/icons/nerd-off.png";
-  const categoryLinks = allCategories.filter(c => c.category_slug !== "projects");
-  const projectsLink = allCategories.find(c => c.category_slug === "projects");
 
   return (
     <>
@@ -25,22 +23,6 @@ export function Header() {
         >
           Pablo Tutino
         </Link>
-
-        {/* Desktop nav links — hidden on mobile */}
-        <div className="hidden md:flex items-center gap-10">
-          <Link
-            href="/series"
-            className="font-headline-lg-mobile text-label-sm NOTuppercase tracking-widest text-primary hover:text-secondary transition-colors"
-          >
-            Series
-          </Link>
-          <Link
-            href="/projects"
-            className="font-headline-lg-mobile text-label-sm NOTuppercase tracking-widest text-primary hover:text-secondary transition-colors"
-          >
-            {projectsLink ? (projectsLink.title_es ? t(projectsLink.title, projectsLink.title_es) : projectsLink.title) : "Projects"}
-          </Link>
-        </div>
 
         <button
           onClick={() => setMenuOpen(!menuOpen)}
@@ -103,49 +85,25 @@ export function Header() {
         {/* Separator */}
         <div className="w-16 border-t border-outline-variant opacity-30" />
 
-        {/* Projects */}
+        {/* Index */}
         <Link
-          href="/projects"
+          href="/index"
           className="font-headline-md text-headline-md tracking-[0.2em] text-primary hover:text-secondary transition-all duration-300 uppercase mt-8"
           onClick={() => setMenuOpen(false)}
         >
-          {projectsLink ? (projectsLink.title_es ? t(projectsLink.title, projectsLink.title_es) : projectsLink.title) : "PROJECTS"}
+          INDEX
         </Link>
 
         {/* Separator */}
         <div className="w-16 border-t border-outline-variant opacity-30 mt-8" />
 
-        {/* Category links */}
-        <div className="flex flex-col items-center space-y-6 mt-8">
-          <Link
-                href="/series"
-                className="font-headline-md text-headline-md tracking-[0.2em] text-primary hover:text-secondary transition-all duration-300 uppercase"
-                onClick={() => setMenuOpen(false)}
-              >
-              Series
-            </Link>
-          {false && categoryLinks.map((cat) => (
-            <Link
-              key={cat.category_slug}
-              href={`/${cat.category_slug}`}
-              className="font-headline-md text-body-md tracking-[0.2em] text-primary hover:text-secondary transition-all duration-300 uppercase"
-              onClick={() => setMenuOpen(false)}
-            >
-              {cat.title_es ? t(cat.title, cat.title_es) : cat.title}
-            </Link>
-          ))}
-        </div>
-
-        {/* Separator */}
-        <div className="w-16 border-t border-outline-variant opacity-30 mt-8" />
-
-        {/* Info */}
+        {/* About */}
         <Link
           href="/about"
           className="font-headline-md text-headline-md tracking-[0.2em] text-primary hover:text-secondary transition-all duration-300 uppercase mt-8"
           onClick={() => setMenuOpen(false)}
         >
-          INFO
+          ABOUT
         </Link>
       </nav>
     </>

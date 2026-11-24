@@ -58,7 +58,7 @@ export function Footer() {
         href="/about"
         className="font-pt-mono text-[11px] tracking-widest hover:opacity-70 transition-opacity"
       >
-        INFO
+        ABOUT
       </Link>
     </footer>
   );
