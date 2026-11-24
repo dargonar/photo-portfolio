@@ -168,11 +168,7 @@ export function Carousel() {
 
       {/* Footer overlay — glass bg, fixed bottom */}
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-glass-bg backdrop-blur-md border-t border-outline-variant px-gutter p-4">
-        <div className="flex items-center justify-between max-w-screen-xl mx-auto">
-          {/* Left: counter */}
-          <span className="font-data-mono text-data-mono text-primary shrink-0">
-            {pad(current + 1)} / {pad(total)}
-          </span>
+        <div className="flex items-center justify-center max-w-screen-xl mx-auto">
           {/* Center: serie name + link — truncado a 1 línea en mobile */}
           <Link
             href={seriePath}
