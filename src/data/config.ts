@@ -7,6 +7,7 @@ function castSerie(s: (typeof rawConfig.series)[number]): Serie {
     carousel_transition: s.carousel_transition as Serie["carousel_transition"],
     lightbox_mode: s.lightbox_mode as Serie["lightbox_mode"],
     layout: s.layout as Serie["layout"],
+    cover_portrait: s.cover_portrait as Serie["cover_portrait"],
     images: s.images as Serie["images"],
   };
 }

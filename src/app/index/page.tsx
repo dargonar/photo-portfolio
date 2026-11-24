@@ -38,13 +38,15 @@ export default function IndexPage() {
           const file = thumbFile(serie);
           const isProject = serie.category_slug === "projects";
           const type = isProject ? t("Project", "Proyecto") : t("Series", "Serie");
+          // cover portrait: la celda crece hacia abajo y empuja la fila siguiente
+          const portrait = !!serie.cover_portrait;
           return (
             <Link
               key={serie.serie_slug}
               href={isProject ? `/projects/${serie.serie_slug}` : `/series/${serie.serie_slug}`}
               className="group block"
             >
-              <div className="relative aspect-[4/3] overflow-hidden bg-surface-container">
+              <div className={`relative overflow-hidden bg-surface-container ${portrait ? "aspect-[3/4]" : "aspect-[4/3]"}`}>
                 {file && (
                   <CldImage
                     src={`${serie.serie_slug}/${file.replace(/\.[^.]+$/, "")}`}

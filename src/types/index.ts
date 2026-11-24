@@ -113,6 +113,7 @@ export interface Serie {
   lightbox_mode?: LightboxMode;
   lightbox_autoplay_interval?: number;
   layout?: SerieLayout;
+  cover_portrait?: boolean;
   images: SeriesItem[];
 }
 

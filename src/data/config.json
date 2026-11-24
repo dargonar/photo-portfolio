@@ -301,7 +301,8 @@
             "editor": "Lightroom"
           }
         }
-      ]
+      ],
+      "cover_portrait": false
     },
     {
       "serie_name": "Street-Theatre",
@@ -524,7 +525,8 @@
             "editor": "Lightroom"
           }
         }
-      ]
+      ],
+      "cover_portrait": false
     },
     {
       "serie_name": "Knots",
@@ -715,7 +717,8 @@
             "editor": "Lightroom"
           }
         }
-      ]
+      ],
+      "cover_portrait": true
     },
     {
       "serie_name": "Too Much But Not Enough",
@@ -2879,7 +2882,8 @@
             "editor": ""
           }
         }
-      ]
+      ],
+      "cover_portrait": true
     },
     {
       "serie_name": "El Nono",
@@ -3319,7 +3323,8 @@
             "editor": "Lightroom"
           }
         }
-      ]
+      ],
+      "cover_portrait": true
     },
     {
       "serie_name": "Night speed",
@@ -4129,7 +4134,8 @@
             }
           ]
         }
-      ]
+      ],
+      "cover_portrait": true
     },
     {
       "serie_name": "Soluble oil",
@@ -4898,7 +4904,8 @@
             "editor": ""
           }
         }
-      ]
+      ],
+      "cover_portrait": true
     },
     {
       "serie_name": "Inhabiting the recovery ",
@@ -5138,7 +5145,8 @@
             "editor": ""
           }
         }
-      ]
+      ],
+      "cover_portrait": false
     },
     {
       "serie_name": "Light BDSM",
@@ -5361,7 +5369,8 @@
             "editor": ""
           }
         }
-      ]
+      ],
+      "cover_portrait": true
     },
     {
       "serie_name": "Skin Landscape",
@@ -5744,7 +5753,8 @@
             "editor": ""
           }
         }
-      ]
+      ],
+      "cover_portrait": false
     },
     {
       "serie_name": "Pop-Corn",
@@ -6415,7 +6425,8 @@
             "editor": "Lightroom"
           }
         }
-      ]
+      ],
+      "cover_portrait": true
     }
   ],
   "pages": {
