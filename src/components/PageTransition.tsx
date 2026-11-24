@@ -16,7 +16,7 @@ export function PageTransition({ children }: { children: ReactNode }) {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className={isHome ? "" : "min-h-screen pt-14 md:pt-10"}
+        className={isHome ? "" : "min-h-screen "}
       >
         {children}
       </motion.main>

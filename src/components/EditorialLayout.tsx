@@ -3,8 +3,6 @@
 import { siteConfig } from "@/data/config";
 import type { Serie, PhotoItem, LayoutCell, LayoutRow, TextSlot } from "@/types";
 import { useI18n } from "@/hooks/useI18n";
-import { useNerdMode } from "@/hooks/useNerdMode";
-import { NerdOverlay } from "@/components/NerdOverlay";
 import { mdToHtml } from "@/lib/mdToHtml";
 
 const CDN = "https://res.cloudinary.com/dhr3jdnve/image/upload";
@@ -67,7 +65,6 @@ function Cell({
   width: number;
   onOpen: (filename: string) => void;
 }) {
-  const { nerdMode } = useNerdMode();
   if (cell.text) {
     const slot = serie.layout?.text_slots?.[cell.text];
     if (!slot) return null;
@@ -89,7 +86,6 @@ function Cell({
         loading="lazy"
         className="w-full h-auto cursor-pointer"
       />
-      {nerdMode && <NerdOverlay image={img} />}
     </div>
   );
 }

@@ -1,17 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useI18n } from "@/hooks/useI18n";
-import { useNerdMode } from "@/hooks/useNerdMode";
 import { useState } from "react";
 
 export function Header() {
   const { locale, toggleLocale } = useI18n();
-  const { nerdMode, toggleNerdMode } = useNerdMode();
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const nerdIconSrc = "/icons/nerd-off.png";
 
   return (
     <>
@@ -23,7 +18,7 @@ export function Header() {
           Pablo Tutino
         </Link>
 
-        {/* Navegación inline (desktop): INDEX, ABOUT, nerd-mode, language */}
+        {/* Navegación inline (desktop): INDEX, ABOUT, language */}
         <div className="hidden md:flex items-center gap-6">
           <Link
             href="/index"
@@ -38,25 +33,8 @@ export function Header() {
             ABOUT
           </Link>
 
-          {/* Controls: Nerd + Language — secondary chrome, dimmed at rest */}
+          {/* Language — secondary chrome, dimmed at rest */}
           <div className="flex items-center gap-2 opacity-50 hover:opacity-100 focus-within:opacity-100 transition-opacity">
-            <button
-              onClick={(e) => { e.stopPropagation(); toggleNerdMode(); }}
-              className={`flex items-center justify-center w-9 h-9 border transition-all duration-300 ${
-                nerdMode
-                  ? "border-primary bg-primary"
-                  : "border-primary/30 hover:border-primary"
-              }`}
-              title="Nerd Mode"
-            >
-              <Image
-                src={nerdIconSrc}
-                alt="Nerd Mode"
-                width={20}
-                height={20}
-                className="transition-all duration-200"
-              />
-            </button>
             <button
               onClick={(e) => { e.stopPropagation(); toggleLocale(); }}
               className="px-3 h-9 border border-primary font-data-mono text-data-mono flex items-center justify-center transition-all duration-300 hover:bg-primary hover:text-background"

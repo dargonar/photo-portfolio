@@ -2,7 +2,6 @@
 
 import { usePathname } from "next/navigation";
 import { I18nProvider } from "@/hooks/useI18n";
-import { NerdModeProvider } from "@/hooks/useNerdMode";
 import { PasswordGateProvider } from "@/hooks/usePasswordGate";
 import PasswordGate from "@/components/PasswordGate";
 import { Header } from "@/components/Header";
@@ -17,14 +16,12 @@ export function Providers({ children }: { children: React.ReactNode }) {
     <PasswordGateProvider>
       <PasswordGate>
         <I18nProvider>
-          <NerdModeProvider>
-            <Header />
-            <PageTransition>
-              {/* Spacer por el footer fijo: en home el carousel ya gestiona su propio footer */}
-              <div className={isHome ? "" : "pb-[64px]"}>{children}</div>
-            </PageTransition>
-            <Footer />
-          </NerdModeProvider>
+          <Header />
+          <PageTransition>
+            {/* Spacer por el footer fijo: en home el carousel ya gestiona su propio footer */}
+            <div className={isHome ? "" : "pb-[64px]"}>{children}</div>
+          </PageTransition>
+          <Footer />
         </I18nProvider>
       </PasswordGate>
     </PasswordGateProvider>
