@@ -141,18 +141,18 @@ export function Carousel() {
       </Link>
 
       {/* Serie name over photo — bottom-left, scrim gradient. Mobile: 50% width. */}
-      <div className="absolute bottom-0 left-0 z-20 w-1/2 md:w-auto pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-        <div className="relative p-4 md:p-6">
-          <h2 className="font-pt-mono text-xl md:text-2xl text-white leading-tight">
+      <div className="absolute bottom-[72px] left-0 z-20 w-1/2 md:w-auto pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+        <div className="relative p-4 md:p-6 md:pl-12">
+          <h2 className="text-white text-3xl md:text-5xl font-light tracking-tight leading-tight">
             {t(serie.serie_name, serie.serie_name_es)}
           </h2>
-          <p className="font-pt-mono text-[12px] text-white/80 mt-1">{serie.year}</p>
+          <p className="font-pt-mono text-lg md:text-xl text-white/80 mt-2">{serie.year}</p>
         </div>
       </div>
 
       {/* Dots + pause/play — desktop: centered. Mobile: right half, left-aligned */}
-      <div className="absolute bottom-[72px] left-1/2 right-0 md:right-auto md:-translate-x-1/2 z-20 flex items-center gap-4">
+      <div className="absolute bottom-[72px] left-1/2 right-0 md:right-auto md:-translate-x-1/2 z-20 flex items-center gap-4 bg-black/35 rounded-full px-4 py-2 backdrop-blur-sm">
         <div className="flex items-center gap-2.5">
           {images.map((img, i) => (
             <button
