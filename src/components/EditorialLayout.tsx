@@ -58,11 +58,13 @@ function Cell({
   serie,
   cell,
   width,
+  fit,
   onOpen,
 }: {
   serie: Serie;
   cell: LayoutCell;
   width: number;
+  fit?: boolean;
   onOpen: (filename: string) => void;
 }) {
   if (cell.text) {
@@ -77,14 +79,18 @@ function Cell({
   const img = item.data;
   return (
     <div
-      className={`relative flex min-w-0 w-full ${alignClass[cell.align ?? "center"]}`}
+      className={`relative flex min-w-0 ${fit ? "flex-1 h-full items-center justify-center" : `w-full ${alignClass[cell.align ?? "center"]}`}`}
       onClick={() => onOpen(img.filename)}
     >
       <img
         src={cdnUrl(serie.serie_slug, img.filename, width)}
         alt={`${serie.serie_name} — ${img.filename}`}
         loading="lazy"
-        className="w-full h-auto cursor-pointer"
+        className={
+          fit
+            ? "cursor-pointer max-h-[80vh] max-w-full w-auto h-auto object-contain"
+            : "w-full h-auto cursor-pointer"
+        }
       />
     </div>
   );
@@ -138,11 +144,12 @@ export function EditorialLayout({
           return (
             <section
               key={`row-${i}`}
-              className={`flex min-h-[75vh] gap-4 ${
-                n === 2 || textOnly
-                  ? "grid grid-cols-1 md:grid-cols-2 items-center"
-                  : "items-center"
-              }`}
+              className={
+                n === 2 && !textOnly
+                  ? // diptico: ambas fotos entran en el viewport, juntas y centradas
+                    "flex h-screen items-center justify-center gap-4 md:gap-8 px-4 md:px-8"
+                  : `flex min-h-[75vh] items-center ${n === 2 ? "grid grid-cols-1 md:grid-cols-2 gap-4" : ""}`
+              }
             >
               {textOnly && <div className="hidden md:block" />}
               {row.cells.map((cell, j) => (
@@ -151,6 +158,7 @@ export function EditorialLayout({
                   serie={serie}
                   cell={cell}
                   width={n === 2 ? 900 : 1600}
+                  fit={n === 2 && !textOnly}
                   onOpen={onOpen}
                 />
               ))}
