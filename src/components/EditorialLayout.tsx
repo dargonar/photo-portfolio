@@ -16,6 +16,25 @@ function cdnUrl(serieSlug: string, filename: string, width: number) {
 /* ── text slots ── */
 function TextSlotView({ slot }: { slot: TextSlot }) {
   const { t } = useI18n();
+  if (slot.layout === "columns") {
+    // texto largo a dos columnas (colofón): título estilo hero, interlineado
+    // doble, 1 columna en mobile / 2 en desktop (CSS columns: el texto fluye)
+    return (
+      <div className={`w-full ${slot.class ?? ""}`}>
+        {slot.title && (
+          <h2 className="text-3xl md:text-5xl font-light text-primary mb-10">
+            {t(slot.title ?? "", slot.title_es ?? "")}
+          </h2>
+        )}
+        <div
+          // mismo ancho que el grid de credits (2 columnas gap-x-8) y misma
+          // fuente (font-pt-mono text-sm); contenido HTML crudo para <i> etc.
+          className="font-pt-mono text-sm leading-8 md:columns-2 md:gap-8"
+          dangerouslySetInnerHTML={{ __html: t(slot.content_md ?? "", slot.content_md_es ?? "") }}
+        />
+      </div>
+    );
+  }
   if (slot.layout === "credits") {
     return (
       <div className={`w-full ${slot.class ?? ""}`}>

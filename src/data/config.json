@@ -38,13 +38,6 @@
           {
             "cells": [
               {
-                "text": "intro"
-              }
-            ]
-          },
-          {
-            "cells": [
-              {
                 "photo": "pablotutino_005_DSC3907_hq.jpg"
               },
               {
@@ -562,6 +555,13 @@
           {
             "cells": [
               {
+                "text": "statement"
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
                 "text": "credits"
               }
             ]
@@ -587,13 +587,20 @@
               },
               {
                 "role": "Design",
-                "name": "—"
+                "name": "Pablo Tutino"
               },
               {
                 "role": "Models",
                 "name": "—"
               }
             ]
+          },
+          "statement": {
+            "layout": "columns",
+            "title": "Too Much But Not Enough",
+            "title_es": "Too Much But Not Enough",
+            "content_md": "<p>Criticism is absorbed, rebellion is commercialized, and what might once have been a threat ends up turned into merchandise. The system does not need to silence those who question it; it is enough to incorporate them, empty them of meaning, and return them to the market.</p><p>What if everything were an object of consumption? Our bodies, our thoughts, our feelings. Ourselves. Others too.</p><p>In Un día en la vida de Dios (A Day in the Life of God), Martín Caparrós imagines a god employed by a corporation. During a twenty-four-hour workday, spanning 4,560 million years, that god creates our planet. An entire lifetime, compressed into a single workday.</p><p>I think of this photographic series as the narration of one ADHD day.</p><p>A day that unfolds between real events and imagined scenes, between memories, associations, desires, and fictions. A day where time does not always obey and is not always linear, where imagination bursts in, builds worlds, and abandons them.</p><p>But what happens when that imagination finds no place in the world we inhabit?</p><p>We live under a logic that demands attention, productivity, efficiency, and performance. That which does not fit its parameters appears as a deviation, something that must be corrected. Pain becomes private. Anxiety, depression, and burnout are interpreted as personal failures, while we learn to correct ourselves, medicate ourselves, optimize ourselves, and keep functioning. We rarely ask what makes us ill.</p><p>Difference turned into fault. Structural malaise turned into individual responsibility. My responsibility. My fault.</p><p>A colonized, domesticated, neutralized imagination.</p><p>Perhaps these photographs are an attempt to recover what I learned to consider defective. To give a territory to what does not fit, to make visible what happens while I try to remain within the limits of a reality that demands my attention, my time, and my performance.</p><p>An entire day trying to function. And everything that happens inside me in the meantime.</p>",
+            "content_md_es": "<p>La crítica se absorbe, la rebeldía se comercializa y aquello que alguna vez pudo ser una amenaza termina convertido en mercancía. El sistema no necesita silenciar aquello que lo cuestiona; le basta con incorporarlo, vaciarlo de sentido y devolverlo al mercado.</p><p>¿Y si todo fuera objeto de consumo? Nuestro cuerpo, nuestros pensamientos, nuestros sentimientos. Nosotrxs mismxs. También lxs otrxs.</p><p>En Un día en la vida de Dios, Martín Caparrós imagina a un dios empleado de una corporación. Durante una jornada laboral de veinticuatro horas, que comprende 4560 millones de años, ese dios crea nuestro planeta. Una vida entera, comprimida en una jornada de trabajo.</p><p>Pienso esta serie fotográfica como la narración de un día de TDAH.</p><p>Un día que transcurre entre acontecimientos reales y escenas imaginarias, entre recuerdos, asociaciones, deseos y ficciones. Una jornada donde el tiempo no siempre obedece ni es lineal, donde la imaginación irrumpe, construye mundos y los abandona.</p><p>Pero ¿qué sucede cuando esa imaginación no encuentra lugar en el mundo que habitamos?</p><p>Vivimos bajo una lógica que exige atención, productividad, eficiencia y rendimiento. Aquello que no se ajusta a sus parámetros aparece como una desviación, algo que debe corregirse. El dolor se vuelve privado. La ansiedad, la depresión y el agotamiento se interpretan como fracasos personales, mientras aprendemos a corregirnos, medicarnos, optimizarnos y seguir funcionando. Rara vez nos preguntamos por aquello que nos enferma.</p><p>La diferencia convertida en falla. El malestar estructural convertido en responsabilidad individual. Mi responsabilidad. Mi falla.</p><p>Una imaginación colonizada, domesticada, neutralizada.</p><p>Quizás estas fotografías sean un intento de recuperar aquello que aprendí a considerar defectuoso. De darle un territorio a lo que no encaja, de hacer visible aquello que sucede mientras intento permanecer dentro de los límites de una realidad que exige mi atención, mi tiempo y mi rendimiento.</p><p>Un día entero intentando funcionar. Y todo lo que sucede por dentro mientras tanto.</p>"
           }
         }
       },
@@ -8067,8 +8074,8 @@
     },
     "about": {
       "title": "Bio",
-      "content_text": "I explore shame as a visual and emotional territory. I try to put myself out there and make a fool of myself, and turn all of it into images.<br/><br/>I have a background in IT Engineering, currently completing my degree in Photography at UNLP.<br/>I've taken workshops and courses with Federico Estol, Iara Kremer, Adrián Salgueiro, Nicolás Janowski, Nadia Bautista, among others.<br/><br/>When much seems to become an object of consumption, where criticism is absorbed, rebellion is commercialized and love is reduced to an individual experience on a screen: fantasy and humor present themselves to me as refuge.<br/>I want to believe that (my) imagination has not yet been colonized, and that navigating my days between real events and imagined scenes, between memories, associations, desires and fictions, is not synonymous with a flaw to be corrected.<br/>Days when time does not always obey nor is linear, when imagination bursts in, builds worlds and abandons them.<br/><br/>Perhaps visual narration is an attempt to recover what I learned to consider defective in myself: my ADHD.<br/>To give a territory to what doesn't fit, to make visible what happens in my head alongside shared reality.<br/><br/>Pablo Tutino... tuti to friends.<br/>Visual storyteller and photographer + developer.",
-      "content_text_es": "Exploro la vergüenza como territorio visual y emocional. Intento salir ahí fuera a hacer el ridículo y convertirlo todo en imágenes.<br/><br/>Soy Ingeniero en Sistemas de profesión, a punto de recibirme en la carrera de Fotografía de la UNLP.<br/>Realicé talleres y cursos con Federico Estol, Iara Kremer, Adrián Salgueiro, Nicolás Janowski, Nadia Bautista, entre otrxs.<br/><br/>Cuando mucho parece convertirse en objeto de consumo, donde la crítica es absorbida, la rebeldía comercializada y el amor individualizado en la pantalla: la fantasía y el humor se me presentan como refugio.<br/>Quiero creer que la (mi) imaginación aún no fue colonizada, y que navegar mis días entre acontecimientos reales y escenas imaginarias, entre recuerdos, asociaciones, deseos y ficciones, no es sinónimo de falla a corregir. <br/>Días donde el tiempo no siempre obedece ni es lineal, donde la imaginación irrumpe, construye mundos y los abandona.<br/><br/>Quizás la narración visual sea un intento de recuperar aquello que aprendí a considerar defectuoso en mí: mi TDAH.<br/>A darle un territorio a lo que no encaja, de hacer visible aquello que sucede en mi cabeza en el mientras tanto de la realidad compartida.<br/><br/>Pablo Tutino... tuti para lxs amigxs.<br/>Visual storyteller and photographer + developer.",
+      "content_text": "I explore shame as a visual and emotional territory. I try to put myself out there, make a fool of myself, and turn it all into images.<br/><br/>I am a Systems Engineer by profession and am close to graduating from the Photography program at the National University of La Plata (UNLP). I have attended workshops and courses with Federico Estol, Iara Kremer, Adrián Salgueiro, Nicolás Janowski, Nadia Bautista, among others.<br/><br/>When everything seems to become an object of consumption, when criticism is absorbed, rebellion commercialized, and love individualized on a screen, fantasy and humor emerge as a refuge.<br/><br/>I want to believe that imagination — my imagination — has not yet been colonized. That navigating my days between real events and imagined scenes, memories, associations, desires, and fictions is not necessarily a flaw that needs to be corrected.<br/><br/>There are days when time refuses to obey or follow a linear trajectory. Days when imagination — or the brain itself — erupts, builds worlds, and then abandons them.<br/><br/>Perhaps visual storytelling is an attempt to reclaim something I learned to consider defective in myself: my ADHD. To give a territory to what doesn't fit, to make visible what happens inside my head while life goes on.<br/><br/>Pablo Tutino... tuti to friends.<br/>Visual storyteller and photographer + developer.",
+      "content_text_es": "Exploro la vergüenza como territorio visual y emocional. Intento salir ahí fuera, hacer el ridículo y convertirlo todo en imágenes.<br/><br/>Soy Ingeniero en Sistemas y estoy próximo a graduarme de la carrera de Fotografía de la UNLP. Realicé talleres y cursos con Federico Estol, Iara Kremer, Adrián Salgueiro, Nicolás Janowski, Nadia Bautista, entre otrxs.<br/><br/>Cuando todo parece convertirse en objeto de consumo, cuando la crítica es absorbida, la rebeldía comercializada y el amor individualizado en una pantalla, la fantasía y el humor se me presentan como refugio.<br/><br/>Quiero creer que la (mi) imaginación todavía no ha sido colonizada. Que navegar mis días entre acontecimientos reales y escenas imaginarias, recuerdos, asociaciones, deseos y ficciones no es necesariamente una falla que deba corregirse.<br/><br/>Hay días en los que el tiempo no obedece ni sigue una trayectoria lineal. Días en los que la imaginación —el propio cerebro— irrumpe, construye mundos y luego los abandona.<br/><br/>Quizás la narración visual sea un intento de recuperar aquello que aprendí a considerar defectuoso en mí: mi TDAH. De darle un territorio a lo que no encaja, de hacer visible aquello que sucede en mi cabeza mientras la vida transcurre.<br/><br/>Pablo Tutino... tuti para lxs amigxs.<br/>Visual storyteller and photographer + developer.",
       "image": "retrato.jpg"
     }
   },
