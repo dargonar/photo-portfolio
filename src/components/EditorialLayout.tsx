@@ -126,6 +126,18 @@ function DipticPair({
     if (!el) return;
     const imgs = Array.from(el.querySelectorAll("img"));
     if (!imgs.length || !imgs.every((i) => i.complete && i.naturalWidth > 0)) return;
+    if (window.innerWidth < 768) {
+      // mobile: apiladas — ambas comparten el mismo ancho para que el par
+      // entero (2 fotos + línea) quepa en el viewport
+      const ratios = imgs.map((i) => i.naturalHeight / i.naturalWidth);
+      setPairW(
+        Math.min(
+          0.92 * window.innerWidth,
+          (0.9 * window.innerHeight) / ratios.reduce((s, r) => s + r, 0)
+        )
+      );
+      return;
+    }
     const caps = imgs.map((i) =>
       Math.min(
         0.45 * window.innerWidth,
@@ -141,12 +153,12 @@ function DipticPair({
   }, [measure]);
 
   return (
-    <div ref={ref} className="flex items-center justify-center max-w-full">
+    <div ref={ref} className="flex flex-col md:flex-row items-center justify-center max-w-full">
       {row.cells.map((cell, j) => (
         <Fragment key={`cell-${j}`}>
           {j > 0 && (
             <div
-              className="w-px self-stretch"
+              className="h-px w-full md:h-auto md:w-px md:self-stretch"
               style={{
                 backgroundColor: layout.diptic_bg
                   ? "rgba(255,255,255,0.25)"

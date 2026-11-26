@@ -107,6 +107,18 @@ export function EditorialLightbox({
     if (!el) return;
     const imgs = Array.from(el.querySelectorAll("img"));
     if (!imgs.length || !imgs.every((i) => i.complete && i.naturalWidth > 0)) return;
+    if (window.innerWidth < 768) {
+      // mobile: apiladas — ambas comparten el mismo ancho para que el par
+      // entero (2 fotos + línea) quepa en el viewport
+      const ratios = imgs.map((i) => i.naturalHeight / i.naturalWidth);
+      setPairW(
+        Math.min(
+          0.92 * window.innerWidth,
+          (0.9 * window.innerHeight) / ratios.reduce((s, r) => s + r, 0)
+        )
+      );
+      return;
+    }
     const caps = imgs.map((i) =>
       Math.min(
         0.45 * window.innerWidth,
@@ -136,7 +148,7 @@ export function EditorialLightbox({
       <div className="absolute inset-0 flex items-center justify-center p-6 md:p-12">
         <div
           ref={pairRef}
-          className="flex items-center"
+          className="flex flex-col md:flex-row items-center"
           style={
             isDiptic
               ? { backgroundColor: serie.layout?.diptic_bg ?? "transparent", padding: "2rem 2.5rem" }
@@ -147,7 +159,7 @@ export function EditorialLightbox({
             <div key={f} className="flex items-center">
               {j > 0 && (
                 <div
-                  className="w-px self-stretch"
+                  className="h-px w-full md:h-auto md:w-px md:self-stretch"
                   style={{
                     backgroundColor: serie.layout?.diptic_bg
                       ? "rgba(255,255,255,0.25)"
