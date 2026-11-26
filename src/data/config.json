@@ -2606,11 +2606,28 @@
             "flash": false,
             "editor": "Lightroom"
           }
+        },
+        {
+          "type": "photo",
+          "data": {
+            "filename": "tia3_Layer_5.jpg",
+            "not_visible_in_serie": true,
+            "title": "",
+            "description": "",
+            "exif_date": "2023-01-01",
+            "location": "La Plata, AR",
+            "iso": 100,
+            "aperture_f": 2.8,
+            "shutter_speed": "1/125",
+            "focal_mm": 50,
+            "flash": false,
+            "editor": "Lightroom"
+          }
         }
       ],
       "cover_portrait": true,
       "layout": {
-        "cover": "Layer_12_1.png",
+        "cover": "tia3_Layer_5.jpg",
         "cover_object_position": "top",
         "rows": [
           {
@@ -7925,9 +7942,9 @@
             "object_position": "top"
           },
           {
-            "filename": "Layer_12_1.png",
+            "filename": "tia3_Layer_5.jpg",
             "serie_slug": "el-nono",
-            "object_position": "top"
+            "object_position": "center"
           },
           {
             "filename": "10_09_IMG_2873.jpg",
@@ -7942,9 +7959,9 @@
             "object_position": "top"
           },
           {
-            "filename": "Layer_12_1.png",
+            "filename": "tia3_Layer_5.jpg",
             "serie_slug": "el-nono",
-            "object_position": "top"
+            "object_position": "center"
           },
           {
             "filename": "10_09_IMG_2873.jpg",
