@@ -5,7 +5,7 @@ import { useI18n } from "@/hooks/useI18n";
 import { useState } from "react";
 
 export function Header() {
-  const { locale, toggleLocale } = useI18n();
+  const { locale, toggleLocale, t } = useI18n();
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -24,13 +24,13 @@ export function Header() {
             href="/work"
             className="font-label-sm text-label-sm tracking-[0.2em] uppercase text-primary hover:text-secondary transition-colors"
           >
-            WORK
+            {t("WORK", "OBRAS")}
           </Link>
           <Link
             href="/about"
             className="font-label-sm text-label-sm tracking-[0.2em] uppercase text-primary hover:text-secondary transition-colors"
           >
-            ABOUT
+            {t("ABOUT", "ACERCA")}
           </Link>
 
           {/* Language — secondary chrome, dimmed at rest */}
@@ -95,7 +95,7 @@ export function Header() {
           className="font-headline-md text-headline-md tracking-[0.2em] text-primary hover:text-secondary transition-all duration-300 uppercase mt-8"
           onClick={() => setMenuOpen(false)}
         >
-          WORK
+          {t("WORK", "OBRAS")}
         </Link>
 
         {/* Separator */}
@@ -107,7 +107,7 @@ export function Header() {
           className="font-headline-md text-headline-md tracking-[0.2em] text-primary hover:text-secondary transition-all duration-300 uppercase mt-8"
           onClick={() => setMenuOpen(false)}
         >
-          ABOUT
+          {t("ABOUT", "ACERCA")}
         </Link>
       </nav>
     </>

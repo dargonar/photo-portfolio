@@ -2,8 +2,10 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useI18n } from "@/hooks/useI18n";
 
 export function Footer() {
+  const { t } = useI18n();
   const pathname = usePathname();
   const isHome = pathname === "/";
 
@@ -75,7 +77,7 @@ export function Footer() {
         href="/about"
         className="font-pt-mono text-[11px] tracking-widest hover:opacity-70 transition-opacity"
       >
-        ABOUT
+        {t("ABOUT", "ACERCA")}
       </Link>
     </footer>
   );
