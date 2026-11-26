@@ -215,6 +215,18 @@ export function EditorialLayout({
       ? rows
       : photoFns.filter((f) => f !== cover).map((f) => ({ cells: [{ photo: f }] }));
 
+  // back to top: aparece cuando la fila de credits entra en el viewport
+  const [showTop, setShowTop] = useState(false);
+  const creditsRef = useCallback((el: HTMLElement | null) => {
+    if (!el) return;
+    const io = new IntersectionObserver(
+      ([e]) => setShowTop(e.isIntersecting),
+      { rootMargin: "0px 0px -20% 0px" }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
   return (
     <div className="min-h-screen">
       {/* Hero: cover full-bleed con título superpuesto */}
@@ -250,9 +262,11 @@ export function EditorialLayout({
           // texto tras texto (statement → credits): el padding-top de la fila
           // de abajo es redundante (la de arriba ya aporta pb-16/24) → pt-0
           const prevTextOnly = i > 0 && effRows[i - 1].cells.length === 1 && !!effRows[i - 1].cells[0].text;
+          const isCredits = textOnly && row.cells[0].text === "credits";
           return (
             <section
               key={`row-${i}`}
+              ref={isCredits ? creditsRef : undefined}
               className={
                 n === 2 && !textOnly
                   ? // diptico: ambas fotos entran en el viewport, juntas y centradas
@@ -283,6 +297,16 @@ export function EditorialLayout({
           );
         })}
       </div>
+
+      {/* Back to top — aparece al llegar a los credits, encima del footer */}
+      <button
+        onClick={() => window.scrollTo(0, 0)}
+        className={`fixed right-4 md:right-8 bottom-20 z-40 font-pt-mono text-[11px] uppercase tracking-[0.15em] px-4 py-2 border border-primary/60 bg-background/80 backdrop-blur-sm text-primary hover:bg-primary hover:text-background transition-all duration-300 ${
+          showTop ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+      >
+        {t("Back to top", "Ir arriba")}
+      </button>
     </div>
   );
 }
