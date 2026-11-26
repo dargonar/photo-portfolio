@@ -97,7 +97,7 @@ function Cell({
             ? // diptico: ambas fotos comparten el mismo ancho (pairW), dentro de su mitad
               pairW
               ? "cursor-pointer max-h-[80vh] object-contain"
-              : "cursor-pointer h-[80vh] w-auto max-w-[45vw] object-contain"
+              : "cursor-pointer max-h-[85vh] w-auto max-w-full object-contain"
             : "w-full h-auto cursor-pointer"
         }
         style={fit && pairW ? { width: `${pairW}px` } : undefined}
@@ -222,7 +222,8 @@ export function EditorialLayout({
                   ? // diptico: ambas fotos entran en el viewport, juntas y centradas
                     // bg configurable por serie (layout.diptic_bg) para fotos claras
                     `flex h-screen items-center justify-center px-4 md:px-8 ${layout.diptic_bg ? "text-white" : ""}`
-                  : `flex min-h-[75vh] items-center ${n === 2 ? "grid grid-cols-1 md:grid-cols-2 gap-4" : ""}`
+                  : // fila individual: foto completa en el viewport, centrada, espaciada
+                    `flex min-h-[85vh] items-center justify-center px-4 md:px-8 py-16 md:py-24`
               }
               style={
                 n === 2 && !textOnly && layout.diptic_bg
@@ -241,6 +242,7 @@ export function EditorialLayout({
                     serie={serie}
                     cell={cell}
                     width={1600}
+                    fit={!textOnly}
                     onOpen={onOpen}
                   />
                 ))

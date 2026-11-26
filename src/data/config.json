@@ -2790,7 +2790,7 @@
             ]
           }
         },
-        "diptic_bg": "#1a1a1a"
+        "diptic_bg": "#AAAAAA"
       }
     },
     {
@@ -5545,7 +5545,11 @@
             "cells": [
               {
                 "photo": "IMG_0089.jpg"
-              },
+              }
+            ]
+          },
+          {
+            "cells": [
               {
                 "photo": "IMG_0210.jpg"
               }
@@ -5555,7 +5559,11 @@
             "cells": [
               {
                 "photo": "IMG_0359.jpg"
-              },
+              }
+            ]
+          },
+          {
+            "cells": [
               {
                 "photo": "IMG_0557.jpg"
               }
@@ -5565,7 +5573,11 @@
             "cells": [
               {
                 "photo": "IMG_0704.jpg"
-              },
+              }
+            ]
+          },
+          {
+            "cells": [
               {
                 "photo": "IMG_0729_v2.jpg"
               }
@@ -5575,7 +5587,11 @@
             "cells": [
               {
                 "photo": "IMG_1053.jpg"
-              },
+              }
+            ]
+          },
+          {
+            "cells": [
               {
                 "photo": "IMG_1058.jpg"
               }
@@ -5585,7 +5601,11 @@
             "cells": [
               {
                 "photo": "IMG_1075.jpg"
-              },
+              }
+            ]
+          },
+          {
+            "cells": [
               {
                 "photo": "IMG_1093.jpg"
               }
@@ -5595,7 +5615,11 @@
             "cells": [
               {
                 "photo": "IMG_1186.jpg"
-              },
+              }
+            ]
+          },
+          {
+            "cells": [
               {
                 "photo": "IMG_1207-2_v3.jpg"
               }
@@ -5605,7 +5629,11 @@
             "cells": [
               {
                 "photo": "IMG_1211_v3.jpg"
-              },
+              }
+            ]
+          },
+          {
+            "cells": [
               {
                 "photo": "IMG_1222_v2.jpg"
               }
@@ -5615,7 +5643,11 @@
             "cells": [
               {
                 "photo": "IMG_1223_v2.jpg"
-              },
+              }
+            ]
+          },
+          {
+            "cells": [
               {
                 "photo": "IMG_1231_v2.jpg"
               }
@@ -5625,7 +5657,11 @@
             "cells": [
               {
                 "photo": "IMG_1263_v2.jpg"
-              },
+              }
+            ]
+          },
+          {
+            "cells": [
               {
                 "photo": "IMG_1271_v2.jpg"
               }
@@ -5635,7 +5671,11 @@
             "cells": [
               {
                 "photo": "IMG_1277_v4.jpg"
-              },
+              }
+            ]
+          },
+          {
+            "cells": [
               {
                 "photo": "IMG_1330_v2.jpg"
               }
@@ -5645,7 +5685,11 @@
             "cells": [
               {
                 "photo": "IMG_1341_v2.jpg"
-              },
+              }
+            ]
+          },
+          {
+            "cells": [
               {
                 "photo": "IMG_1342_v2.jpg"
               }
@@ -5655,7 +5699,11 @@
             "cells": [
               {
                 "photo": "IMG_1347_v2.jpg"
-              },
+              }
+            ]
+          },
+          {
+            "cells": [
               {
                 "photo": "IMG_1411_v2.jpg"
               }
@@ -5665,7 +5713,11 @@
             "cells": [
               {
                 "photo": "IMG_1415_vNEW_2.jpg"
-              },
+              }
+            ]
+          },
+          {
+            "cells": [
               {
                 "photo": "IMG_1430_v2.jpg"
               }
@@ -5675,7 +5727,11 @@
             "cells": [
               {
                 "photo": "IMG_1431_v2.jpg"
-              },
+              }
+            ]
+          },
+          {
+            "cells": [
               {
                 "photo": "IMG_1431x_v2.jpg"
               }
@@ -5685,7 +5741,11 @@
             "cells": [
               {
                 "photo": "IMG_1464_v2.jpg"
-              },
+              }
+            ]
+          },
+          {
+            "cells": [
               {
                 "photo": "IMG_1488_pop.jpg"
               }
@@ -5695,7 +5755,11 @@
             "cells": [
               {
                 "photo": "IMG_1508_moody_pop.jpg"
-              },
+              }
+            ]
+          },
+          {
+            "cells": [
               {
                 "photo": "IMG_1521_pop_moody.jpg"
               }
@@ -5705,7 +5769,11 @@
             "cells": [
               {
                 "photo": "IMG_1616_moody.jpg"
-              },
+              }
+            ]
+          },
+          {
+            "cells": [
               {
                 "photo": "IMG_1641.jpg"
               }
@@ -5715,7 +5783,11 @@
             "cells": [
               {
                 "photo": "IMG_1748_moody_pop.jpg"
-              },
+              }
+            ]
+          },
+          {
+            "cells": [
               {
                 "photo": "IMG_1773_moody.jpg"
               }
@@ -5725,7 +5797,11 @@
             "cells": [
               {
                 "photo": "IMG_1791_moody.jpg"
-              },
+              }
+            ]
+          },
+          {
+            "cells": [
               {
                 "photo": "IMG_1824_pop.jpg"
               }
@@ -5735,7 +5811,11 @@
             "cells": [
               {
                 "photo": "IMG_1853_pop.jpg"
-              },
+              }
+            ]
+          },
+          {
+            "cells": [
               {
                 "photo": "IMG_1929_pop_moody.jpg"
               }
@@ -5745,7 +5825,11 @@
             "cells": [
               {
                 "photo": "IMG_1942_pop.jpg"
-              },
+              }
+            ]
+          },
+          {
+            "cells": [
               {
                 "photo": "IMG_1946_moody_pop.jpg"
               }
@@ -5755,7 +5839,11 @@
             "cells": [
               {
                 "photo": "IMG_1953_moody_pop.jpg"
-              },
+              }
+            ]
+          },
+          {
+            "cells": [
               {
                 "photo": "IMG_1955_moody_pop.jpg"
               }
@@ -5765,7 +5853,11 @@
             "cells": [
               {
                 "photo": "IMG_2061_moody_pop.jpg"
-              },
+              }
+            ]
+          },
+          {
+            "cells": [
               {
                 "photo": "IMG_2123_moody_pop.jpg"
               }
