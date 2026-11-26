@@ -215,8 +215,16 @@ export function EditorialLayout({
         </h1>
       </section>
 
-      {/* Slots */}
-      <div className="max-w-7xl mx-auto px-4 md:px-8 py-8 space-y-8">
+      {/* Slots — mismo bg que las secciones (diptic_bg), para que la grilla
+          entera (incluidas filas individuales y texto) esté sobre ese fondo */}
+      <div
+        className="max-w-7xl mx-auto px-4 md:px-8 py-8 space-y-8"
+        style={
+          layout.diptic_bg
+            ? { backgroundColor: layout.diptic_bg }
+            : undefined
+        }
+      >
         {effRows.map((row, i) => {
           const n = row.cells.length;
           const textOnly = n === 1 && !!row.cells[0].text;
@@ -231,11 +239,6 @@ export function EditorialLayout({
                     `flex min-h-screen items-center justify-center px-4 md:px-8 py-16 md:py-0 ${layout.diptic_bg ? "text-white" : ""}`
                   : // fila individual: foto completa en el viewport, centrada, espaciada
                     `flex min-h-[85vh] items-center justify-center px-4 md:px-8 py-16 md:py-24`
-              }
-              style={
-                n === 2 && !textOnly && layout.diptic_bg
-                  ? { backgroundColor: layout.diptic_bg }
-                  : undefined
               }
             >
               {textOnly && <div className="hidden md:block" />}
