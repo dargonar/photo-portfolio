@@ -1,5 +1,6 @@
 "use client";
 
+import { Fragment } from "react";
 import { siteConfig } from "@/data/config";
 import type { Serie, PhotoItem, LayoutCell, LayoutRow, TextSlot } from "@/types";
 import { useI18n } from "@/hooks/useI18n";
@@ -79,7 +80,7 @@ function Cell({
   const img = item.data;
   return (
     <div
-      className={`relative flex min-w-0 ${fit ? "flex-1 h-full items-center justify-center" : `w-full ${alignClass[cell.align ?? "center"]}`}`}
+      className={`relative flex min-w-0 ${fit ? "flex-1 items-center justify-center" : `w-full ${alignClass[cell.align ?? "center"]}`}`}
       onClick={() => onOpen(img.filename)}
     >
       <img
@@ -148,7 +149,7 @@ export function EditorialLayout({
                 n === 2 && !textOnly
                   ? // diptico: ambas fotos entran en el viewport, juntas y centradas
                     // bg configurable por serie (layout.diptic_bg) para fotos claras
-                    `flex h-screen items-center justify-center gap-4 md:gap-8 px-4 md:px-8 ${layout.diptic_bg ? "text-white" : ""}`
+                    `flex h-screen items-center justify-center gap-3 px-4 md:px-8 ${layout.diptic_bg ? "text-white" : ""}`
                   : `flex min-h-[75vh] items-center ${n === 2 ? "grid grid-cols-1 md:grid-cols-2 gap-4" : ""}`
               }
               style={
@@ -158,16 +159,42 @@ export function EditorialLayout({
               }
             >
               {textOnly && <div className="hidden md:block" />}
-              {row.cells.map((cell, j) => (
-                <Cell
-                  key={`cell-${i}-${j}`}
-                  serie={serie}
-                  cell={cell}
-                  width={n === 2 ? 900 : 1600}
-                  fit={n === 2 && !textOnly}
-                  onOpen={onOpen}
-                />
-              ))}
+              {n === 2 && !textOnly ? (
+                // diptico: fotos juntas con una línea fina entre ellas
+                <div className="flex items-stretch gap-3">
+                  {row.cells.map((cell, j) => (
+                    <Fragment key={`cell-${i}-${j}`}>
+                      {j > 0 && (
+                        <div
+                          className="w-px self-stretch"
+                          style={{
+                            backgroundColor: layout.diptic_bg
+                              ? "rgba(255,255,255,0.25)"
+                              : "var(--color-outline-variant)",
+                          }}
+                        />
+                      )}
+                      <Cell
+                        serie={serie}
+                        cell={cell}
+                        width={900}
+                        fit
+                        onOpen={onOpen}
+                      />
+                    </Fragment>
+                  ))}
+                </div>
+              ) : (
+                row.cells.map((cell, j) => (
+                  <Cell
+                    key={`cell-${i}-${j}`}
+                    serie={serie}
+                    cell={cell}
+                    width={1600}
+                    onOpen={onOpen}
+                  />
+                ))
+              )}
             </section>
           );
         })}
