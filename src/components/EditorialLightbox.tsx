@@ -17,6 +17,8 @@ function cdnUrl(serieSlug: string, filename: string, width: number) {
  * - foto centrada sobre mate, ~80vh
  * - UI mínima circular: ‹ › a media altura, ✕ arriba derecha
  * - sin caption/contador/EXIF; flechas navegan, ESC cierra
+ * - Modo diptico: si la serie tiene rows de 2 fotos, el visor muestra pares
+ *   (las 2 fotos juntas al centro, como en la página). Navega de par a par.
  */
 export function EditorialLightbox({
   serie,
@@ -30,19 +32,32 @@ export function EditorialLightbox({
   onClose: () => void;
 }) {
   const { t } = useI18n();
+
+  const pairs = serie.layout?.rows?.length
+    ? serie.layout.rows
+        .filter((r) => r.cells.length === 2 && r.cells.every((c) => c.photo))
+        .map((r) => [r.cells[0].photo!, r.cells[1].photo!])
+        .filter((p) => p.every((f) => filenames.includes(f)))
+    : [];
+
   const [idx, setIdx] = useState(() => {
+    if (pairs.length) {
+      const i = pairs.findIndex((p) => p.includes(initialFilename));
+      return i >= 0 ? i : 0;
+    }
     const i = filenames.indexOf(initialFilename);
     return i >= 0 ? i : 0;
   });
   const [loaded, setLoaded] = useState(false);
 
+  const n = pairs.length || filenames.length;
   const goPrev = useCallback(
-    () => setIdx((i) => (i - 1 + filenames.length) % filenames.length),
-    [filenames.length]
+    () => setIdx((i) => (i - 1 + n) % n),
+    [n]
   );
   const goNext = useCallback(
-    () => setIdx((i) => (i + 1) % filenames.length),
-    [filenames.length]
+    () => setIdx((i) => (i + 1) % n),
+    [n]
   );
 
   useEffect(() => setLoaded(false), [idx]);
@@ -69,16 +84,19 @@ export function EditorialLightbox({
 
   // precargar vecinas
   useEffect(() => {
-    const next = filenames[(idx + 1) % filenames.length];
-    const prev = filenames[(idx - 1 + filenames.length) % filenames.length];
-    [next, prev].forEach((f) => {
+    const next = pairs.length ? pairs[(idx + 1) % pairs.length] : filenames[(idx + 1) % filenames.length];
+    const prev = pairs.length ? pairs[(idx - 1 + pairs.length) % pairs.length] : filenames[(idx - 1 + filenames.length) % filenames.length];
+    [...next, ...prev].forEach((f) => {
       const im = new Image();
       im.src = cdnUrl(serie.serie_slug, f, 2000);
     });
-  }, [idx, filenames, serie.serie_slug]);
+  }, [idx, filenames, pairs, serie.serie_slug]);
 
   const btn =
     "w-11 h-11 rounded-full flex items-center justify-center bg-white/80 text-neutral-900 border border-neutral-300 hover:bg-white hover:border-neutral-500 transition-all select-none";
+
+  const isDiptic = pairs.length > 0;
+  const shown = isDiptic ? pairs[idx] : [filenames[idx]];
 
   return (
     <div
@@ -90,18 +108,41 @@ export function EditorialLightbox({
       aria-modal="true"
       aria-label={t("Photo viewer", "Visor de fotos")}
     >
-      {/* foto centrada sobre mate */}
+      {/* foto(s) centrada(s) sobre mate — diptico: las 2 juntas con línea fina */}
       <div className="absolute inset-0 flex items-center justify-center p-6 md:p-12">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          key={filenames[idx]}
-          src={cdnUrl(serie.serie_slug, filenames[idx], 2000)}
-          alt={filenames[idx]}
-          onLoad={() => setLoaded(true)}
-          className={`max-h-[80vh] max-w-full object-contain transition-opacity duration-300 ${
-            loaded ? "opacity-100" : "opacity-0"
-          }`}
-        />
+        <div
+          className={`flex items-center ${isDiptic ? "gap-3" : ""}`}
+          style={
+            isDiptic
+              ? { backgroundColor: serie.layout?.diptic_bg ?? "transparent", padding: "2rem 2.5rem" }
+              : undefined
+          }
+        >
+          {shown.map((f, j) => (
+            <div key={f} className="flex items-center gap-3">
+              {j > 0 && (
+                <div
+                  className="w-px self-stretch"
+                  style={{
+                    backgroundColor: serie.layout?.diptic_bg
+                      ? "rgba(255,255,255,0.25)"
+                      : "var(--color-outline-variant)",
+                  }}
+                />
+              )}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                key={f}
+                src={cdnUrl(serie.serie_slug, f, 2000)}
+                alt={f}
+                onLoad={() => setLoaded(true)}
+                className={`max-h-[80vh] max-w-[45vw] object-contain transition-opacity duration-300 ${
+                  loaded ? "opacity-100" : "opacity-0"
+                }`}
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* UI mínima circular */}
