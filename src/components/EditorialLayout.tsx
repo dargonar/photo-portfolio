@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment } from "react";
+import { Fragment, useCallback, useEffect, useRef, useState } from "react";
 import { siteConfig } from "@/data/config";
 import type { Serie, PhotoItem, LayoutCell, LayoutRow, TextSlot } from "@/types";
 import { useI18n } from "@/hooks/useI18n";
@@ -60,12 +60,16 @@ function Cell({
   cell,
   width,
   fit,
+  pairW,
+  onLoad,
   onOpen,
 }: {
   serie: Serie;
   cell: LayoutCell;
   width: number;
   fit?: boolean;
+  pairW?: number | null;
+  onLoad?: () => void;
   onOpen: (filename: string) => void;
 }) {
   if (cell.text) {
@@ -87,13 +91,80 @@ function Cell({
         src={cdnUrl(serie.serie_slug, img.filename, width)}
         alt={`${serie.serie_name} — ${img.filename}`}
         loading="lazy"
+        onLoad={onLoad}
         className={
           fit
-            ? // diptico: altura fija (duplas parejas) + tope de ancho por foto (mitad)
-              "cursor-pointer h-[80vh] w-auto max-w-[45vw] object-contain"
+            ? // diptico: ambas fotos comparten el mismo ancho (pairW), dentro de su mitad
+              pairW
+              ? "cursor-pointer max-h-[80vh] object-contain"
+              : "cursor-pointer h-[80vh] w-auto max-w-[45vw] object-contain"
             : "w-full h-auto cursor-pointer"
         }
+        style={fit && pairW ? { width: `${pairW}px` } : undefined}
       />
+    </div>
+  );
+}
+
+/* ── diptico: las 2 fotos comparten el mismo ancho (el más angosto de las
+   dos, limitado a 45vw y a 80vh de alto) — así cada foto queda dentro del
+   50% del espacio del par y las landscape no agrandan el par ── */
+function DipticPair({
+  serie,
+  row,
+  onOpen,
+}: {
+  serie: Serie;
+  row: LayoutRow;
+  onOpen: (filename: string) => void;
+}) {
+  const layout = serie.layout ?? {};
+  const ref = useRef<HTMLDivElement>(null);
+  const [pairW, setPairW] = useState<number | null>(null);
+  const measure = useCallback(() => {
+    const el = ref.current;
+    if (!el) return;
+    const imgs = Array.from(el.querySelectorAll("img"));
+    if (!imgs.length || !imgs.every((i) => i.complete && i.naturalWidth > 0)) return;
+    const caps = imgs.map((i) =>
+      Math.min(
+        0.45 * window.innerWidth,
+        0.8 * window.innerHeight * (i.naturalWidth / i.naturalHeight)
+      )
+    );
+    setPairW(Math.min(...caps));
+  }, []);
+  useEffect(() => {
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, [measure]);
+
+  return (
+    <div ref={ref} className="flex items-center justify-center max-w-full">
+      {row.cells.map((cell, j) => (
+        <Fragment key={`cell-${j}`}>
+          {j > 0 && (
+            <div
+              className="w-px self-stretch"
+              style={{
+                backgroundColor: layout.diptic_bg
+                  ? "rgba(255,255,255,0.25)"
+                  : "var(--color-outline-variant)",
+              }}
+            />
+          )}
+          <Cell
+            serie={serie}
+            cell={cell}
+            width={900}
+            fit
+            pairW={pairW}
+            onLoad={measure}
+            onOpen={onOpen}
+          />
+        </Fragment>
+      ))}
     </div>
   );
 }
@@ -162,29 +233,7 @@ export function EditorialLayout({
               {textOnly && <div className="hidden md:block" />}
               {n === 2 && !textOnly ? (
                 // diptico: fotos juntas con una línea fina entre ellas
-                <div className="flex items-center justify-center max-w-full">
-                  {row.cells.map((cell, j) => (
-                    <Fragment key={`cell-${i}-${j}`}>
-                      {j > 0 && (
-                        <div
-                          className="w-px self-stretch"
-                          style={{
-                            backgroundColor: layout.diptic_bg
-                              ? "rgba(255,255,255,0.25)"
-                              : "var(--color-outline-variant)",
-                          }}
-                        />
-                      )}
-                      <Cell
-                        serie={serie}
-                        cell={cell}
-                        width={900}
-                        fit
-                        onOpen={onOpen}
-                      />
-                    </Fragment>
-                  ))}
-                </div>
+                <DipticPair serie={serie} row={row} onOpen={onOpen} />
               ) : (
                 row.cells.map((cell, j) => (
                   <Cell

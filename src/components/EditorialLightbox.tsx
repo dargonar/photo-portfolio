@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useRef } from "react";
 import type { Serie } from "@/types";
 import { useI18n } from "@/hooks/useI18n";
 
@@ -98,6 +98,30 @@ export function EditorialLightbox({
   const isDiptic = pairs.length > 0;
   const shown = isDiptic ? pairs[idx] : [filenames[idx]];
 
+  // diptico: ambas fotos comparten el mismo ancho (el más angosto, limitado
+  // a 45vw y 80vh de alto) — las landscape no agrandan el par
+  const pairRef = useRef<HTMLDivElement>(null);
+  const [pairW, setPairW] = useState<number | null>(null);
+  const measure = useCallback(() => {
+    const el = pairRef.current;
+    if (!el) return;
+    const imgs = Array.from(el.querySelectorAll("img"));
+    if (!imgs.length || !imgs.every((i) => i.complete && i.naturalWidth > 0)) return;
+    const caps = imgs.map((i) =>
+      Math.min(
+        0.45 * window.innerWidth,
+        0.8 * window.innerHeight * (i.naturalWidth / i.naturalHeight)
+      )
+    );
+    setPairW(Math.min(...caps));
+  }, []);
+  useEffect(() => {
+    setPairW(null);
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, [idx, isDiptic, measure]);
+
   return (
     <div
       className="fixed inset-0 z-[100] bg-white/90 backdrop-blur-[2px]"
@@ -111,6 +135,7 @@ export function EditorialLightbox({
       {/* foto(s) centrada(s) sobre mate — diptico: las 2 juntas con línea fina */}
       <div className="absolute inset-0 flex items-center justify-center p-6 md:p-12">
         <div
+          ref={pairRef}
           className="flex items-center"
           style={
             isDiptic
@@ -135,12 +160,20 @@ export function EditorialLightbox({
                 key={f}
                 src={cdnUrl(serie.serie_slug, f, 2000)}
                 alt={f}
-                onLoad={() => setLoaded(true)}
+                onLoad={() => {
+                  setLoaded(true);
+                  measure();
+                }}
                 className={`${
-                  isDiptic ? "h-[80vh] w-auto max-w-[45vw]" : "max-h-[80vh] max-w-full"
-                } object-contain transition-opacity duration-300 ${
+                  isDiptic
+                    ? pairW
+                      ? "max-h-[80vh] object-contain"
+                      : "h-[80vh] w-auto max-w-[45vw] object-contain"
+                    : "max-h-[80vh] max-w-full object-contain"
+                } transition-opacity duration-300 ${
                   loaded ? "opacity-100" : "opacity-0"
                 }`}
+                style={isDiptic && pairW ? { width: `${pairW}px` } : undefined}
               />
             </div>
           ))}
