@@ -9,7 +9,7 @@ export default function HomePage() {
       {/* Home scrolleable: carousel 100vh + grilla de work debajo */}
       <Carousel />
       <div className="px-4 py-8">
-        <WorkGrid />
+        <WorkGrid cols={2} />
       </div>
     </>
   );

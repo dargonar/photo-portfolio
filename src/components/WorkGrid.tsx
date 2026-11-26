@@ -8,7 +8,8 @@ import { useI18n } from "@/hooks/useI18n";
 
 // Grilla de todas las series + proyectos (usada en /work y debajo del carousel de home).
 // Covers apaisadas: todas las celdas aspect 4/3.
-export default function WorkGrid() {
+// cols = columnas de las series en desktop (proyectos siempre 2 en desktop)
+export default function WorkGrid({ cols = 4 }: { cols?: 2 | 4 }) {
   const { t } = useI18n();
   const all = siteConfig.series;
 
@@ -68,8 +69,8 @@ export default function WorkGrid() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
         {projects.map(cell)}
       </div>
-      {/* Series: 4 columnas en desktop */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {/* Series: 4 columnas en desktop (2 si cols=2) */}
+      <div className={`grid grid-cols-1 sm:grid-cols-2 gap-6 ${cols === 2 ? "lg:grid-cols-2" : "lg:grid-cols-4"}`}>
         {series.map(cell)}
       </div>
     </div>
