@@ -108,15 +108,9 @@ export function EditorialLightbox({
     const imgs = Array.from(el.querySelectorAll("img"));
     if (!imgs.length || !imgs.every((i) => i.complete && i.naturalWidth > 0)) return;
     if (window.innerWidth < 768) {
-      // mobile: apiladas — ambas comparten el mismo ancho para que el par
-      // entero (2 fotos + línea) quepa en el viewport
-      const ratios = imgs.map((i) => i.naturalHeight / i.naturalWidth);
-      setPairW(
-        Math.min(
-          0.92 * window.innerWidth,
-          (0.9 * window.innerHeight) / ratios.reduce((s, r) => s + r, 0)
-        )
-      );
+      // mobile: apiladas — cada foto mantiene su tamaño individual (sin ancho
+      // compartido); solo se unen tocándose con la línea entre ellas
+      setPairW(null);
       return;
     }
     const caps = imgs.map((i) =>
@@ -180,7 +174,8 @@ export function EditorialLightbox({
                   isDiptic
                     ? pairW
                       ? "max-h-[80vh] object-contain"
-                      : "h-[80vh] w-auto max-w-[45vw] object-contain"
+                      : // mobile apilado: tamaño individual (como filas sueltas)
+                        "max-md:max-h-[85vh] max-md:w-auto max-md:max-w-full md:h-[80vh] md:w-auto md:max-w-[45vw] object-contain"
                     : "max-h-[80vh] max-w-full object-contain"
                 } transition-opacity duration-300 ${
                   loaded ? "opacity-100" : "opacity-0"

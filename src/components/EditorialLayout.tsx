@@ -127,15 +127,9 @@ function DipticPair({
     const imgs = Array.from(el.querySelectorAll("img"));
     if (!imgs.length || !imgs.every((i) => i.complete && i.naturalWidth > 0)) return;
     if (window.innerWidth < 768) {
-      // mobile: apiladas — ambas comparten el mismo ancho para que el par
-      // entero (2 fotos + línea) quepa en el viewport
-      const ratios = imgs.map((i) => i.naturalHeight / i.naturalWidth);
-      setPairW(
-        Math.min(
-          0.92 * window.innerWidth,
-          (0.9 * window.innerHeight) / ratios.reduce((s, r) => s + r, 0)
-        )
-      );
+      // mobile: apiladas — cada foto mantiene su tamaño individual (sin ancho
+      // compartido); solo se unen tocándose con la línea entre ellas
+      setPairW(null);
       return;
     }
     const caps = imgs.map((i) =>
@@ -233,7 +227,8 @@ export function EditorialLayout({
                 n === 2 && !textOnly
                   ? // diptico: ambas fotos entran en el viewport, juntas y centradas
                     // bg configurable por serie (layout.diptic_bg) para fotos claras
-                    `flex h-screen items-center justify-center px-4 md:px-8 ${layout.diptic_bg ? "text-white" : ""}`
+                    // mobile: el par apilado puede exceder la pantalla (min-h)
+                    `flex min-h-screen items-center justify-center px-4 md:px-8 py-16 md:py-0 ${layout.diptic_bg ? "text-white" : ""}`
                   : // fila individual: foto completa en el viewport, centrada, espaciada
                     `flex min-h-[85vh] items-center justify-center px-4 md:px-8 py-16 md:py-24`
               }
