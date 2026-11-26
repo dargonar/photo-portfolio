@@ -10,13 +10,13 @@ export default function AboutPage() {
   const bio = t(about.content_text, about.content_text_es ?? about.content_text);
 
   return (
-    <div className="min-h-screen px-4 py-8 pt-24 md:pt-8 max-w-7xl mx-auto">
+    <div className="min-h-screen px-4 py-8 pt-24 max-w-7xl mx-auto">
 
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 md:gap-20">
         {/* Left: Name + portrait */}
         <div className="md:w-1/2 flex flex-col">
           <h1 className="XXfont-label-sm XXtext-label-sm tracking-[0.2em] text-[17px] pt-[10px] uppercase text-on-surface-variant mb-8">
-            {about.title}
+            {t("ABOUT ME", "BIO")}
           </h1>
           <div className="relative aspect-[3/4] bg-white/5 overflow-hidden">
             <Image
