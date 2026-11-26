@@ -80,7 +80,7 @@ function Cell({
   const img = item.data;
   return (
     <div
-      className={`relative flex min-w-0 ${fit ? "flex-1 items-center justify-center" : `w-full ${alignClass[cell.align ?? "center"]}`}`}
+      className={`relative flex min-w-0 ${fit ? "items-center justify-center" : `w-full ${alignClass[cell.align ?? "center"]}`}`}
       onClick={() => onOpen(img.filename)}
     >
       <img
@@ -89,8 +89,8 @@ function Cell({
         loading="lazy"
         className={
           fit
-            ? // diptico: cada foto contenida dentro de su mitad (50%), sin crecer mas alla
-              "cursor-pointer max-h-[80vh] max-w-full object-contain"
+            ? // diptico: altura fija (duplas parejas) + tope de ancho por foto (mitad)
+              "cursor-pointer h-[80vh] w-auto max-w-[45vw] object-contain"
             : "w-full h-auto cursor-pointer"
         }
       />
@@ -162,7 +162,7 @@ export function EditorialLayout({
               {textOnly && <div className="hidden md:block" />}
               {n === 2 && !textOnly ? (
                 // diptico: fotos juntas con una línea fina entre ellas
-                <div className="flex items-stretch w-full">
+                <div className="flex items-center justify-center max-w-full">
                   {row.cells.map((cell, j) => (
                     <Fragment key={`cell-${i}-${j}`}>
                       {j > 0 && (
