@@ -247,6 +247,9 @@ export function EditorialLayout({
         {effRows.map((row, i) => {
           const n = row.cells.length;
           const textOnly = n === 1 && !!row.cells[0].text;
+          // texto tras texto (statement → credits): el padding-top de la fila
+          // de abajo es redundante (la de arriba ya aporta pb-16/24) → pt-0
+          const prevTextOnly = i > 0 && effRows[i - 1].cells.length === 1 && !!effRows[i - 1].cells[0].text;
           return (
             <section
               key={`row-${i}`}
@@ -257,7 +260,7 @@ export function EditorialLayout({
                     // mobile: el par apilado puede exceder la pantalla (min-h)
                     `flex min-h-screen items-center justify-center px-4 md:px-8 py-16 md:py-0 ${layout.diptic_bg ? "text-white" : ""}`
                   : // fila individual: foto completa en el viewport, centrada, espaciada
-                    `flex min-h-[85vh] items-center justify-center px-4 md:px-8 py-16 md:py-24`
+                    `flex min-h-[85vh] items-center justify-center px-4 md:px-8 ${prevTextOnly ? "pb-16 md:pb-24" : "py-16 md:py-24"}`
               }
             >
               {textOnly && <div className="hidden md:block" />}
