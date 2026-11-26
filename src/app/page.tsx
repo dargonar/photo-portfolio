@@ -1,6 +1,7 @@
 import { Carousel } from "@/components/Carousel";
 import { Splash } from "@/components/Splash";
 import WorkGrid from "@/components/WorkGrid";
+import HomeFooter from "@/components/HomeFooter";
 
 export default function HomePage() {
   return (
@@ -12,6 +13,7 @@ export default function HomePage() {
       <div className="relative z-10 bg-background px-4 pt-8 pb-24">
         <WorkGrid cols={2} />
       </div>
+      <HomeFooter />
     </>
   );
 }
