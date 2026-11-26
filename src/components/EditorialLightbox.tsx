@@ -136,7 +136,9 @@ export function EditorialLightbox({
                 src={cdnUrl(serie.serie_slug, f, 2000)}
                 alt={f}
                 onLoad={() => setLoaded(true)}
-                className={`max-h-[80vh] max-w-[45vw] object-contain transition-opacity duration-300 ${
+                className={`${
+                  isDiptic ? "h-[80vh] w-auto max-w-[45vw]" : "max-h-[80vh] max-w-full"
+                } object-contain transition-opacity duration-300 ${
                   loaded ? "opacity-100" : "opacity-0"
                 }`}
               />
