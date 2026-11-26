@@ -8,7 +8,8 @@ export default function HomePage() {
       <Splash />
       {/* Home scrolleable: carousel 100vh + grilla de work debajo */}
       <Carousel />
-      <div className="px-4 py-8">
+      {/* La grilla scrollea por encima del carousel (sticky) — fondo opaco para taparlo */}
+      <div className="relative z-10 bg-background px-4 pt-8 pb-24">
         <WorkGrid cols={2} />
       </div>
     </>

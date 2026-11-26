@@ -94,7 +94,7 @@ export function Carousel() {
   const pad = (n: number) => String(n).padStart(2, "0");
 
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-black">
+    <div className="sticky top-0 h-screen overflow-hidden bg-black">
 
       {/* Nav arrows */}
       <button
@@ -179,7 +179,7 @@ export function Carousel() {
       </div>
 
       {/* Footer overlay — same as global footer (instagram, github, email), sin ABOUT */}
-      <div className="absolute bottom-0 left-0 right-0 z-40 bg-glass-bg backdrop-blur-md border-t border-outline-variant flex justify-center items-center gap-6 px-gutter p-4">
+      <div className="fixed bottom-0 left-0 right-0 z-40 bg-glass-bg backdrop-blur-md border-t border-outline-variant flex justify-center items-center gap-6 px-gutter p-4">
         <a href="https://www.instagram.com/pablotutino" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity" aria-label="Instagram">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg>
         </a>
