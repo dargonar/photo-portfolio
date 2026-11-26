@@ -10,7 +10,7 @@ export default function AboutPage() {
   const bio = t(about.content_text, about.content_text_es ?? about.content_text);
 
   return (
-    <div className="min-h-screen px-4 py-8 max-w-7xl mx-auto">
+    <div className="min-h-screen px-4 py-8 pt-24 md:pt-8 max-w-7xl mx-auto">
 
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 md:gap-20">
         {/* Left: Name + portrait */}

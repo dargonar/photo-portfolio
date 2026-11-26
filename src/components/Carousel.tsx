@@ -94,7 +94,8 @@ export function Carousel() {
   const pad = (n: number) => String(n).padStart(2, "0");
 
   return (
-    <div className="sticky top-0 h-screen overflow-hidden bg-black">
+    // h-dvh: en mobile 100vh incluye el chrome del navegador y el bottom queda tapado por el footer
+    <div className="sticky top-0 h-screen h-dvh overflow-hidden bg-black">
 
       {/* Nav arrows */}
       <button
