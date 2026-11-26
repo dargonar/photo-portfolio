@@ -61,7 +61,16 @@ export interface TextSlotCredits {
   class?: string;
 }
 
-export type TextSlot = TextSlotProse | TextSlotCredits;
+export interface TextSlotColumns {
+  layout: "columns";
+  title?: string;
+  title_es?: string;
+  content_md?: string;
+  content_md_es?: string;
+  class?: string;
+}
+
+export type TextSlot = TextSlotProse | TextSlotCredits | TextSlotColumns;
 
 export interface LayoutCell {
   photo?: string;    // filename (resuelto contra serie.images)

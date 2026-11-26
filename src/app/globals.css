@@ -4,7 +4,7 @@
   /* ── Colors (Stitch design system) ── */
   --color-primary: #1a1a1a;
   --color-on-primary: #f4f4f2;
-  --color-background: #f4f4f2;
+  --color-background: #ffffff;
   --color-on-background: #1a1a1a;
   --color-surface: #f4f4f2;
   --color-on-surface: #1a1a1a;
@@ -151,14 +151,14 @@ img { user-select: none; -webkit-user-drag: none; }
   padding: 2rem;
   font-size: clamp(1rem, 3vw, 1.5rem);
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.85);
+  color: inherit;
 }
 .text-slide-prose em {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--color-on-surface-variant, currentColor);
   font-style: italic;
 }
 .text-slide-prose strong {
-  color: white;
+  color: var(--color-primary, currentColor);
   font-weight: 700;
 }
 .text-slide-prose blockquote {
