@@ -111,7 +111,7 @@ export function EditorialLightbox({
       {/* foto(s) centrada(s) sobre mate — diptico: las 2 juntas con línea fina */}
       <div className="absolute inset-0 flex items-center justify-center p-6 md:p-12">
         <div
-          className={`flex items-center ${isDiptic ? "gap-3" : ""}`}
+          className="flex items-center"
           style={
             isDiptic
               ? { backgroundColor: serie.layout?.diptic_bg ?? "transparent", padding: "2rem 2.5rem" }
@@ -119,7 +119,7 @@ export function EditorialLightbox({
           }
         >
           {shown.map((f, j) => (
-            <div key={f} className="flex items-center gap-3">
+            <div key={f} className="flex items-center">
               {j > 0 && (
                 <div
                   className="w-px self-stretch"

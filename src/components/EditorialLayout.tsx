@@ -149,7 +149,7 @@ export function EditorialLayout({
                 n === 2 && !textOnly
                   ? // diptico: ambas fotos entran en el viewport, juntas y centradas
                     // bg configurable por serie (layout.diptic_bg) para fotos claras
-                    `flex h-screen items-center justify-center gap-3 px-4 md:px-8 ${layout.diptic_bg ? "text-white" : ""}`
+                    `flex h-screen items-center justify-center px-4 md:px-8 ${layout.diptic_bg ? "text-white" : ""}`
                   : `flex min-h-[75vh] items-center ${n === 2 ? "grid grid-cols-1 md:grid-cols-2 gap-4" : ""}`
               }
               style={
@@ -161,7 +161,7 @@ export function EditorialLayout({
               {textOnly && <div className="hidden md:block" />}
               {n === 2 && !textOnly ? (
                 // diptico: fotos juntas con una línea fina entre ellas
-                <div className="flex items-stretch gap-3">
+                <div className="flex items-stretch">
                   {row.cells.map((cell, j) => (
                     <Fragment key={`cell-${i}-${j}`}>
                       {j > 0 && (
