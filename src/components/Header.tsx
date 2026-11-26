@@ -30,7 +30,7 @@ export function Header() {
             href="/about"
             className="font-label-sm text-label-sm tracking-[0.2em] uppercase text-primary hover:text-secondary transition-colors"
           >
-            {t("ABOUT", "ACERCA")}
+            {t("ABOUT", "BIO")}
           </Link>
 
           {/* Language — secondary chrome, dimmed at rest */}
@@ -107,7 +107,7 @@ export function Header() {
           className="font-headline-md text-headline-md tracking-[0.2em] text-primary hover:text-secondary transition-all duration-300 uppercase mt-8"
           onClick={() => setMenuOpen(false)}
         >
-          {t("ABOUT", "ACERCA")}
+          {t("ABOUT", "BIO")}
         </Link>
       </nav>
     </>
