@@ -26,40 +26,52 @@ export default function WorkGrid() {
     return item ? item.data.filename : null;
   };
 
+  const cell = (serie: Serie) => {
+    const file = thumbFile(serie);
+    const isProject = serie.category_slug === "projects";
+    const type = isProject ? t("Project", "Proyecto") : t("Series", "Serie");
+    return (
+      <Link
+        key={serie.serie_slug}
+        href={isProject ? `/projects/${serie.serie_slug}` : `/series/${serie.serie_slug}`}
+        className="group block"
+      >
+        <div className="relative overflow-hidden bg-surface-container aspect-[4/3]">
+          {file && (
+            <CldImage
+              src={`${serie.serie_slug}/${file.replace(/\.[^.]+$/, "")}`}
+              alt={`${t(serie.serie_name, serie.serie_name_es)} — ${file}`}
+              fill
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              sizes="(min-width: 1024px) 50vw, (min-width: 640px) 50vw, 100vw"
+            />
+          )}
+        </div>
+        <div className="mt-3">
+          <h2 className="font-pt-mono text-base text-primary leading-tight group-hover:text-secondary transition-colors">
+            {t(serie.serie_name, serie.serie_name_es)}
+          </h2>
+          <p className="font-pt-mono text-[12px] text-on-surface-variant mt-1">
+            {serie.year} — {type}
+          </p>
+        </div>
+      </Link>
+    );
+  };
+
+  const projects = all.filter((s) => s.category_slug === "projects");
+  const series = all.filter((s) => s.category_slug !== "projects");
+
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      {all.map((serie) => {
-        const file = thumbFile(serie);
-        const isProject = serie.category_slug === "projects";
-        const type = isProject ? t("Project", "Proyecto") : t("Series", "Serie");
-        return (
-          <Link
-            key={serie.serie_slug}
-            href={isProject ? `/projects/${serie.serie_slug}` : `/series/${serie.serie_slug}`}
-            className="group block"
-          >
-            <div className="relative overflow-hidden bg-surface-container aspect-[4/3]">
-              {file && (
-                <CldImage
-                  src={`${serie.serie_slug}/${file.replace(/\.[^.]+$/, "")}`}
-                  alt={`${t(serie.serie_name, serie.serie_name_es)} — ${file}`}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-                />
-              )}
-            </div>
-            <div className="mt-3">
-              <h2 className="font-pt-mono text-base text-primary leading-tight group-hover:text-secondary transition-colors">
-                {t(serie.serie_name, serie.serie_name_es)}
-              </h2>
-              <p className="font-pt-mono text-[12px] text-on-surface-variant mt-1">
-                {serie.year} — {type}
-              </p>
-            </div>
-          </Link>
-        );
-      })}
+    <div className="space-y-10">
+      {/* Proyectos: 2 columnas en desktop (celdas grandes) */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+        {projects.map(cell)}
+      </div>
+      {/* Series: 4 columnas en desktop */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {series.map(cell)}
+      </div>
     </div>
   );
 }
