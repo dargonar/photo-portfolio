@@ -89,8 +89,8 @@ function Cell({
         loading="lazy"
         className={
           fit
-            ? // diptico: misma altura para ambas fotos (parejas uniformes), sin exceder el ancho
-              "cursor-pointer h-[80vh] w-auto max-w-[45vw] object-contain"
+            ? // diptico: cada foto contenida dentro de su mitad (50%), sin crecer mas alla
+              "cursor-pointer max-h-[80vh] max-w-full object-contain"
             : "w-full h-auto cursor-pointer"
         }
       />
@@ -162,7 +162,7 @@ export function EditorialLayout({
               {textOnly && <div className="hidden md:block" />}
               {n === 2 && !textOnly ? (
                 // diptico: fotos juntas con una línea fina entre ellas
-                <div className="flex items-stretch justify-center max-w-full">
+                <div className="flex items-stretch w-full">
                   {row.cells.map((cell, j) => (
                     <Fragment key={`cell-${i}-${j}`}>
                       {j > 0 && (
