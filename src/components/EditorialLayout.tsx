@@ -147,8 +147,14 @@ export function EditorialLayout({
               className={
                 n === 2 && !textOnly
                   ? // diptico: ambas fotos entran en el viewport, juntas y centradas
-                    "flex h-screen items-center justify-center gap-4 md:gap-8 px-4 md:px-8"
+                    // bg configurable por serie (layout.diptic_bg) para fotos claras
+                    `flex h-screen items-center justify-center gap-4 md:gap-8 px-4 md:px-8 ${layout.diptic_bg ? "text-white" : ""}`
                   : `flex min-h-[75vh] items-center ${n === 2 ? "grid grid-cols-1 md:grid-cols-2 gap-4" : ""}`
+              }
+              style={
+                n === 2 && !textOnly && layout.diptic_bg
+                  ? { backgroundColor: layout.diptic_bg }
+                  : undefined
               }
             >
               {textOnly && <div className="hidden md:block" />}
